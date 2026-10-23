@@ -154,7 +154,15 @@ Each script writes its numbers to `results/verification*/` and exits with status
 
 Each `model.pt` must stay beside its `log.json`, because the loader reads the network's architecture from it. The networks have 2.7 to 8.9 million parameters.
 
-The study trained 73 networks in all, including seeds, ablations and reference networks. The other 69 are distributed separately as `pfm-models-v1.0.zip` (1,039,810,996 bytes, SHA-256 `c17c6e6c744217bfcf476a00d24256466c8c96c13be716a46e5e0cfcf02f788f`), which unzips into `runs/` and `runs_grid/` here. Comments in the code refer to PLAN.md and the audit records of the original study, which are not part of this folder.
+The study trained 73 networks in all, including seeds, ablations and reference networks. All 73 are attached to the release [v1.0](https://github.com/abhaysadineni/photoacoustic-physics-foundation-model/releases/tag/v1.0) as `pfm-models-v1.0.zip` (1,039,810,932 bytes, SHA-256 `ac66693d320980eb50d6fa365ee7716c7e704d1be25e833a244f52e124c31770`). Download it and its checksum file into this folder, check it and unzip it here:
+
+```bash
+gh release download v1.0 -R abhaysadineni/photoacoustic-physics-foundation-model -p 'pfm-models-v1.0.zip*'
+sha256sum -c pfm-models-v1.0.zip.sha256          # macOS: shasum -a 256 -c pfm-models-v1.0.zip.sha256
+unzip -o pfm-models-v1.0.zip
+```
+
+Without the GitHub command line, download the two files from the release page in a browser. On Windows, `certutil -hashfile pfm-models-v1.0.zip SHA256` prints the checksum to compare. The archive fills `runs/` and `runs_grid/` and adds its own two notes, `README.txt` and `LICENSE.txt`; the four networks already here are byte-identical to their copies in it. `experiments/train_jobs.py` and `experiments/train_jobs_grid.py` describe what each network was trained on. Comments in the code refer to PLAN.md and the audit records of the original study, which are not part of this repository.
 
 ## Licence and citation
 

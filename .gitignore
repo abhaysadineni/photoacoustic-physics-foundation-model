@@ -6,3 +6,7 @@ data2d/
 examples/*.png
 results/my_check.json
 state.pt
+pfm-models-v1.0.zip
+pfm-models-v1.0.zip.sha256
+/README.txt
+/LICENSE.txt
