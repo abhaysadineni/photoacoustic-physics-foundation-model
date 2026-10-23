@@ -1,0 +1,299 @@
+{
+  "verify": {
+    "system": "advdiff",
+    "check": "translated spreading Gaussian, periodic box (two cases)",
+    "n": [
+      32,
+      64,
+      128
+    ],
+    "error": [
+      0.03890949036894902,
+      0.009707781165477615,
+      0.0024252664953128074
+    ],
+    "observed_order": [
+      2.0029085917359892,
+      2.000998303845189
+    ],
+    "promised_order": 2.0,
+    "passed": true,
+    "d": 3,
+    "v": [
+      0.48000000000000004,
+      0.6000000000000001,
+      0.6400000000000001
+    ],
+    "D": 0.015961059951726538,
+    "s0": 0.1,
+    "t1": 0.25,
+    "norm": "relative L2 at t1 (point values)",
+    "cases": {
+      "mid": {
+        "system": "advdiff",
+        "check": "translated_spreading_gaussian_mid_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.03890949036894902,
+          0.009707781165477615,
+          0.0024252664953128074
+        ],
+        "observed_order": [
+          2.0029085917359892,
+          2.000998303845189
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "v": [
+          0.48000000000000004,
+          0.6000000000000001,
+          0.6400000000000001
+        ],
+        "D": 0.015961059951726538,
+        "s0": 0.1,
+        "t1": 0.25,
+        "norm": "relative L2 at t1 (point values)"
+      },
+      "fast_low_D": {
+        "system": "advdiff",
+        "check": "translated_spreading_gaussian_fast_low_D_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.07437010335777004,
+          0.018626599335613277,
+          0.004656059171517044
+        ],
+        "observed_order": [
+          1.9973584721589617,
+          2.0001830070490048
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "v": [
+          0.7200000000000001,
+          0.9000000000000001,
+          0.9600000000000002
+        ],
+        "D": 0.01171875,
+        "s0": 0.1,
+        "t1": 0.25,
+        "norm": "relative L2 at t1 (point values)"
+      }
+    },
+    "D_range": [
+      0.01171875,
+      0.021739130434782608
+    ],
+    "dt_frame": 0.03125
+  },
+  "verify_seconds": 238.69029191799928,
+  "smoke": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.8781025409698486,
+        "max": 0.4956071376800537,
+        "channels": [
+          [
+            2
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.002403846153846154,
+          0.0020833333333333333
+        ],
+        "seconds": 21.560044582001865,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.7813684344291687,
+        "max": 0.9570837616920471,
+        "channels": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.003125,
+          0.002403846153846154
+        ],
+        "seconds": 16.167214130000502,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "neumann",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.7479569315910339,
+        "max": 0.9160217046737671,
+        "channels": [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.002840909090909091,
+          0.0026041666666666665
+        ],
+        "seconds": 16.76493825399666,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.5269887447357178,
+        "max": 0.6943153738975525,
+        "channels": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.0020833333333333333,
+          0.00390625
+        ],
+        "seconds": 17.691276231998927,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.45617446303367615,
+        "max": 0.9685132503509521,
+        "channels": [
+          [
+            2
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.003472222222222222,
+          0.002840909090909091
+        ],
+        "seconds": 14.077936030000274,
+        "failures": [],
+        "passed": true
+      }
+    ]
+  },
+  "resolution": {
+    "bc": "periodic",
+    "n": [
+      64,
+      128
+    ],
+    "n_traj": 1,
+    "rel_L2_diff_all_frames": [
+      0.004217861595799649
+    ],
+    "max": 0.004217861595799649,
+    "estimated_error_default_grid": [
+      0.005623815461066198
+    ],
+    "seconds": [
+      7.9197331110044615,
+      341.5031410119991
+    ]
+  },
+  "timing": {
+    "bc": "periodic",
+    "n_traj": 16,
+    "n_frames": 24,
+    "n_internal": 64,
+    "seconds": 155.4338528100052,
+    "seconds_per_trajectory": 9.714615800625324,
+    "batch_per_call": 4,
+    "rk4_substeps_per_frame": [
+      9,
+      15
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "load_average_at_end": [
+      2.28857421875,
+      2.43310546875,
+      2.1162109375
+    ],
+    "nice": 0
+  },
+  "passed": true
+}

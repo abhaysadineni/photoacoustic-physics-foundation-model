@@ -1,0 +1,417 @@
+{
+  "system": "fisher",
+  "check": "Ablowitz-Zeppetella exact wave, scaled: D=0.01, r=6.0, kappa=sqrt(r/(6D))=10, speed (5/sqrt6) sqrt(rD)=0.5, x0=0.3, final time T=0.6, exact Dirichlet wall values",
+  "n": [
+    128,
+    256,
+    512
+  ],
+  "error": [
+    3.0247586398251365e-05,
+    7.563508988887134e-06,
+    1.8909779650931071e-06
+  ],
+  "observed_order": [
+    1.9996924133931686,
+    1.9999231566702773
+  ],
+  "promised_order": 2.0,
+  "passed": true,
+  "rk4_steps": [
+    492,
+    1967,
+    7865
+  ],
+  "error_metric": "relative L2 on the internal grid at t = T (point values)",
+  "exact_residual": {
+    "max_abs_residual": 2.3072616595065654e-08,
+    "max_abs_u_t": 1.4814583082639607,
+    "note": "finite-difference residual of the closed form; O(1e-4) or smaller relative to |u_t| means the scaled formula solves the PDE"
+  },
+  "supplementary_neumann_heat": {
+    "system": "fisher",
+    "check": "r = 0, cos(pi x) exp(-D pi^2 t), D = 0.01, T = 2, even reflection (reported, not part of passed)",
+    "n": [
+      128,
+      256,
+      512
+    ],
+    "error": [
+      9.908815277322807e-06,
+      2.4772319209684504e-06,
+      6.193097739331493e-07
+    ],
+    "observed_order": [
+      1.9999836340218964,
+      1.999995821553252
+    ],
+    "promised_order": 2.0,
+    "passed": true
+  },
+  "resolution_check": [
+    {
+      "case": "train corner",
+      "D": 0.001,
+      "r": 20.0,
+      "decay_length_sqrt_D_over_r_cells_512": 3.6203867196751234,
+      "rel_l2_512_vs_2048_at_frame64": 0.0018311130115762353,
+      "max_rel_l2_512_vs_2048_all_frames": 0.0018311130115762353
+    },
+    {
+      "case": "ood corner",
+      "D": 0.0003,
+      "r": 40.0,
+      "decay_length_sqrt_D_over_r_cells_512": 1.4021697472132253,
+      "rel_l2_512_vs_2048_at_frame64": 0.007822574116289616,
+      "max_rel_l2_512_vs_2048_all_frames": 0.007822574116289616
+    }
+  ],
+  "front_speed": {
+    "D": 1.0,
+    "r": 1.0,
+    "domain_length": 400.0,
+    "bc": "neumann",
+    "initial": "u = 1 for x < 10.0, 0 otherwise",
+    "minimal_speed_2sqrt_rD": 2.0,
+    "bramson_leading_order_speed": "2 sqrt(rD) - 3 / (2 lambda t), lambda = sqrt(r/D)",
+    "speed_estimator": "(X(t + 1.0) - X(t - 1.0)) / 2.0",
+    "grids": [
+      {
+        "dx": 0.1,
+        "n": 4000,
+        "dt": 0.0020000000000000005,
+        "rows": [
+          {
+            "t": 5.0,
+            "X": 15.824005063044769,
+            "measured_speed": 1.5963173230350938,
+            "measured_over_minimal": 0.7981586615175469,
+            "bramson_leading_order": 1.7,
+            "measured_minus_bramson": -0.10368267696490618
+          },
+          {
+            "t": 10.0,
+            "X": 24.494472226731567,
+            "measured_speed": 1.8181804476849024,
+            "measured_over_minimal": 0.9090902238424512,
+            "bramson_leading_order": 1.85,
+            "measured_minus_bramson": -0.0318195523150977
+          },
+          {
+            "t": 20.0,
+            "X": 43.31989930378838,
+            "measured_speed": 1.920455530784185,
+            "measured_over_minimal": 0.9602277653920925,
+            "bramson_leading_order": 1.925,
+            "measured_minus_bramson": -0.004544469215814972
+          },
+          {
+            "t": 40.0,
+            "X": 82.27170969301106,
+            "measured_speed": 1.9638217688560573,
+            "measured_over_minimal": 0.9819108844280287,
+            "bramson_leading_order": 1.9625,
+            "measured_minus_bramson": 0.0013217688560573926
+          },
+          {
+            "t": 80.0,
+            "X": 161.3006716414364,
+            "measured_speed": 1.983004243938467,
+            "measured_over_minimal": 0.9915021219692335,
+            "bramson_leading_order": 1.98125,
+            "measured_minus_bramson": 0.001754243938467015
+          },
+          {
+            "t": 160.0,
+            "X": 320.3851146103234,
+            "measured_speed": 1.9920116714014853,
+            "measured_over_minimal": 0.9960058357007426,
+            "bramson_leading_order": 1.990625,
+            "measured_minus_bramson": 0.0013866714014851844
+          }
+        ],
+        "max_u": 0.9999999999999722,
+        "min_u": 4.1680462826408673e-35
+      },
+      {
+        "dx": 0.05,
+        "n": 8000,
+        "dt": 0.0005000000000000001,
+        "rows": [
+          {
+            "t": 5.0,
+            "X": 15.824210496720692,
+            "measured_speed": 1.5959945370735698,
+            "measured_over_minimal": 0.7979972685367849,
+            "bramson_leading_order": 1.7,
+            "measured_minus_bramson": -0.1040054629264302
+          },
+          {
+            "t": 10.0,
+            "X": 24.492567528568927,
+            "measured_speed": 1.8176932145588367,
+            "measured_over_minimal": 0.9088466072794184,
+            "bramson_leading_order": 1.85,
+            "measured_minus_bramson": -0.03230678544116339
+          },
+          {
+            "t": 20.0,
+            "X": 43.31266399544479,
+            "measured_speed": 1.9198741078842758,
+            "measured_over_minimal": 0.9599370539421379,
+            "bramson_leading_order": 1.925,
+            "measured_minus_bramson": -0.005125892115724229
+          },
+          {
+            "t": 40.0,
+            "X": 82.25287752004668,
+            "measured_speed": 1.9632166221609069,
+            "measured_over_minimal": 0.9816083110804534,
+            "bramson_leading_order": 1.9625,
+            "measured_minus_bramson": 0.0007166221609069545
+          },
+          {
+            "t": 80.0,
+            "X": 161.25782902497156,
+            "measured_speed": 1.9823899674311036,
+            "measured_over_minimal": 0.9911949837155518,
+            "bramson_leading_order": 1.98125,
+            "measured_minus_bramson": 0.0011399674311036723
+          },
+          {
+            "t": 160.0,
+            "X": 320.2932992344423,
+            "measured_speed": 1.9913928240003713,
+            "measured_over_minimal": 0.9956964120001857,
+            "bramson_leading_order": 1.990625,
+            "measured_minus_bramson": 0.0007678240003712311
+          }
+        ],
+        "max_u": 0.999999999999889,
+        "min_u": 3.3694231975045605e-35
+      }
+    ],
+    "note": "Measured speed stays below 2 sqrt(rD) and approaches it slowly, consistent with the Bramson logarithmic delay; the leading-order speed correction -3/(2 lambda t) is an asymptotic statement with corrections of higher order in 1/sqrt(t), so agreement at small t is not expected to be close."
+  },
+  "verify_seconds": 70.69385475499985,
+  "batch_check": {
+    "passed": true,
+    "blowup_factor": 1.5,
+    "blowup_rule": "max|u| over frames <= blowup_factor * max(max|u| at frame 0, scale_floor)",
+    "scale_floor": 1.0,
+    "rows": [
+      {
+        "bc": "periodic",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 0.9999998807907104,
+        "min_value": 0.0,
+        "max_value": 0.9999998807907104,
+        "channels": [
+          [
+            2
+          ],
+          [
+            0
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          0.00017556179775280898,
+          0.0006793478260869565,
+          0.0001166044776119403,
+          0.00018825301204819278,
+          0.00021701388888888888,
+          0.00011574074074074075,
+          0.00010557432432432433,
+          0.00014204545454545454
+        ],
+        "bounds": [
+          -1e-06,
+          1.000001
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.019035883247852325,
+        "mean_rel_change_per_frame_frames_56to63": 0.008581423200666904,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.0,
+        "min_value": 0.0,
+        "max_value": 1.0,
+        "channels": [
+          [
+            0
+          ],
+          [
+            2
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            2
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          0.0002332089552238806,
+          0.0005387931034482759,
+          0.0003720238095238095,
+          0.00011322463768115942,
+          0.00021404109589041095,
+          0.00013354700854700856,
+          0.0003551136363636364,
+          0.0003720238095238095
+        ],
+        "bounds": [
+          -1e-06,
+          1.000001
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.024042073637247086,
+        "mean_rel_change_per_frame_frames_56to63": 0.006517350673675537,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "neumann",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 0.9999964833259583,
+        "min_value": 0.0,
+        "max_value": 0.9999964833259583,
+        "channels": [
+          [
+            2
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          0.00041118421052631577,
+          0.0001166044776119403,
+          0.00019054878048780488,
+          0.00048828125,
+          0.00040064102564102563,
+          0.00020833333333333335,
+          0.00027901785714285713,
+          0.0002840909090909091
+        ],
+        "bounds": [
+          -1e-06,
+          1.000001
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.01567457616329193,
+        "mean_rel_change_per_frame_frames_56to63": 0.00902267824858427,
+        "failures": [],
+        "passed": true
+      }
+    ]
+  },
+  "timing_64x64": [
+    {
+      "bc": "periodic",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 5.6399327399994945,
+      "seconds_per_trajectory": 0.0881239490624921,
+      "rk4_substeps_per_frame_max": 204,
+      "rk4_substeps_per_frame_min": 22
+    },
+    {
+      "bc": "dirichlet",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 5.084855592000167,
+      "seconds_per_trajectory": 0.07945086862500261,
+      "rk4_substeps_per_frame_max": 202,
+      "rk4_substeps_per_frame_min": 23
+    },
+    {
+      "bc": "neumann",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 4.869690186000298,
+      "seconds_per_trajectory": 0.07608890915625466,
+      "rk4_substeps_per_frame_max": 204,
+      "rk4_substeps_per_frame_min": 21
+    }
+  ],
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "machine": "x86_64"
+  }
+}

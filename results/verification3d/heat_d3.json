@@ -1,0 +1,239 @@
+{
+  "verify": {
+    "system": "heat",
+    "check": "gaussian_spreading_d3",
+    "n": [
+      32,
+      64,
+      128
+    ],
+    "error": [
+      0.007436787513129173,
+      0.0018419826563442936,
+      0.000459440168134881
+    ],
+    "observed_order": [
+      2.0134200740427644,
+      2.003310577519282
+    ],
+    "promised_order": 2.0,
+    "passed": true,
+    "d": 3,
+    "norm": "relative L2 at t1 (point values)",
+    "s0_m": 0.00128,
+    "t1_s": 12.288000000000002,
+    "alpha_m2_s": 1e-07,
+    "centre": [
+      0.0065664,
+      0.006732800000000001,
+      0.0068992
+    ],
+    "rk4_steps": [
+      37,
+      148,
+      590
+    ],
+    "bc": "periodic, images summed in the exact solution",
+    "dt_frame_s": 1.1130434782608696
+  },
+  "verify_seconds": 85.81102105399623,
+  "smoke": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.2204093933105469,
+        "channels": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.06956521739130435,
+          0.06956521739130435
+        ],
+        "seconds": 10.757749110998702,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.4095878601074219,
+        "channels": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.06956521739130435,
+          0.06956521739130435
+        ],
+        "seconds": 10.851487009000266,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "neumann",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.170229196548462,
+        "channels": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.07950310559006211,
+          0.07950310559006211
+        ],
+        "seconds": 9.085474623003392,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.6111657619476318,
+        "channels": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.05565217391304348,
+          0.05565217391304348
+        ],
+        "seconds": 14.332988743000897,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.4454503059387207,
+        "channels": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.05565217391304348,
+          0.05565217391304348
+        ],
+        "seconds": 15.799988327999017,
+        "failures": [],
+        "passed": true
+      }
+    ]
+  },
+  "resolution": {
+    "bc": "periodic",
+    "n": [
+      64,
+      128
+    ],
+    "n_traj": 1,
+    "rel_L2_diff_all_frames": [
+      0.007327851685774228
+    ],
+    "max": 0.007327851685774228,
+    "estimated_error_default_grid": [
+      0.009770468914365636
+    ],
+    "seconds": [
+      7.266472281997267,
+      245.60428846900322
+    ]
+  },
+  "timing": {
+    "bc": "periodic",
+    "n_traj": 16,
+    "n_frames": 24,
+    "n_internal": 64,
+    "seconds": 106.17769399000099,
+    "seconds_per_trajectory": 6.636105874375062,
+    "batch_per_call": 4,
+    "rk4_substeps_per_frame": [
+      13,
+      18
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "load_average_at_end": [
+      2.22802734375,
+      2.0703125,
+      1.59130859375
+    ],
+    "nice": 0
+  },
+  "passed": true
+}

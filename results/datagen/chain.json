@@ -1,0 +1,73 @@
+[
+  {
+    "system": "chain",
+    "split": "train",
+    "n": 600,
+    "seconds": 16.584953784942627,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "chain",
+    "split": "val",
+    "n": 60,
+    "seconds": 1.5632987022399902,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "chain",
+    "split": "test",
+    "n": 100,
+    "seconds": 2.7183144092559814,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "chain",
+    "split": "test_bc",
+    "n": 100,
+    "seconds": 2.8106958866119385,
+    "regime": "train",
+    "bc_set": "test"
+  },
+  {
+    "system": "chain",
+    "split": "test_ood",
+    "n": 100,
+    "seconds": 2.8145389556884766,
+    "regime": "ood",
+    "bc_set": "train"
+  },
+  {
+    "norm_scale": [
+      1909227.625,
+      2.8144555471953936e-05,
+      13.138357162475586
+    ]
+  },
+  {
+    "system": "chain",
+    "split": "test_d2_pressure_release",
+    "n": 100,
+    "seconds": 3.2485790252685547
+  },
+  {
+    "system": "chain",
+    "split": "test_d2_rigid",
+    "n": 100,
+    "seconds": 3.117156744003296
+  },
+  {
+    "system": "chain",
+    "split": "test_d3_pressure_release",
+    "n": 100,
+    "seconds": 3.0084969997406006
+  },
+  {
+    "system": "chain",
+    "split": "test_d3_rigid",
+    "n": 100,
+    "seconds": 2.884622812271118
+  }
+]

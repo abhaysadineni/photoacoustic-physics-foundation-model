@@ -1,0 +1,49 @@
+[
+  {
+    "system": "burgers",
+    "split": "train",
+    "n": 600,
+    "seconds": 176.44067549705505,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "burgers",
+    "split": "val",
+    "n": 60,
+    "seconds": 18.3027503490448,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "burgers",
+    "split": "test",
+    "n": 100,
+    "seconds": 30.296998977661133,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "burgers",
+    "split": "test_bc",
+    "n": 100,
+    "seconds": 30.289268732070923,
+    "regime": "train",
+    "bc_set": "test"
+  },
+  {
+    "system": "burgers",
+    "split": "test_ood",
+    "n": 100,
+    "seconds": 59.00037169456482,
+    "regime": "ood",
+    "bc_set": "train"
+  },
+  {
+    "norm_scale": [
+      0.22504986822605133,
+      0.21346783638000488,
+      0.237532377243042
+    ]
+  }
+]

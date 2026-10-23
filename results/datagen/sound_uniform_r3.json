@@ -1,0 +1,49 @@
+[
+  {
+    "system": "sound_uniform_r3",
+    "split": "train",
+    "n": 600,
+    "seconds": 7.280405759811401,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "sound_uniform_r3",
+    "split": "val",
+    "n": 60,
+    "seconds": 0.6807427406311035,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "sound_uniform_r3",
+    "split": "test",
+    "n": 100,
+    "seconds": 1.1153600215911865,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "sound_uniform_r3",
+    "split": "test_bc",
+    "n": 100,
+    "seconds": 1.1129322052001953,
+    "regime": "train",
+    "bc_set": "test"
+  },
+  {
+    "system": "sound_uniform_r3",
+    "split": "test_ood",
+    "n": 100,
+    "seconds": 1.1351168155670166,
+    "regime": "ood",
+    "bc_set": "train"
+  },
+  {
+    "norm_scale": [
+      1.0,
+      1.0,
+      0.5099225044250488
+    ]
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "test": {
+    "system": "chain",
+    "dim": 2,
+    "split": "test",
+    "n": 100,
+    "seconds": 35.20295548439026,
+    "regime": "train",
+    "bc_set": "train",
+    "seed": 380465663,
+    "reference_rows": 16,
+    "reference_match": "strict",
+    "reference_check": {
+      "match": "strict",
+      "worst_sampled_rel_diff": 0.0,
+      "sha256_got": "5a75bb6490a369b067a892136494ec4e59ce639982a6b7cb8e11743164df35c2"
+    },
+    "files": {
+      "test_bc.npy": "f863f0310913506fe80fcc3256f611607fdd19e6f627f804e19ab18f68f61724",
+      "test_chan.npy": "54f3f3ffa77b82f919706c87e08ec4c5924b667f725ae999b4ef6f024615c30b",
+      "test_fields.npy": "51f761bedbe6995af79767f0048360666a367f0e41b5502376f88b6bee3a05c9",
+      "test_meta.json": "ae877bdbb736830433d8e70227f3d37a304354782e5f9617fe98b36f4f4a3269"
+    }
+  },
+  "test_bc": {
+    "system": "chain",
+    "dim": 2,
+    "split": "test_bc",
+    "n": 100,
+    "seconds": 30.897861003875732,
+    "regime": "train",
+    "bc_set": "test",
+    "seed": 990521921,
+    "reference_rows": 16,
+    "reference_match": "strict",
+    "reference_check": {
+      "match": "strict",
+      "worst_sampled_rel_diff": 0.0,
+      "sha256_got": "253784f4fa174db7bc061de72667f3f5ebb6adaed1a1779cd758377393dc76da"
+    },
+    "files": {
+      "test_bc_bc.npy": "18d3a39c17718640f4f0563dbdc66a3963ac9e3026d38507e08f013d85aa3fdb",
+      "test_bc_chan.npy": "54f3f3ffa77b82f919706c87e08ec4c5924b667f725ae999b4ef6f024615c30b",
+      "test_bc_fields.npy": "cac801de70bf6cd340cfbc56e37c470f5ed6327f7faa579ce5aaa34fee97c3a8",
+      "test_bc_meta.json": "6bc2c88b6d83934da63c9f775fe8e7507ae56c557fba6ca4341958b3b0abe89c"
+    }
+  },
+  "test_ood": {
+    "system": "chain",
+    "dim": 2,
+    "split": "test_ood",
+    "n": 100,
+    "seconds": 36.19541025161743,
+    "regime": "ood",
+    "bc_set": "train",
+    "seed": 1028713919,
+    "reference_rows": 16,
+    "reference_match": "strict",
+    "reference_check": {
+      "match": "strict",
+      "worst_sampled_rel_diff": 0.0,
+      "sha256_got": "6f8d1767edc7b8b1f1c38ee2ba7361c0b13b25bc63ddb1f880ec82c93b29a608"
+    },
+    "files": {
+      "test_ood_bc.npy": "f863f0310913506fe80fcc3256f611607fdd19e6f627f804e19ab18f68f61724",
+      "test_ood_chan.npy": "54f3f3ffa77b82f919706c87e08ec4c5924b667f725ae999b4ef6f024615c30b",
+      "test_ood_fields.npy": "34057c5512453ddf4dc4524c3455038b8554e0312f6a65b937f9cb133421af4a",
+      "test_ood_meta.json": "0de8181ff77dcb709100b6a6a20e91ccaa7c001d637673943a633e514d48dd68"
+    }
+  }
+}

@@ -1,0 +1,1104 @@
+{
+  "system": "coupled",
+  "photothermal": {
+    "system": "photothermal",
+    "check": "uniform heating (exact), Gaussian heater (order 2), steady fluence",
+    "n": [
+      128,
+      256,
+      512
+    ],
+    "error": [
+      0.0010457415523698864,
+      0.0002609037469091106,
+      6.51928018816244e-05
+    ],
+    "observed_order": [
+      2.0029367754097827,
+      2.000733076842224
+    ],
+    "promised_order": 2.0,
+    "passed": true,
+    "s0_m": 0.00064,
+    "t1_s": 3.0720000000000005,
+    "alpha_m2_s": 1e-07,
+    "code_path": "coupled.run_thermal with acoustics off (thermal substeps)",
+    "norm": "relative L2",
+    "cases": {
+      "uniform_heating": {
+        "system": "photothermal",
+        "check": "uniform_constant_heating_exact",
+        "n": [
+          128,
+          256,
+          512
+        ],
+        "error": [
+          1.3449253285132319e-15,
+          4.371007317668004e-15,
+          6.724626642566159e-15
+        ],
+        "observed_order": null,
+        "promised_order": null,
+        "passed": true,
+        "pass_rule": "max relative error over all 64 frames < 1e-12 (exact in the scheme; round-off only)",
+        "rho_cp_J_m3K": 4172000.0,
+        "H0_W_m3": 1000000000.0,
+        "dt_frame_s": 6.406149903907751e-08,
+        "code_path": "coupled.run_thermal (Photothermal's integrator), chain substep rule",
+        "norm": "max abs error / max |T| over all frames and cells"
+      },
+      "gaussian_heater": {
+        "system": "photothermal",
+        "check": "gaussian_heater_d1",
+        "n": [
+          128,
+          256,
+          512
+        ],
+        "error": [
+          0.0010457415523698864,
+          0.0002609037469091106,
+          6.51928018816244e-05
+        ],
+        "observed_order": [
+          2.0029367754097827,
+          2.000733076842224
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "s0_m": 0.00064,
+        "t1_s": 3.0720000000000005,
+        "alpha_m2_s": 1e-07,
+        "code_path": "coupled.run_thermal with acoustics off (thermal substeps)",
+        "norm": "relative L2"
+      },
+      "light_steady_source_d1": {
+        "system": "chain",
+        "check": "light_steady_source_d1",
+        "n": [
+          128,
+          256,
+          512
+        ],
+        "error": [
+          4.87321565668028e-05,
+          1.218405865039653e-05,
+          3.0460783379282054e-06
+        ],
+        "observed_order": [
+          1.9998792765430644,
+          1.9999698415367342
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 1,
+        "solution": "plane exp(-mu_eff x)",
+        "mu_a_m-1": 14.374573758932081,
+        "musp_m-1": 1032.6746270444582,
+        "mu_eff_m-1": 212.49154782846696,
+        "domain_m": [
+          0.0,
+          0.0128
+        ],
+        "norm": "relative L2, volume weighted",
+        "bc": "Dirichlet with exact values"
+      },
+      "light_steady_surface_d1": {
+        "system": "chain",
+        "check": "light_steady_surface_d1",
+        "n": [
+          128,
+          256,
+          512
+        ],
+        "error": [
+          4.911648360044235e-05,
+          1.2280145233928216e-05,
+          3.0701002889047407e-06
+        ],
+        "observed_order": [
+          1.9998796542769888,
+          1.9999699341416715
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 1,
+        "solution": "slab lit at x = 0, phi(L) = 0: sinh(mu_eff (L - x))/sinh(mu_eff L)",
+        "mu_a_m-1": 14.374573758932081,
+        "musp_m-1": 1032.6746270444582,
+        "mu_eff_m-1": 212.49154782846696,
+        "domain_m": [
+          0.0,
+          0.0128
+        ],
+        "norm": "relative L2, volume weighted",
+        "bc": "chain code path (steady_fluence): d = 1 phi(0) = 1, phi(L) = 0; d = 2, 3 phi(L) = 1, symmetric centre"
+      }
+    },
+    "smoke_test": {
+      "passed": true,
+      "rows": [
+        {
+          "bc": "periodic",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 8.549281601076671e-27,
+          "ch0_max": 9538186.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.14078669250011444,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0,
+          "ch1_min": 6.468688362737396e-10,
+          "ch1_max": 0.00021625103545375168,
+          "ch1_mean_rel_change_per_frame_1to8": 0.016532521694898605,
+          "ch1_mean_rel_change_per_frame_56to63": 2.7900666665914287e-08,
+          "mua_over_musp_max": 0.1525883072709969,
+          "wavelengths_nm": [
+            750,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9995928406715393,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 0.0,
+          "ch0_max": 9710990.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.11293978989124298,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0075538018718361855,
+          "ch1_min": 0.0,
+          "ch1_max": 0.0002610037918202579,
+          "ch1_mean_rel_change_per_frame_1to8": 0.011875400319695473,
+          "ch1_mean_rel_change_per_frame_56to63": 0.0005221895989961922,
+          "mua_over_musp_max": 0.0966252245126463,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.996249794960022,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 0.0,
+          "ch0_max": 9739307.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.14377735555171967,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0012179063633084297,
+          "ch1_min": 8.407790785948902e-45,
+          "ch1_max": 0.00021869501506444067,
+          "ch1_mean_rel_change_per_frame_1to8": 0.01494429912418127,
+          "ch1_mean_rel_change_per_frame_56to63": 4.223672658554278e-05,
+          "mua_over_musp_max": 0.07709028437293791,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.997818648815155,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "periodic",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 0.0,
+          "ch0_max": 9463682.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.13626357913017273,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0007864265353418887,
+          "ch1_min": 6.949039084586768e-42,
+          "ch1_max": 0.00038258053245954216,
+          "ch1_mean_rel_change_per_frame_1to8": 0.016802705824375153,
+          "ch1_mean_rel_change_per_frame_56to63": 2.1734522306360304e-05,
+          "mua_over_musp_max": 0.28162071241031245,
+          "wavelengths_nm": [
+            700,
+            750,
+            800
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "T_over_bound_max": 0.999187171459198,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 0.0,
+          "ch0_max": 9547953.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.18829238414764404,
+          "ch0_mean_rel_change_per_frame_56to63": 0.00037241444806568325,
+          "ch1_min": 1.401298464324817e-45,
+          "ch1_max": 0.00016667101590428501,
+          "ch1_mean_rel_change_per_frame_1to8": 0.021769683808088303,
+          "ch1_mean_rel_change_per_frame_56to63": 6.914169716765173e-06,
+          "mua_over_musp_max": 0.257904564658871,
+          "wavelengths_nm": [
+            700,
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "T_over_bound_max": 0.9975921511650085,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 0.0,
+          "ch0_max": 9493685.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.15747925639152527,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0,
+          "ch1_min": 0.0,
+          "ch1_max": 0.0001734663383103907,
+          "ch1_mean_rel_change_per_frame_1to8": 0.014225447550415993,
+          "ch1_mean_rel_change_per_frame_56to63": 1.2343301492023784e-08,
+          "mua_over_musp_max": 0.2243651537918765,
+          "wavelengths_nm": [
+            700,
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "T_over_bound_max": 0.9991046786308289,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ]
+    },
+    "timing_64x64": [
+      {
+        "bc": "periodic",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.3659343830004218,
+        "seconds_per_trajectory": 0.02134272473438159,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "pressure_release",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 0.9602280500039342,
+        "seconds_per_trajectory": 0.015003563281311472,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "rigid",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.4014680990003399,
+        "seconds_per_trajectory": 0.02189793904688031,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "sampling_stats": {
+      "train": {
+        "n_accepted": 3000,
+        "n_rejected": 0,
+        "rejection_rate": 0.0,
+        "by_ood_kind": {
+          "None": {
+            "accepted": 3000,
+            "rejected": 0,
+            "rejection_rate": 0.0
+          }
+        },
+        "mua_over_musp_max_accepted": 0.27757185440791976,
+        "light_start_over_t_tr_min": 10.6594711124253,
+        "light_init_width_over_l_tr_min": 3.769963945437728,
+        "note": "light_* ratios refer to light.T_START and the background medium"
+      },
+      "ood": {
+        "n_accepted": 3000,
+        "n_rejected": 295,
+        "rejection_rate": 0.08952959028831563,
+        "by_ood_kind": {
+          "blood_fraction": {
+            "accepted": 1509,
+            "rejected": 295,
+            "rejection_rate": 0.16352549889135254
+          },
+          "wavelength": {
+            "accepted": 1491,
+            "rejected": 0,
+            "rejection_rate": 0.0
+          }
+        },
+        "mua_over_musp_max_accepted": 0.29967086776247615,
+        "light_start_over_t_tr_min": 11.698567670163811,
+        "light_init_width_over_l_tr_min": 3.949441761424655,
+        "note": "light_* ratios refer to light.T_START and the background medium"
+      }
+    }
+  },
+  "thermoacoustic": {
+    "system": "thermoacoustic",
+    "check": "constant Gaussian heating, Duhamel (order 2); Gaussian heater T",
+    "n": [
+      128,
+      256,
+      512
+    ],
+    "error": [
+      0.0020746241213761983,
+      0.0005182164454100806,
+      0.00012951763941486288
+    ],
+    "observed_order": [
+      2.001223269123468,
+      2.000406203175619
+    ],
+    "promised_order": 2.0,
+    "passed": true,
+    "d": 1,
+    "s_m": 0.0008,
+    "t_s": 4.099935938500961e-06,
+    "H0_W_m3": 1000000000.0,
+    "gruneisen": 0.201,
+    "reference": "Duhamel integral, exact: (s sqrt(pi)/(4c)) [erf((r+ct)/s) - erf((r-ct)/s)]",
+    "norm": "relative L2, volume weighted",
+    "cases": {
+      "constant_heating_duhamel_d1": {
+        "system": "chain",
+        "check": "acoustic_constant_heating_d1",
+        "n": [
+          128,
+          256,
+          512
+        ],
+        "error": [
+          0.0020746241213761983,
+          0.0005182164454100806,
+          0.00012951763941486288
+        ],
+        "observed_order": [
+          2.001223269123468,
+          2.000406203175619
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 1,
+        "s_m": 0.0008,
+        "t_s": 4.099935938500961e-06,
+        "H0_W_m3": 1000000000.0,
+        "gruneisen": 0.201,
+        "reference": "Duhamel integral, exact: (s sqrt(pi)/(4c)) [erf((r+ct)/s) - erf((r-ct)/s)]",
+        "norm": "relative L2, volume weighted"
+      },
+      "gaussian_heater_temperature_d1": {
+        "system": "chain",
+        "check": "heat_heated_d1",
+        "n": [
+          128,
+          256,
+          512
+        ],
+        "error": [
+          0.0010457415523698864,
+          0.0002609037469091106,
+          6.51928018816244e-05
+        ],
+        "observed_order": [
+          2.0029367754097827,
+          2.000733076842224
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 1,
+        "s0_m": 0.00064,
+        "t1_s": 3.0720000000000005,
+        "alpha_m2_s": 1e-07,
+        "rho_cp_J_m3K": 4172000.0,
+        "H0_W_m3": 1358072.9166666665,
+        "centre": "r = 0 (symmetry wall for d = 1, axis/centre for d = 2, 3)",
+        "code_path": "chain.make_rhs + chain.run_chain (coupled T, p, u state) with acoustics switched off; thermal bc of the chain (neumann for wall boundaries)",
+        "norm": "relative L2, volume weighted"
+      }
+    },
+    "smoke_test": {
+      "passed": true,
+      "rows": [
+        {
+          "bc": "periodic",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 6.468688362737396e-10,
+          "ch1_max": 0.00021625103545375168,
+          "ch1_mean_rel_change_per_frame_1to8": 0.016532521694898605,
+          "ch1_mean_rel_change_per_frame_56to63": 2.7900666665914287e-08,
+          "ch2_min": 0.000486538017867133,
+          "ch2_max": 50.572261810302734,
+          "ch2_mean_rel_change_per_frame_1to8": 0.016532521694898605,
+          "ch2_mean_rel_change_per_frame_56to63": 0.03398936241865158,
+          "mua_over_musp_max": 0.1525883072709969,
+          "wavelengths_nm": [
+            750,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9995928406715393,
+          "p_over_bound_max": 0.7032185196876526,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 0.0002610037918202579,
+          "ch1_mean_rel_change_per_frame_1to8": 0.011875400319695473,
+          "ch1_mean_rel_change_per_frame_56to63": 0.0005221895989961922,
+          "ch2_min": -27.473712921142578,
+          "ch2_max": 38.02738952636719,
+          "ch2_mean_rel_change_per_frame_1to8": 0.016654793173074722,
+          "ch2_mean_rel_change_per_frame_56to63": 0.07619866728782654,
+          "mua_over_musp_max": 0.0966252245126463,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.996249794960022,
+          "p_over_bound_max": 0.5014849901199341,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 8.407790785948902e-45,
+          "ch1_max": 0.00021869501506444067,
+          "ch1_mean_rel_change_per_frame_1to8": 0.01494429912418127,
+          "ch1_mean_rel_change_per_frame_56to63": 4.223672658554278e-05,
+          "ch2_min": 7.107759957745447e-39,
+          "ch2_max": 43.996456146240234,
+          "ch2_mean_rel_change_per_frame_1to8": 0.014944298192858696,
+          "ch2_mean_rel_change_per_frame_56to63": 0.03673610836267471,
+          "mua_over_musp_max": 0.07709028437293791,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.997818648815155,
+          "p_over_bound_max": 0.7642059922218323,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "periodic",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 2.076724324129379e-42,
+          "ch1_max": 0.00036348539288155735,
+          "ch1_mean_rel_change_per_frame_1to8": 0.01449421513825655,
+          "ch1_mean_rel_change_per_frame_56to63": 0.00029148836620151997,
+          "ch2_min": 1.3644309967724694e-36,
+          "ch2_max": 180.6448211669922,
+          "ch2_mean_rel_change_per_frame_1to8": 0.01449421513825655,
+          "ch2_mean_rel_change_per_frame_56to63": 0.034933701157569885,
+          "mua_over_musp_max": 0.2614089646981987,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "gruneisen_fat"
+          ],
+          "T_over_bound_max": 0.9985856413841248,
+          "p_over_bound_max": 0.6471117734909058,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 0.0002551942889112979,
+          "ch1_mean_rel_change_per_frame_1to8": 0.014470724388957024,
+          "ch1_mean_rel_change_per_frame_56to63": 5.925806817685952e-06,
+          "ch2_min": -113.64192962646484,
+          "ch2_max": 141.1951904296875,
+          "ch2_mean_rel_change_per_frame_1to8": 0.020121289417147636,
+          "ch2_mean_rel_change_per_frame_56to63": 0.0862303227186203,
+          "mua_over_musp_max": 0.18262767649360748,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "gruneisen_fat"
+          ],
+          "T_over_bound_max": 0.9976239800453186,
+          "p_over_bound_max": 0.5611610412597656,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 0.0006045620539225638,
+          "ch1_mean_rel_change_per_frame_1to8": 0.016797423362731934,
+          "ch1_mean_rel_change_per_frame_56to63": 0.00017382246733177453,
+          "ch2_min": 0.0,
+          "ch2_max": 173.4842071533203,
+          "ch2_mean_rel_change_per_frame_1to8": 0.016797423362731934,
+          "ch2_mean_rel_change_per_frame_56to63": 0.04110746085643768,
+          "mua_over_musp_max": 0.25488732529236025,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "gruneisen_fat"
+          ],
+          "T_over_bound_max": 0.996453583240509,
+          "p_over_bound_max": 0.7086641788482666,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ]
+    },
+    "timing_64x64": [
+      {
+        "bc": "periodic",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 2.782011823997891,
+        "seconds_per_trajectory": 0.04346893474996705,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "pressure_release",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 2.5577399940011674,
+        "seconds_per_trajectory": 0.03996468740626824,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "rigid",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 2.48444438399747,
+        "seconds_per_trajectory": 0.03881944349996047,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "sampling_stats": {
+      "train": {
+        "n_accepted": 3000,
+        "n_rejected": 0,
+        "rejection_rate": 0.0,
+        "by_ood_kind": {
+          "None": {
+            "accepted": 3000,
+            "rejected": 0,
+            "rejection_rate": 0.0
+          }
+        },
+        "mua_over_musp_max_accepted": 0.27757185440791976,
+        "light_start_over_t_tr_min": 10.6594711124253,
+        "light_init_width_over_l_tr_min": 3.769963945437728,
+        "note": "light_* ratios refer to light.T_START and the background medium"
+      },
+      "ood": {
+        "n_accepted": 3000,
+        "n_rejected": 269,
+        "rejection_rate": 0.08228816151728358,
+        "by_ood_kind": {
+          "gruneisen_fat": {
+            "accepted": 1499,
+            "rejected": 1,
+            "rejection_rate": 0.0006666666666666666
+          },
+          "blood_fraction": {
+            "accepted": 1501,
+            "rejected": 268,
+            "rejection_rate": 0.15149802148106276
+          }
+        },
+        "mua_over_musp_max_accepted": 0.2997550455447804,
+        "light_start_over_t_tr_min": 10.966883927668203,
+        "light_init_width_over_l_tr_min": 3.8239393174523055,
+        "note": "light_* ratios refer to light.T_START and the background medium"
+      }
+    }
+  },
+  "consistency_with_chain": {
+    "rows": [
+      {
+        "regime": "train",
+        "bc": "periodic",
+        "n_traj": 8,
+        "photothermal_ch0_max_abs_diff": 0.0,
+        "photothermal_ch0_max_rel_diff": 0.0,
+        "photothermal_ch1_max_abs_diff": 0.0,
+        "photothermal_ch1_max_rel_diff": 0.0,
+        "photothermal_unused_ch2_max_abs": 0.0,
+        "thermoacoustic_ch1_max_abs_diff": 0.0,
+        "thermoacoustic_ch1_max_rel_diff": 0.0,
+        "thermoacoustic_ch2_max_abs_diff": 0.0,
+        "thermoacoustic_ch2_max_rel_diff": 0.0,
+        "thermoacoustic_unused_ch0_max_abs": 0.0
+      },
+      {
+        "regime": "train",
+        "bc": "pressure_release",
+        "n_traj": 8,
+        "photothermal_ch0_max_abs_diff": 0.0,
+        "photothermal_ch0_max_rel_diff": 0.0,
+        "photothermal_ch1_max_abs_diff": 0.0,
+        "photothermal_ch1_max_rel_diff": 0.0,
+        "photothermal_unused_ch2_max_abs": 0.0,
+        "thermoacoustic_ch1_max_abs_diff": 0.0,
+        "thermoacoustic_ch1_max_rel_diff": 0.0,
+        "thermoacoustic_ch2_max_abs_diff": 0.0,
+        "thermoacoustic_ch2_max_rel_diff": 0.0,
+        "thermoacoustic_unused_ch0_max_abs": 0.0
+      },
+      {
+        "regime": "train",
+        "bc": "rigid",
+        "n_traj": 8,
+        "photothermal_ch0_max_abs_diff": 0.0,
+        "photothermal_ch0_max_rel_diff": 0.0,
+        "photothermal_ch1_max_abs_diff": 0.0,
+        "photothermal_ch1_max_rel_diff": 0.0,
+        "photothermal_unused_ch2_max_abs": 0.0,
+        "thermoacoustic_ch1_max_abs_diff": 0.0,
+        "thermoacoustic_ch1_max_rel_diff": 0.0,
+        "thermoacoustic_ch2_max_abs_diff": 0.0,
+        "thermoacoustic_ch2_max_rel_diff": 0.0,
+        "thermoacoustic_unused_ch0_max_abs": 0.0
+      },
+      {
+        "regime": "ood",
+        "bc": "periodic",
+        "n_traj": 8,
+        "photothermal_ch0_max_abs_diff": 0.0,
+        "photothermal_ch0_max_rel_diff": 0.0,
+        "photothermal_ch1_max_abs_diff": 0.0,
+        "photothermal_ch1_max_rel_diff": 0.0,
+        "photothermal_unused_ch2_max_abs": 0.0,
+        "thermoacoustic_ch1_max_abs_diff": 0.0,
+        "thermoacoustic_ch1_max_rel_diff": 0.0,
+        "thermoacoustic_ch2_max_abs_diff": 0.0,
+        "thermoacoustic_ch2_max_rel_diff": 0.0,
+        "thermoacoustic_unused_ch0_max_abs": 0.0
+      },
+      {
+        "regime": "ood",
+        "bc": "pressure_release",
+        "n_traj": 8,
+        "photothermal_ch0_max_abs_diff": 0.0,
+        "photothermal_ch0_max_rel_diff": 0.0,
+        "photothermal_ch1_max_abs_diff": 0.0,
+        "photothermal_ch1_max_rel_diff": 0.0,
+        "photothermal_unused_ch2_max_abs": 0.0,
+        "thermoacoustic_ch1_max_abs_diff": 0.0,
+        "thermoacoustic_ch1_max_rel_diff": 0.0,
+        "thermoacoustic_ch2_max_abs_diff": 0.0,
+        "thermoacoustic_ch2_max_rel_diff": 0.0,
+        "thermoacoustic_unused_ch0_max_abs": 0.0
+      },
+      {
+        "regime": "ood",
+        "bc": "rigid",
+        "n_traj": 8,
+        "photothermal_ch0_max_abs_diff": 0.0,
+        "photothermal_ch0_max_rel_diff": 0.0,
+        "photothermal_ch1_max_abs_diff": 0.0,
+        "photothermal_ch1_max_rel_diff": 0.0,
+        "photothermal_unused_ch2_max_abs": 0.0,
+        "thermoacoustic_ch1_max_abs_diff": 0.0,
+        "thermoacoustic_ch1_max_rel_diff": 0.0,
+        "thermoacoustic_ch2_max_abs_diff": 0.0,
+        "thermoacoustic_ch2_max_rel_diff": 0.0,
+        "thermoacoustic_unused_ch0_max_abs": 0.0
+      }
+    ],
+    "max_rel_diff": 0.0,
+    "unused_channel_max_abs": 0.0,
+    "passed": true,
+    "pass_rule": "max |difference| / max |chain channel| <= 1e-6 (float32 output resolution) and unused channel exactly zero"
+  },
+  "ood_kinds": {
+    "photothermal": [
+      "wavelength",
+      "blood_fraction"
+    ],
+    "thermoacoustic": [
+      "blood_fraction",
+      "gruneisen_fat"
+    ]
+  },
+  "dt_frame_s": 6.406149903907751e-08,
+  "length_m": 0.0128,
+  "allowed_bcs": [
+    "periodic",
+    "pressure_release",
+    "rigid"
+  ],
+  "param_sources": {
+    "optics": "as light.PARAM_SOURCES",
+    "c_m_s": "c_soft.range",
+    "rho_kg_m3": "rho_soft.range",
+    "alpha_m2_s": "muscle_fat_thermal (fat, muscle): k / (rho c)",
+    "cp_J_kgK": "muscle_fat_thermal.fat.c_J_kgK, muscle_fat_thermal.muscle.c_J_kgK",
+    "gruneisen (train low)": "gamma_water_NIST.37C (non-blood background at 37 C)",
+    "gruneisen (train high)": "gamma_blood_human_37C_measured.37C_donors (max; measured whole blood at 37 C, Villanueva-Palero 2017 Table 6)",
+    "gruneisen (ood fat)": "gamma_tissue_measured: porcine_lipid_lard, porcine_subcutaneous_fat (22 C)",
+    "gruneisen 37 C soft tissue": "gamma_soft_tissue_37C_measured is null/UNVERIFIED; not used",
+    "phi0_W_m2, envelope, pre_frames": "modelling choice",
+    "pulse_duration_s": "modelling choice: 0.25 to 0.5 x L / c_soft.value",
+    "dt_frame": "sound.DT_FRAME = (L / 128) / c_soft.value",
+    "LENGTH": "modelling choice (12.8 mm)",
+    "all parameters": "inherited unchanged from chain.PARAM_SOURCES (pfm/solvers/chain.py)"
+  },
+  "chain_py_md5": "98364bd5866db1f3ed011fc72fda734e",
+  "passed": true,
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "machine": "x86_64"
+  }
+}

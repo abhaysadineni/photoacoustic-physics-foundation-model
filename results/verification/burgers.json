@@ -1,0 +1,286 @@
+{
+  "system": "burgers",
+  "check": "viscous travelling wave, uL=1.0, uR=0.0, nu=0.01, x0=0.3, final time T=0.6, exact time-dependent Dirichlet wall values (odd reflection about g(t))",
+  "n": [
+    128,
+    256,
+    512
+  ],
+  "error": [
+    0.001035332860687108,
+    0.00025834075838690153,
+    6.455349529447963e-05
+  ],
+  "observed_order": [
+    2.002747490061146,
+    2.0007081567174234
+  ],
+  "promised_order": 2.0,
+  "passed": true,
+  "rk4_steps": [
+    492,
+    1967,
+    7865
+  ],
+  "front_width_4nu_over_du_cells_at_n128": 5.12,
+  "error_metric": "relative L2 on the internal grid at t = T (point values)",
+  "resolution_check": [
+    {
+      "case": "train corner",
+      "bc": "periodic",
+      "nu": 0.004,
+      "u_max": 1.0,
+      "Re": 250.0,
+      "delta_over_dx_512": 4.096,
+      "cell_peclet_512": 0.48828125,
+      "rel_l2_512_vs_2048_at_frame64": 0.00010235961235594004,
+      "max_rel_l2_512_vs_2048_all_frames": 0.0006493742112070322,
+      "max_abs_u_512": 0.9980207085609436
+    },
+    {
+      "case": "train corner",
+      "bc": "dirichlet",
+      "nu": 0.004,
+      "u_max": 1.0,
+      "Re": 250.0,
+      "delta_over_dx_512": 4.096,
+      "cell_peclet_512": 0.48828125,
+      "rel_l2_512_vs_2048_at_frame64": 0.00010236101661575958,
+      "max_rel_l2_512_vs_2048_all_frames": 0.0006493742112070322,
+      "max_abs_u_512": 0.9980207085609436
+    },
+    {
+      "case": "ood corner",
+      "bc": "periodic",
+      "nu": 0.002,
+      "u_max": 1.0,
+      "Re": 500.0,
+      "delta_over_dx_512": 2.048,
+      "cell_peclet_512": 0.9765625,
+      "rel_l2_512_vs_2048_at_frame64": 0.00018472484953235835,
+      "max_rel_l2_512_vs_2048_all_frames": 0.0016679844120517373,
+      "max_abs_u_512": 0.9980207085609436
+    },
+    {
+      "case": "ood corner",
+      "bc": "dirichlet",
+      "nu": 0.002,
+      "u_max": 1.0,
+      "Re": 500.0,
+      "delta_over_dx_512": 2.048,
+      "cell_peclet_512": 0.9765625,
+      "rel_l2_512_vs_2048_at_frame64": 0.0001847247767727822,
+      "max_rel_l2_512_vs_2048_all_frames": 0.0016679844120517373,
+      "max_abs_u_512": 0.9980207085609436
+    }
+  ],
+  "verify_seconds": 23.34585362799953,
+  "batch_check": {
+    "passed": true,
+    "blowup_factor": 1.5,
+    "blowup_rule": "max|u| over frames <= blowup_factor * max(max|u| at frame 0, scale_floor)",
+    "scale_floor": 0.0,
+    "rows": [
+      {
+        "bc": "periodic",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.0,
+        "min_value": -0.674270749092102,
+        "max_value": 0.9477192163467407,
+        "channels": [
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          5.2787162162162165e-05,
+          0.00017556179775280898,
+          3.70260663507109e-05,
+          5.600358422939068e-05,
+          6.377551020408164e-05,
+          3.685141509433962e-05,
+          3.389370932754881e-05,
+          4.376750700280112e-05
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.05616998299956322,
+        "mean_rel_change_per_frame_frames_56to63": 0.008314702659845352,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.0,
+        "min_value": -0.9623892903327942,
+        "max_value": 0.9613380432128906,
+        "channels": [
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          6.793478260869565e-05,
+          0.00014204545454545454,
+          0.00010146103896103897,
+          3.591954022988506e-05,
+          6.300403225806451e-05,
+          4.177807486631016e-05,
+          9.765625e-05,
+          0.00010347682119205298
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.05408542603254318,
+        "mean_rel_change_per_frame_frames_56to63": 0.00864265114068985,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "neumann",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.0,
+        "min_value": -0.7959241271018982,
+        "max_value": 0.4877799451351166,
+        "channels": [
+          [
+            0
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.00011241007194244605,
+          3.693853427895981e-05,
+          5.681818181818182e-05,
+          0.00013020833333333333,
+          0.00010926573426573427,
+          6.127450980392157e-05,
+          7.971938775510203e-05,
+          8.095854922279793e-05
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.05230267718434334,
+        "mean_rel_change_per_frame_frames_56to63": 0.009849590249359608,
+        "failures": [],
+        "passed": true
+      }
+    ]
+  },
+  "timing_64x64": [
+    {
+      "bc": "periodic",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 20.549681385999975,
+      "seconds_per_trajectory": 0.3210887716562496,
+      "rk4_substeps_per_frame_max": 612,
+      "rk4_substeps_per_frame_min": 85
+    },
+    {
+      "bc": "dirichlet",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 18.63857351200022,
+      "seconds_per_trajectory": 0.29122771112500345,
+      "rk4_substeps_per_frame_max": 606,
+      "rk4_substeps_per_frame_min": 88
+    },
+    {
+      "bc": "neumann",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 17.360748865999994,
+      "seconds_per_trajectory": 0.2712617010312499,
+      "rk4_substeps_per_frame_max": 611,
+      "rk4_substeps_per_frame_min": 84
+    }
+  ],
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "machine": "x86_64"
+  }
+}

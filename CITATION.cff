@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, its trained networks or its results, please cite it as below."
+title: "Photoacoustic Physics Foundation Model"
+version: "1.0"
+date-released: 2026-10-22
+authors:
+  - family-names: Sadineni
+    given-names: Abhay Chakra
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+type: software

@@ -1,0 +1,621 @@
+{
+  "verify": {
+    "system": "sound_layered",
+    "check": "reduction to the 1D SoundLayered solver",
+    "cases": {
+      "periodic": {
+        "system": "sound_layered",
+        "bc": "periodic",
+        "frame_ratio": 4,
+        "own_dt": {
+          "max_abs_diff": 2.9588777317179904e-08,
+          "max_rel_diff": 4.134338567421913e-08,
+          "transverse_nonuniformity_rel": 0.0,
+          "scale": 0.7156834602355957,
+          "frames_compared_d": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frames_compared_1d": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60
+          ],
+          "dims_transverse": 2,
+          "nsub_d": 8,
+          "dt_d_s": 3.2030749519538756e-08
+        },
+        "matched_dt": {
+          "max_abs_diff": 2.9588777317179904e-08,
+          "max_rel_diff": 4.134338567421913e-08,
+          "transverse_nonuniformity_rel": 0.0,
+          "scale": 0.7156834602355957,
+          "frames_compared_d": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frames_compared_1d": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60
+          ],
+          "dims_transverse": 2,
+          "nsub_d": 8,
+          "dt_d_s": 3.2030749519538756e-08
+        },
+        "dt_1d_s": 3.2030749519538756e-08,
+        "layers": [
+          "water37",
+          "soft_tissue"
+        ],
+        "interfaces": [
+          {
+            "x": 0.0027,
+            "sharp": false,
+            "width": 0.0004130794720018754
+          }
+        ],
+        "passed": true
+      },
+      "pressure_release": {
+        "system": "sound_layered",
+        "bc": "pressure_release",
+        "frame_ratio": 4,
+        "own_dt": {
+          "max_abs_diff": 2.94585944526915e-08,
+          "max_rel_diff": 3.248370910046723e-08,
+          "transverse_nonuniformity_rel": 0.0,
+          "scale": 0.9068728685379028,
+          "frames_compared_d": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frames_compared_1d": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60
+          ],
+          "dims_transverse": 2,
+          "nsub_d": 8,
+          "dt_d_s": 3.2030749519538756e-08
+        },
+        "matched_dt": {
+          "max_abs_diff": 2.94585944526915e-08,
+          "max_rel_diff": 3.248370910046723e-08,
+          "transverse_nonuniformity_rel": 0.0,
+          "scale": 0.9068728685379028,
+          "frames_compared_d": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frames_compared_1d": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60
+          ],
+          "dims_transverse": 2,
+          "nsub_d": 8,
+          "dt_d_s": 3.2030749519538756e-08
+        },
+        "dt_1d_s": 3.2030749519538756e-08,
+        "layers": [
+          "soft_tissue",
+          "fat",
+          "water37"
+        ],
+        "interfaces": [
+          {
+            "x": 0.006200000000000001,
+            "sharp": false,
+            "width": 0.00011586322204184586
+          },
+          {
+            "x": 0.0079,
+            "sharp": true,
+            "width": 0.0
+          }
+        ],
+        "passed": true
+      },
+      "rigid": {
+        "system": "sound_layered",
+        "bc": "rigid",
+        "frame_ratio": 4,
+        "own_dt": {
+          "max_abs_diff": 2.8265523144277438e-08,
+          "max_rel_diff": 3.492398940862138e-08,
+          "transverse_nonuniformity_rel": 0.0,
+          "scale": 0.8093440532684326,
+          "frames_compared_d": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frames_compared_1d": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60
+          ],
+          "dims_transverse": 2,
+          "nsub_d": 8,
+          "dt_d_s": 3.2030749519538756e-08
+        },
+        "matched_dt": {
+          "max_abs_diff": 2.8265523144277438e-08,
+          "max_rel_diff": 3.492398940862138e-08,
+          "transverse_nonuniformity_rel": 0.0,
+          "scale": 0.8093440532684326,
+          "frames_compared_d": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frames_compared_1d": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60
+          ],
+          "dims_transverse": 2,
+          "nsub_d": 8,
+          "dt_d_s": 3.2030749519538756e-08
+        },
+        "dt_1d_s": 3.2030749519538756e-08,
+        "layers": [
+          "water37",
+          "soft_tissue",
+          "fat",
+          "muscle"
+        ],
+        "interfaces": [
+          {
+            "x": 0.0048000000000000004,
+            "sharp": false,
+            "width": 0.00036851936892642135
+          },
+          {
+            "x": 0.0081,
+            "sharp": false,
+            "width": 0.0002838847358643212
+          },
+          {
+            "x": 0.0106,
+            "sharp": true,
+            "width": 0.0
+          }
+        ],
+        "passed": true
+      }
+    },
+    "max_rel_diff": 4.134338567421913e-08,
+    "passed": true,
+    "pass_rule": "max relative difference to the 1D solver <= 1e-6 (float32 output)"
+  },
+  "verify_seconds": 4.399989848025143e-07,
+  "smoke": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.8352726697921753,
+        "max": 0.3665699064731598,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          4.2707666026051677e-08,
+          4.2707666026051677e-08
+        ],
+        "seconds": 33.38420080200012,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.9999972868844267,
+          0.9999997157087936
+        ]
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.974791407585144,
+        "max": 0.8744037747383118,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          4.2707666026051677e-08,
+          4.2707666026051677e-08
+        ],
+        "seconds": 33.3540275330015,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.9999986873935012,
+          0.9999974759498429
+        ]
+      },
+      {
+        "bc": "rigid",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.9681991338729858,
+        "max": 0.41043785214424133,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          4.2707666026051677e-08,
+          4.2707666026051677e-08
+        ],
+        "seconds": 31.96191495599487,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.999998965227411,
+          0.9999972140770558
+        ]
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.6254934668540955,
+        "max": 0.3645365536212921,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          3.6606570879472867e-08,
+          3.6606570879472867e-08
+        ],
+        "seconds": 34.33872042800067,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.9999997963181843,
+          0.9999998704341008
+        ]
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -0.555974006652832,
+        "max": 1.0847495794296265,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          3.6606570879472867e-08,
+          3.6606570879472867e-08
+        ],
+        "seconds": 35.687930873005826,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.9999994231521416,
+          0.9999969684024678
+        ]
+      }
+    ]
+  },
+  "resolution": {
+    "bc": "periodic",
+    "n": [
+      96,
+      192
+    ],
+    "n_traj": 1,
+    "rel_L2_diff_all_frames": [
+      0.0009586833126552058
+    ],
+    "max": 0.0009586833126552058,
+    "estimated_error_default_grid": [
+      0.0012782444168736077
+    ],
+    "seconds": [
+      14.615720386995235,
+      574.1758966940033
+    ]
+  },
+  "timing": {
+    "bc": "periodic",
+    "n_traj": 16,
+    "n_frames": 24,
+    "n_internal": 96,
+    "seconds": 297.37511770600395,
+    "seconds_per_trajectory": 18.585944856625247,
+    "batch_per_call": 4,
+    "rk4_substeps_per_frame": [
+      6,
+      6
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "load_average_at_end": [
+      2.11376953125,
+      1.912109375,
+      1.921875
+    ],
+    "nice": 0
+  },
+  "passed": true,
+  "resolution_study": {
+    "source": "results/verification3d/sound_resolution_d3.json (tests2d/resolution_sound.py)",
+    "chosen_internal_grid": 96,
+    "pulse_width_rule": "1/e half-width uniform in [3, 10] output cells",
+    "worst_case": "launched Gaussian of the minimum width (3 output cells), uniform medium, full record, relative L2 over all frames against a Richardson extrapolation",
+    "cases": {
+      "uniform_launched_w0.3mm": {
+        "error_at_chosen_internal_grid": 0.5403403501804196,
+        "all_grids": {
+          "64": 0.8351869326541534,
+          "96": 0.5403403501804196,
+          "128": 0.30394144697648606
+        }
+      },
+      "uniform_launched_w1.2mm": {
+        "error_at_chosen_internal_grid": 0.014389832170054231,
+        "all_grids": {
+          "64": 0.032436819407213255,
+          "96": 0.014389832170054231,
+          "128": 0.008094280595655505
+        }
+      },
+      "uniform_launched_w2.6mm": {
+        "error_at_chosen_internal_grid": 0.0014401402784825032,
+        "all_grids": {
+          "64": 0.0032421499174216427,
+          "96": 0.0014401402784825032,
+          "128": 0.000810078906646408
+        }
+      },
+      "layered_random_seed500": {
+        "error_at_chosen_internal_grid": 0.0012785687408602253,
+        "all_grids": {
+          "64": 0.0028782015239936258,
+          "96": 0.0012785687408602253,
+          "128": 0.0007191949167338766
+        }
+      },
+      "uniform_random_seed501": {
+        "error_at_chosen_internal_grid": 0.006059431604733447,
+        "all_grids": {
+          "64": 0.013643672479919001,
+          "96": 0.006059431604733447,
+          "128": 0.0034084302776625636
+        }
+      }
+    }
+  }
+}

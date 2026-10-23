@@ -1,0 +1,12 @@
+Code in this folder (the directories pfm, pfm2d, experiments, tools, tests, tests2d and
+examples) is licensed under the Apache License, Version 2.0. The full text is in
+LICENSE-APACHE-2.0 and at https://www.apache.org/licenses/LICENSE-2.0
+
+The trained networks (the folders runs/ and runs_grid/, each network's model.pt and log.json),
+README.md, the result files (results/) and the parameter tables with their source notes
+(params/) are licensed under the Creative Commons Attribution 4.0 International licence
+(CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+The source documents cited in params/ remain under their own publishers' terms; only the
+compilation and the notes in this folder are covered here.
+
+Copyright 2026 Abhay Chakra Sadineni

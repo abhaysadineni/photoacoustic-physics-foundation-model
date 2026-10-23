@@ -1,0 +1,307 @@
+{
+  "system": "heat",
+  "check": "Gaussian hot spot spreading, d = 1, 2, 3",
+  "n": [
+    128,
+    256,
+    512
+  ],
+  "error": [
+    0.0009800670394430277,
+    0.00024448306161043413,
+    6.108761996729897e-05
+  ],
+  "observed_order": [
+    2.0031459219815577,
+    2.0007825773358676
+  ],
+  "promised_order": 2.0,
+  "passed": true,
+  "d": 1,
+  "norm": "relative L2, volume weighted, at t1",
+  "s0_m": 0.00064,
+  "t1_s": 3.0720000000000005,
+  "alpha_m2_s": 1e-07,
+  "domain_m": 0.0128,
+  "bc": "neumann (wall at least 5 final 1/e radii from the centre)",
+  "cases": {
+    "d1": {
+      "system": "heat",
+      "check": "gaussian_spreading_d1",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.0009800670394430277,
+        0.00024448306161043413,
+        6.108761996729897e-05
+      ],
+      "observed_order": [
+        2.0031459219815577,
+        2.0007825773358676
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 1,
+      "norm": "relative L2, volume weighted, at t1",
+      "s0_m": 0.00064,
+      "t1_s": 3.0720000000000005,
+      "alpha_m2_s": 1e-07,
+      "domain_m": 0.0128,
+      "bc": "neumann (wall at least 5 final 1/e radii from the centre)"
+    },
+    "d2": {
+      "system": "heat",
+      "check": "gaussian_spreading_d2",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.0028697988233074346,
+        0.0007146044315154172,
+        0.00017847477914603716
+      ],
+      "observed_order": [
+        2.005732839888473,
+        2.0014246439046617
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "norm": "relative L2, volume weighted, at t1",
+      "s0_m": 0.00064,
+      "t1_s": 3.0720000000000005,
+      "alpha_m2_s": 1e-07,
+      "domain_m": 0.0128,
+      "bc": "neumann (wall at least 5 final 1/e radii from the centre)"
+    },
+    "d3": {
+      "system": "heat",
+      "check": "gaussian_spreading_d3",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.005169143537428066,
+        0.0012908154960919681,
+        0.00032261226202019895
+      ],
+      "observed_order": [
+        2.0016424613476995,
+        2.0004096230533266
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "norm": "relative L2, volume weighted, at t1",
+      "s0_m": 0.00064,
+      "t1_s": 3.0720000000000005,
+      "alpha_m2_s": 1e-07,
+      "domain_m": 0.0128,
+      "bc": "neumann (wall at least 5 final 1/e radii from the centre)"
+    }
+  },
+  "verify_seconds": 0.31056494799850043,
+  "smoke_test": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "channels": [
+          [
+            1
+          ]
+        ],
+        "ch1_min": 0.0,
+        "ch1_max": 3.120032787322998,
+        "ch1_mean_rel_change_per_frame_1to8": 0.07072438299655914,
+        "ch1_mean_rel_change_per_frame_56to63": 0.017009969800710678,
+        "internal_dt_s": [
+          0.002604802604802605,
+          0.0026386312100597814,
+          0.003149993847668266,
+          0.0027271758815382977,
+          0.00243322878053417,
+          0.0031257631257631258,
+          0.002282860709827002,
+          0.0023488393430589963
+        ],
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "train",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "channels": [
+          [
+            1
+          ]
+        ],
+        "ch1_min": 0.0,
+        "ch1_max": 4.780449867248535,
+        "ch1_mean_rel_change_per_frame_1to8": 0.06499053537845612,
+        "ch1_mean_rel_change_per_frame_56to63": 0.014301626943051815,
+        "internal_dt_s": [
+          0.003414699213018541,
+          0.0030324567638000473,
+          0.003727974370176205,
+          0.0029445594662985968,
+          0.0030784030784030783,
+          0.0030552571905955363,
+          0.0032249937011841773,
+          0.0030552571905955363
+        ],
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "neumann",
+        "regime": "train",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "channels": [
+          [
+            1
+          ]
+        ],
+        "ch1_min": 0.0,
+        "ch1_max": 3.7373509407043457,
+        "ch1_mean_rel_change_per_frame_1to8": 0.04833196476101875,
+        "ch1_mean_rel_change_per_frame_56to63": 0.017787547782063484,
+        "internal_dt_s": [
+          0.0037624926513815404,
+          0.003414699213018541,
+          0.003303652084139889,
+          0.0035960106756566935,
+          0.003414699213018541,
+          0.0035644667223614594,
+          0.004023259468804023,
+          0.003983815748521631
+        ],
+        "failures": [],
+        "passed": true
+      }
+    ]
+  },
+  "timing_64x64": [
+    {
+      "bc": "periodic",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 16.36901270600356,
+      "seconds_per_trajectory": 0.2557658235313056,
+      "rk4_substeps_per_frame_max": 177,
+      "rk4_substeps_per_frame_min": 123
+    },
+    {
+      "bc": "dirichlet",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 13.254919076003716,
+      "seconds_per_trajectory": 0.20710811056255807,
+      "rk4_substeps_per_frame_max": 142,
+      "rk4_substeps_per_frame_min": 100
+    },
+    {
+      "bc": "neumann",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 15.128134767001029,
+      "seconds_per_trajectory": 0.23637710573439108,
+      "rk4_substeps_per_frame_max": 142,
+      "rk4_substeps_per_frame_min": 99
+    }
+  ],
+  "dt_frame_s": 0.40634920634920635,
+  "length_m": 0.0128,
+  "param_ranges": {
+    "train": {
+      "alpha_m2_s": [
+        9.41450730745091e-08,
+        1.3641235506187275e-07
+      ],
+      "rho_cp_J_m3K": [
+        2230600.0,
+        3592050.0
+      ],
+      "n_hot_spots": [
+        1,
+        3
+      ],
+      "hot_spot_amp_K": [
+        0.2,
+        2.0
+      ],
+      "width_m": [
+        0.0002,
+        0.001
+      ],
+      "n_heaters": [
+        0,
+        2
+      ],
+      "heating_K_per_frame": [
+        0.02,
+        0.2
+      ]
+    },
+    "ood": {
+      "alpha_m2_s": [
+        1.3641235506187275e-07,
+        1.504e-07
+      ],
+      "rho_cp_J_m3K": [
+        3592050.0,
+        4151364.4692
+      ]
+    }
+  },
+  "param_sources": {
+    "alpha_m2_s (train low)": "muscle_fat_thermal.fat: k_W_mK / (rho_kg_m3 * c_J_kgK)",
+    "alpha_m2_s (train high, ood low)": "muscle_fat_thermal.muscle: k / (rho c)",
+    "alpha_m2_s (ood high)": "water37_thermal.alpha_th_m2_s",
+    "rho_cp (train)": "muscle_fat_thermal.fat and .muscle: rho_kg_m3 * c_J_kgK",
+    "rho_cp (ood high)": "water37_thermal: rho_kg_m3 * cp_J_kgK",
+    "alpha_ref for dt_frame": "soft_tissue_alpha_th.value",
+    "LENGTH": "modelling choice (12.8 mm)",
+    "hot spots, heaters, amplitudes, widths, switching": "modelling choice"
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "machine": "x86_64"
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "verify": {
+    "system": "thermoacoustic",
+    "cases": {
+      "constant_heating": {
+        "system": "chain",
+        "check": "acoustic_constant_heating_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.030250195542028232,
+          0.007522029838391164,
+          0.0018760575434840006
+        ],
+        "observed_order": [
+          2.0077505338398254,
+          2.003417949593459
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "s_m": 0.00128,
+        "t_s": 2.4599615631005764e-06,
+        "H0_W_m3": 1000000000.0,
+        "gruneisen": 0.201,
+        "reference": "exact (s^2/(4rc)) [exp(-(r-ct)^2/s^2) - exp(-(r+ct)^2/s^2)] (chain.duhamel_gauss_exact)",
+        "reference_check": {
+          "closed_form": true
+        },
+        "code_path": "chain.run_coupled (coupled T, p, u right-hand side)",
+        "norm": "relative L2 (point values)"
+      }
+    },
+    "note": "the chain's Duhamel case (same run_coupled integrator)",
+    "passed": true
+  },
+  "verify_seconds": 4.989997250959277e-07,
+  "smoke": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 33.321205139160156,
+        "channels": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          6.406149903907751e-08
+        ],
+        "seconds": 10.440617658998235,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.08477924520628874,
+          0.02250567523497987
+        ],
+        "fluence_relative_residual_max": 9.808397033034414e-11,
+        "fluence_method": "cg"
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -50.42768478393555,
+        "max": 22.41897964477539,
+        "channels": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          5.124919923126201e-08
+        ],
+        "seconds": 12.005317741000908,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.03483555268110407,
+          0.06411604414786277
+        ],
+        "fluence_relative_residual_max": 9.53074450220233e-11,
+        "fluence_method": "cg"
+      },
+      {
+        "bc": "rigid",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 20.813854217529297,
+        "channels": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          6.406149903907751e-08
+        ],
+        "seconds": 11.121001388004515,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.051959341370618646,
+          0.04022488434760081
+        ],
+        "fluence_relative_residual_max": 9.858814246366586e-11,
+        "fluence_method": "cg"
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 138.73681640625,
+        "channels": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          6.406149903907751e-08
+        ],
+        "seconds": 10.169094726006733,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.021730195614054235,
+          0.02833963641199311
+        ],
+        "fluence_relative_residual_max": 9.154213209543018e-11,
+        "fluence_method": "cg"
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": -53.0101432800293,
+        "max": 28.17060089111328,
+        "channels": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          6.406149903907751e-08
+        ],
+        "seconds": 10.38640891299292,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.015928450579520848,
+          0.12320537803482208
+        ],
+        "fluence_relative_residual_max": 9.297825663639036e-11,
+        "fluence_method": "cg"
+      }
+    ]
+  },
+  "resolution": {
+    "bc": "periodic",
+    "n": [
+      64,
+      128
+    ],
+    "n_traj": 1,
+    "rel_L2_diff_all_frames": [
+      0.00034942077433990093
+    ],
+    "max": 0.00034942077433990093,
+    "estimated_error_default_grid": [
+      0.00046589436578653453
+    ],
+    "seconds": [
+      4.722777338000014,
+      105.03586018900387
+    ]
+  },
+  "timing": {
+    "bc": "periodic",
+    "n_traj": 16,
+    "n_frames": 24,
+    "n_internal": 64,
+    "seconds": 100.2205888699973,
+    "seconds_per_trajectory": 6.263786804374831,
+    "batch_per_call": 4,
+    "rk4_substeps_per_frame": [
+      4,
+      5
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "load_average_at_end": [
+      1.5771484375,
+      1.50341796875,
+      1.7109375
+    ],
+    "nice": 0
+  },
+  "passed": true
+}

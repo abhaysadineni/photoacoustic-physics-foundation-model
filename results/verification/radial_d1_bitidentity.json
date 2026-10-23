@@ -1,0 +1,896 @@
+{
+ "trajectories": {
+  "n_cases": 56,
+  "all_identical": true,
+  "rows": [
+   {
+    "case": "chain_d1|ood|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d1|ood|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d1|ood|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d1|train|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d1|train|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d1|train|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d2|ood|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d2|ood|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d2|train|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d2|train|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d3|ood|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d3|ood|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d3|train|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "chain_d3|train|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "heat|ood|dirichlet",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "heat|ood|neumann",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "heat|ood|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "heat|train|dirichlet",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "heat|train|neumann",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "heat|train|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "light|ood|dirichlet",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "light|ood|neumann",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "light|ood|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "light|train|dirichlet",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "light|train|neumann",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "light|train|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "photothermal|ood|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "photothermal|ood|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "photothermal|ood|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "photothermal|train|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "photothermal|train|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "photothermal|train|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "sound_layered|ood|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_layered|ood|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_layered|ood|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_layered|train|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_layered|train|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_layered|train|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_lossy|ood|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_lossy|ood|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_lossy|ood|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_lossy|train|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_lossy|train|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_lossy|train|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_uniform|ood|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_uniform|ood|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_uniform|ood|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_uniform|train|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_uniform|train|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "sound_uniform|train|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": true
+   },
+   {
+    "case": "thermoacoustic|ood|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "thermoacoustic|ood|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "thermoacoustic|ood|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "thermoacoustic|train|periodic",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "thermoacoustic|train|pressure_release",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   },
+   {
+    "case": "thermoacoustic|train|rigid",
+    "shape": [
+     8,
+     64,
+     3,
+     128
+    ],
+    "bytes_identical": true,
+    "max_abs_diff": 0.0,
+    "params_in_equal_except_dim": true,
+    "params_out_equal_except_dim": true,
+    "dt_length_channels_equal": true,
+    "dim_key_added": false
+   }
+  ]
+ },
+ "verification_json": {
+  "light": {
+   "n_leaves_before": 432,
+   "n_leaves_after": 432,
+   "n_compared": 432,
+   "n_different": 0,
+   "different": [],
+   "only_before": [],
+   "only_after": []
+  },
+  "heat": {
+   "n_leaves_before": 171,
+   "n_leaves_after": 171,
+   "n_compared": 171,
+   "n_different": 0,
+   "different": [],
+   "only_before": [],
+   "only_after": []
+  },
+  "sound": {
+   "n_leaves_before": 431,
+   "n_leaves_after": 431,
+   "n_compared": 431,
+   "n_different": 0,
+   "different": [],
+   "only_before": [],
+   "only_after": []
+  },
+  "chain": {
+   "n_leaves_before": 10265,
+   "n_leaves_after": 10265,
+   "n_compared": 10265,
+   "n_different": 0,
+   "different": [],
+   "only_before": [],
+   "only_after": []
+  },
+  "coupled": {
+   "n_leaves_before": 716,
+   "n_leaves_after": 716,
+   "n_compared": 716,
+   "n_different": 0,
+   "different": [],
+   "only_before": [],
+   "only_after": []
+  }
+ },
+ "all_json_identical": true
+}

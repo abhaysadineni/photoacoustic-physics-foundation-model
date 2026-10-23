@@ -1,0 +1,474 @@
+{
+  "verify": {
+    "system": "photothermal",
+    "cases": {
+      "light_edge_pressure_release": {
+        "system": "chain",
+        "check": "light_steady_edge_pressure_release_d2",
+        "n": [
+          64,
+          128,
+          256
+        ],
+        "error": [
+          0.000196400392413754,
+          4.9116483596153454e-05,
+          1.228014608652016e-05
+        ],
+        "observed_order": [
+          1.9995186297691772,
+          1.999879553986876
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 2,
+        "bc": "pressure_release",
+        "mu_a_m-1": 14.374573758932081,
+        "musp_m-1": 1032.6746270444582,
+        "mu_eff_m-1": 212.49154782846696,
+        "solution": "sinh(mu_eff (L - x))/sinh(mu_eff L)",
+        "solver": [
+          {
+            "method": "direct",
+            "unknowns": 4096,
+            "relative_residual": 1.067108148885226e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          },
+          {
+            "method": "direct",
+            "unknowns": 16384,
+            "relative_residual": 1.478021088817211e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          },
+          {
+            "method": "direct",
+            "unknowns": 65536,
+            "relative_residual": 2.0408386144790064e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          }
+        ],
+        "norm": "relative L2 (point values)"
+      },
+      "light_edge_periodic": {
+        "system": "chain",
+        "check": "light_steady_edge_periodic_d2",
+        "n": [
+          64,
+          128,
+          256
+        ],
+        "error": [
+          0.00018644199262314535,
+          4.662623920767985e-05,
+          1.1657544924319606e-05
+        ],
+        "observed_order": [
+          1.9995128628829562,
+          1.9998780797102726
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 2,
+        "bc": "periodic",
+        "mu_a_m-1": 14.374573758932081,
+        "musp_m-1": 1032.6746270444582,
+        "mu_eff_m-1": 212.49154782846696,
+        "solution": "cosh(mu_eff (x - L/2))/cosh(mu_eff L/2)",
+        "solver": [
+          {
+            "method": "direct",
+            "unknowns": 4096,
+            "relative_residual": 1.1874765472134054e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          },
+          {
+            "method": "direct",
+            "unknowns": 16384,
+            "relative_residual": 1.6183465489394769e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          },
+          {
+            "method": "direct",
+            "unknowns": 65536,
+            "relative_residual": 2.371832648606148e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          }
+        ],
+        "norm": "relative L2 (point values)"
+      },
+      "light_point_source": {
+        "system": "chain",
+        "check": "light_steady_point_source_d2",
+        "n": [
+          64,
+          128,
+          256
+        ],
+        "error": [
+          0.0004644423617014403,
+          0.00011589324198234169,
+          2.891329140322802e-05
+        ],
+        "observed_order": [
+          2.0027031244214197,
+          2.002991686334703
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 2,
+        "mu_eff_m-1": 212.49154782846696,
+        "D_m": 0.0003183549856850758,
+        "solver": [
+          {
+            "method": "direct",
+            "unknowns": 4096,
+            "relative_residual": 2.8572307116793945e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          },
+          {
+            "method": "direct",
+            "unknowns": 16384,
+            "relative_residual": 4.499480450083444e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          },
+          {
+            "method": "direct",
+            "unknowns": 65536,
+            "relative_residual": 7.033764823167404e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          }
+        ],
+        "solution": "K0(mu_eff r)/(2 pi D)",
+        "norm": "relative L2 over cells with r >= L/8",
+        "bc": "exact Dirichlet values at the face centres of all walls"
+      },
+      "uniform_heating": {
+        "system": "photothermal",
+        "check": "uniform_constant_heating_exact_d2",
+        "n": [
+          64,
+          128
+        ],
+        "error": [
+          1.2527328664780508e-15,
+          1.36661767252151e-15
+        ],
+        "observed_order": [],
+        "promised_order": null,
+        "passed": true,
+        "pass_rule": "max relative error over all frames < 1e-12 (exact in the scheme)",
+        "rho_cp_J_m3K": 4172000.0,
+        "H0_W_m3": 1000000000.0,
+        "dt_frame_s": 1.2812299807815502e-07
+      }
+    },
+    "note": "steady fluence cases are the chain's (same steady_fluence function)",
+    "passed": true
+  },
+  "verify_seconds": 3.1899980967864394e-07,
+  "smoke": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 8422685.0,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          3.2030749519538756e-08,
+          2.5624599615631005e-08,
+          3.2030749519538756e-08,
+          3.2030749519538756e-08
+        ],
+        "seconds": 0.5705872530015768,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.08160515837116135,
+          0.021080036067162432,
+          0.11279906091738294,
+          0.031827428442475575
+        ],
+        "fluence_relative_residual_max": 1.7672115275439978e-15,
+        "fluence_method": "direct"
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "train",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 9475705.0,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          2.5624599615631005e-08,
+          3.2030749519538756e-08,
+          3.2030749519538756e-08,
+          3.2030749519538756e-08
+        ],
+        "seconds": 0.6042186240010778,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.06247922766987775,
+          0.034588575760928934,
+          0.10468574441466144,
+          0.03499420658539031
+        ],
+        "fluence_relative_residual_max": 1.3041906475605132e-15,
+        "fluence_method": "direct"
+      },
+      {
+        "bc": "rigid",
+        "regime": "train",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 8657603.0,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          3.2030749519538756e-08,
+          3.2030749519538756e-08,
+          3.2030749519538756e-08,
+          2.5624599615631005e-08
+        ],
+        "seconds": 0.6627243990005809,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.0738785370075573,
+          0.04354051182629661,
+          0.047298618769016004,
+          0.058220944510775086
+        ],
+        "fluence_relative_residual_max": 1.5652002677172365e-15,
+        "fluence_method": "direct"
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 9049946.0,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          3.2030749519538756e-08,
+          3.2030749519538756e-08,
+          3.2030749519538756e-08,
+          2.5624599615631005e-08
+        ],
+        "seconds": 0.5686437929980457,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.04753619227520975,
+          0.14009830841062143,
+          0.012060832747846964,
+          0.01370662625544986
+        ],
+        "fluence_relative_residual_max": 1.3121803152981053e-15,
+        "fluence_method": "direct"
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "ood",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 9316833.0,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          2.5624599615631005e-08,
+          3.2030749519538756e-08,
+          3.2030749519538756e-08,
+          3.2030749519538756e-08
+        ],
+        "seconds": 0.5758595279985457,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.03365900144632978,
+          0.009276608291861815,
+          0.02066270420514225,
+          0.009100889859392395
+        ],
+        "fluence_relative_residual_max": 1.7260359191843023e-15,
+        "fluence_method": "direct"
+      }
+    ]
+  },
+  "resolution": {
+    "bc": "periodic",
+    "n": [
+      128,
+      256
+    ],
+    "n_traj": 2,
+    "rel_L2_diff_all_frames": [
+      8.102283576280714e-05,
+      8.766360368025031e-05
+    ],
+    "max": 8.766360368025031e-05,
+    "estimated_error_default_grid": [
+      0.00010803044768374285,
+      0.00011688480490700041
+    ],
+    "seconds": [
+      0.2654352559984545,
+      2.645978474000003
+    ]
+  },
+  "timing": {
+    "bc": "periodic",
+    "n_traj": 16,
+    "n_frames": 32,
+    "n_internal": 128,
+    "seconds": 2.9583559590028017,
+    "seconds_per_trajectory": 0.1848972474376751,
+    "batch_per_call": 16,
+    "rk4_substeps_per_frame": [
+      4,
+      5
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "load_average_at_end": [
+      1.41943359375,
+      0.70068359375,
+      0.685546875
+    ],
+    "nice": 0
+  },
+  "passed": true
+}

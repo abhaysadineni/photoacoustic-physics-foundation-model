@@ -1,0 +1,11 @@
+{
+  "cpu_path_unchanged": true,
+  "losses_identical": true,
+  "prefetch_identical": true,
+  "resume_identical": true,
+  "resume_prefetch_identical": true,
+  "old_train_py": "pre-change pfm2d/train.py (commit 5d045c2)",
+  "steps": 60,
+  "torch": "2.14.1+cu130",
+  "passed": true
+}

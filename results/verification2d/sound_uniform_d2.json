@@ -1,0 +1,438 @@
+{
+  "verify": {
+    "system": "sound_uniform",
+    "check": "plane wave along the diagonal; radially symmetric Gaussian pulse",
+    "n": [
+      64,
+      128,
+      256
+    ],
+    "error": [
+      0.009400837625802128,
+      0.0023463879718416338,
+      0.0005863038001740224
+    ],
+    "observed_order": [
+      2.002347727740714,
+      2.000721267800704
+    ],
+    "promised_order": 2.0,
+    "passed": true,
+    "d": 2,
+    "direction": [
+      0.7071067811865475,
+      0.7071067811865475
+    ],
+    "kappa": 2.0,
+    "c_m_s": 1561.0,
+    "rho_kg_m3": 1043.0,
+    "t_end_s": 5.798185009088922e-06,
+    "rk4_steps": [
+      91,
+      182,
+      363
+    ],
+    "energy_ratio": [
+      0.9999981533499495,
+      0.9999999412315451,
+      0.9999999981295484
+    ],
+    "norm": "relative L2 of p after one period (exact: initial state)",
+    "cases": {
+      "plane_wave": {
+        "system": "sound_uniform",
+        "check": "plane_wave_diagonal_d2",
+        "n": [
+          64,
+          128,
+          256
+        ],
+        "error": [
+          0.009400837625802128,
+          0.0023463879718416338,
+          0.0005863038001740224
+        ],
+        "observed_order": [
+          2.002347727740714,
+          2.000721267800704
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 2,
+        "direction": [
+          0.7071067811865475,
+          0.7071067811865475
+        ],
+        "kappa": 2.0,
+        "c_m_s": 1561.0,
+        "rho_kg_m3": 1043.0,
+        "t_end_s": 5.798185009088922e-06,
+        "rk4_steps": [
+          91,
+          182,
+          363
+        ],
+        "energy_ratio": [
+          0.9999981533499495,
+          0.9999999412315451,
+          0.9999999981295484
+        ],
+        "norm": "relative L2 of p after one period (exact: initial state)"
+      },
+      "radial_pulse": {
+        "system": "sound_uniform",
+        "check": "radial_gaussian_pulse_d2",
+        "n": [
+          64,
+          128,
+          256
+        ],
+        "error": [
+          0.016631835397190476,
+          0.004159163115588559,
+          0.001039747577186887
+        ],
+        "observed_order": [
+          1.999582213889534,
+          2.0000599430089534
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 2,
+        "s_m": 0.00128,
+        "t_s": 2.4599615631005764e-06,
+        "c_t_over_L": 0.3,
+        "c_m_s": 1561.0,
+        "reference": "Hankel transform int k P0(k) J0(kr) cos(ckt) dk (chain.hankel_gauss_gl on a 4001-point radial grid, cubic spline; checked against chain.hankel_gauss)",
+        "reference_check": {
+          "closed_form": false,
+          "n_radii": 4001,
+          "r_max_m": 0.01152,
+          "spline_vs_quad_max_rel": 1.2397139695138935e-12,
+          "gauss_legendre_vs_quad_max_rel": 6.597952137917804e-16,
+          "quad_error_estimate_max_rel": 4.15739114422831e-14,
+          "value_at_r_max_rel": 5.256534988784247e-16,
+          "passed_1e-9": true
+        },
+        "bc": "periodic; the exact solution is summed over the 3^d nearest images",
+        "norm": "relative L2 at t (point values)"
+      }
+    },
+    "dt_frame_s": 1.2812299807815502e-07
+  },
+  "verify_seconds": 4.231555323996872,
+  "smoke": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": -0.6810140013694763,
+        "max": 0.9923586249351501,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          1.6015374759769378e-08,
+          1.4235888675350559e-08,
+          1.6015374759769378e-08,
+          1.4235888675350559e-08
+        ],
+        "seconds": 4.706544435000978,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.9999999993763379,
+          0.9999999534985817,
+          0.9999999919933099,
+          0.9999998226173065
+        ]
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "train",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": -0.854807436466217,
+        "max": 0.7317807078361511,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          1.6015374759769378e-08,
+          1.6015374759769378e-08,
+          1.6015374759769378e-08,
+          1.6015374759769378e-08
+        ],
+        "seconds": 4.755336075999367,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.9999999910484434,
+          0.9999999877346059,
+          0.9999999657908986,
+          0.9999999974320999
+        ]
+      },
+      {
+        "bc": "rigid",
+        "regime": "train",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": -0.9260767698287964,
+        "max": 0.8085759878158569,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          1.6015374759769378e-08,
+          1.6015374759769378e-08,
+          1.4235888675350559e-08,
+          1.6015374759769378e-08
+        ],
+        "seconds": 4.614227505000599,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.9999999704854948,
+          0.9999999504279288,
+          0.9999999945737359,
+          0.9999999935633488
+        ]
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": -0.8493337035179138,
+        "max": 0.576231837272644,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          1.2812299807815502e-08,
+          1.4235888675350559e-08,
+          1.8303285439736433e-08,
+          1.4235888675350559e-08
+        ],
+        "seconds": 4.575266950996593,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.9999998627354781,
+          0.9999999987395322,
+          0.9999999859908176,
+          0.9999999984989365
+        ]
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "ood",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": -0.5749713182449341,
+        "max": 0.6828213930130005,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          1.4235888675350559e-08,
+          1.4235888675350559e-08,
+          1.2812299807815502e-08,
+          1.4235888675350559e-08
+        ],
+        "seconds": 4.9900458800038905,
+        "failures": [],
+        "passed": true,
+        "energy_ratio": [
+          0.999999998753715,
+          0.9999999789451282,
+          0.9999998535064234,
+          0.9999999624300375
+        ]
+      }
+    ]
+  },
+  "resolution": {
+    "bc": "periodic",
+    "n": [
+      256,
+      512
+    ],
+    "n_traj": 2,
+    "rel_L2_diff_all_frames": [
+      0.0001902238980541465,
+      0.0019310839735902391
+    ],
+    "max": 0.0019310839735902391,
+    "estimated_error_default_grid": [
+      0.00025363186407219534,
+      0.002574778631453652
+    ],
+    "seconds": [
+      2.1031557070018607,
+      18.37224530000094
+    ]
+  },
+  "timing": {
+    "bc": "periodic",
+    "n_traj": 16,
+    "n_frames": 32,
+    "n_internal": 256,
+    "seconds": 22.848212134005735,
+    "seconds_per_trajectory": 1.4280132583753584,
+    "batch_per_call": 16,
+    "rk4_substeps_per_frame": [
+      8,
+      9
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "load_average_at_end": [
+      1.91357421875,
+      2.0244140625,
+      2.0556640625
+    ],
+    "nice": 0
+  },
+  "passed": true,
+  "resolution_study": {
+    "source": "results/verification2d/sound_resolution_d2.json (tests2d/resolution_sound.py)",
+    "chosen_internal_grid": 256,
+    "pulse_width_rule": "1/e half-width uniform in [3, 10] output cells",
+    "worst_case": "launched Gaussian of the minimum width (3 output cells), uniform medium, full record, relative L2 over all frames against a Richardson extrapolation",
+    "cases": {
+      "uniform_launched_w0.3mm": {
+        "error_at_chosen_internal_grid": 0.06649783380813305,
+        "all_grids": {
+          "128": 0.24607534770856604,
+          "256": 0.06649783380813305,
+          "512": 0.016624458452033263
+        }
+      },
+      "uniform_launched_w0.6mm": {
+        "error_at_chosen_internal_grid": 0.009030596346031573,
+        "all_grids": {
+          "128": 0.036191335203141335,
+          "256": 0.009030596346031573,
+          "512": 0.0022576490865078933
+        }
+      },
+      "uniform_launched_w1.3mm": {
+        "error_at_chosen_internal_grid": 0.0009055016657488534,
+        "all_grids": {
+          "128": 0.003625412291141092,
+          "256": 0.0009055016657488534,
+          "512": 0.00022637541643721377
+        }
+      },
+      "layered_random_seed500": {
+        "error_at_chosen_internal_grid": 0.0020465615093902697,
+        "all_grids": {
+          "128": 0.008178548515061295,
+          "256": 0.0020465615093902697,
+          "512": 0.0005116403773475674
+        }
+      },
+      "uniform_random_seed501": {
+        "error_at_chosen_internal_grid": 0.0003174664298381221,
+        "all_grids": {
+          "128": 0.001270411419059273,
+          "256": 0.0003174664298381221,
+          "512": 7.936660745953028e-05
+        }
+      }
+    }
+  }
+}

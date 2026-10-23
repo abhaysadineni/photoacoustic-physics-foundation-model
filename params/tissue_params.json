@@ -1,0 +1,2601 @@
+{
+  "title": "Physical parameters for photoacoustic simulation in soft tissue",
+  "compiled": "2026-10-20",
+  "fetched": "2026-10-20",
+  "conventions": {
+    "absorption_coefficients": "natural-log (Napierian) mu_a; SI m^-1 = 100 x cm^-1",
+    "molar_extinction": "decadic, cm^-1 M^-1; SI m^2 mol^-1 = 0.1 x cm^-1 M^-1",
+    "attenuation": "1 Np = 8.686 dB (20/ln10)",
+    "status_values": "VERIFIED = read from fetched source; DERIVED = computed here from fetched values (arithmetic shown); UNVERIFIED = no source retrieved, value null"
+  },
+  "parameters": [
+    {
+      "id": "eps_HbO2_532",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of oxyhaemoglobin at 532 nm",
+      "symbol": "epsilon_HbO2",
+      "value": 43876,
+      "units_source": "cm^-1 M^-1 (decadic, per mole Hb per litre)",
+      "value_SI": 4387.6,
+      "units_SI": "m^2 mol^-1 (decadic); 1 cm^-1 M^-1 = 0.1 m^2 mol^-1",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=532 nm, column 'Hb02'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "eps_Hb_532",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of deoxyhaemoglobin at 532 nm",
+      "symbol": "epsilon_Hb",
+      "value": 40584,
+      "units_source": "cm^-1 M^-1 (decadic)",
+      "value_SI": 4058.4,
+      "units_SI": "m^2 mol^-1 (decadic)",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=532 nm, column 'Hb'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "eps_HbO2_750",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of oxyhaemoglobin at 750 nm",
+      "symbol": "epsilon_HbO2",
+      "value": 518,
+      "units_source": "cm^-1 M^-1 (decadic, per mole Hb per litre)",
+      "value_SI": 51.800000000000004,
+      "units_SI": "m^2 mol^-1 (decadic); 1 cm^-1 M^-1 = 0.1 m^2 mol^-1",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=750 nm, column 'Hb02'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "eps_Hb_750",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of deoxyhaemoglobin at 750 nm",
+      "symbol": "epsilon_Hb",
+      "value": 1405.24,
+      "units_source": "cm^-1 M^-1 (decadic)",
+      "value_SI": 140.524,
+      "units_SI": "m^2 mol^-1 (decadic)",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=750 nm, column 'Hb'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "eps_HbO2_800",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of oxyhaemoglobin at 800 nm",
+      "symbol": "epsilon_HbO2",
+      "value": 816,
+      "units_source": "cm^-1 M^-1 (decadic, per mole Hb per litre)",
+      "value_SI": 81.60000000000001,
+      "units_SI": "m^2 mol^-1 (decadic); 1 cm^-1 M^-1 = 0.1 m^2 mol^-1",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=800 nm, column 'Hb02'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "eps_Hb_800",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of deoxyhaemoglobin at 800 nm",
+      "symbol": "epsilon_Hb",
+      "value": 761.72,
+      "units_source": "cm^-1 M^-1 (decadic)",
+      "value_SI": 76.17200000000001,
+      "units_SI": "m^2 mol^-1 (decadic)",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=800 nm, column 'Hb'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "eps_HbO2_850",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of oxyhaemoglobin at 850 nm",
+      "symbol": "epsilon_HbO2",
+      "value": 1058,
+      "units_source": "cm^-1 M^-1 (decadic, per mole Hb per litre)",
+      "value_SI": 105.80000000000001,
+      "units_SI": "m^2 mol^-1 (decadic); 1 cm^-1 M^-1 = 0.1 m^2 mol^-1",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=850 nm, column 'Hb02'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "eps_Hb_850",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of deoxyhaemoglobin at 850 nm",
+      "symbol": "epsilon_Hb",
+      "value": 691.32,
+      "units_source": "cm^-1 M^-1 (decadic)",
+      "value_SI": 69.132,
+      "units_SI": "m^2 mol^-1 (decadic)",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=850 nm, column 'Hb'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "C_Hb_blood",
+      "group": "1_haemoglobin",
+      "name": "Haemoglobin mass concentration of whole blood (assumed)",
+      "symbol": "C_m,Hb",
+      "value": 150,
+      "units_source": "g L^-1",
+      "value_SI": 150,
+      "units_SI": "kg m^-3",
+      "condition": "whole blood, assumption",
+      "source": [
+        {
+          "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+          "year": 1999,
+          "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+          "venue": "Oregon Medical Laser Center (OMLC) web resource",
+          "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        }
+      ],
+      "location": "Prahl hemoglobin index page ('Assume 150 g Hb/liter'); Jacques 2013 Sec. 5 ('Cm.HGb = 150 g L-1')",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "MW_Hb",
+      "group": "1_haemoglobin",
+      "name": "Gram molecular weight of haemoglobin",
+      "symbol": "MW_Hb",
+      "value": 64500,
+      "value_alt": {
+        "Jacques2013": 64458
+      },
+      "units_source": "g mol^-1",
+      "value_SI": 64.5,
+      "units_SI": "kg mol^-1",
+      "condition": "tetramer",
+      "source": [
+        {
+          "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+          "year": 1999,
+          "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+          "venue": "Oregon Medical Laser Center (OMLC) web resource",
+          "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        }
+      ],
+      "location": "Prahl index page ('64,500 as the gram molecular weight'); Jacques 2013 Sec. 5 ('MW = 64 458 g mol-1')",
+      "notes": "Two sources differ by 0.065%.",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "blood_conversion",
+      "group": "1_haemoglobin",
+      "name": "Conversion from molar extinction to whole-blood absorption coefficient",
+      "symbol": "mu_a,blood = ln(10) * epsilon * C_m,Hb / MW_Hb",
+      "value": 0.0053548,
+      "units_source": "cm^-1 per (cm^-1 M^-1)",
+      "formula": "mu_a[cm^-1] = 2.303 * e[cm^-1/M] * (150 g/L)/(64,500 g/mol) = 0.0054 * e  (Prahl); Jacques 2013 Eq.(6): mu_a = ln(10) * sum(C_i * eps_i)",
+      "condition": "whole blood, 150 g/L, fully one species",
+      "source": [
+        {
+          "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+          "year": 1999,
+          "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+          "venue": "Oregon Medical Laser Center (OMLC) web resource",
+          "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        }
+      ],
+      "location": "Prahl index page conversion formula; Jacques 2013 Eqs (6),(7),(12), Sec. 5 worked example at 806 nm (4.38 cm^-1)",
+      "notes": "ln(10)=2.302585 gives 0.00535485; Prahl's 2.303 gives 0.00535581; with MW 64458 gives 0.00535834. Jacques 2013 prints '0.0536 eps_blood', which is inconsistent with its own inputs and its 4.38 cm^-1 result; 0.00536 is correct.",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "mua_blood_HbO2_532",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% oxyhaemoglobin, 532 nm",
+      "symbol": "mu_a,blood,HbO2",
+      "value": 234.9494,
+      "units_source": "cm^-1",
+      "value_SI": 23494.94,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_blood_Hb_532",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% deoxyhaemoglobin, 532 nm",
+      "symbol": "mu_a,blood,Hb",
+      "value": 217.3212,
+      "units_source": "cm^-1",
+      "value_SI": 21732.12,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_blood_HbO2_750",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% oxyhaemoglobin, 750 nm",
+      "symbol": "mu_a,blood,HbO2",
+      "value": 2.7738,
+      "units_source": "cm^-1",
+      "value_SI": 277.38,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_blood_Hb_750",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% deoxyhaemoglobin, 750 nm",
+      "symbol": "mu_a,blood,Hb",
+      "value": 7.5248,
+      "units_source": "cm^-1",
+      "value_SI": 752.48,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_blood_HbO2_800",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% oxyhaemoglobin, 800 nm",
+      "symbol": "mu_a,blood,HbO2",
+      "value": 4.3696,
+      "units_source": "cm^-1",
+      "value_SI": 436.96,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_blood_Hb_800",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% deoxyhaemoglobin, 800 nm",
+      "symbol": "mu_a,blood,Hb",
+      "value": 4.0789,
+      "units_source": "cm^-1",
+      "value_SI": 407.89,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_blood_HbO2_850",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% oxyhaemoglobin, 850 nm",
+      "symbol": "mu_a,blood,HbO2",
+      "value": 5.6654,
+      "units_source": "cm^-1",
+      "value_SI": 566.54,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_blood_Hb_850",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% deoxyhaemoglobin, 850 nm",
+      "symbol": "mu_a,blood,Hb",
+      "value": 3.7019,
+      "units_source": "cm^-1",
+      "value_SI": 370.19,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "melanin_formula_jacques",
+      "group": "2_melanin",
+      "name": "Melanosome-interior absorption coefficient power law",
+      "symbol": "mu_a,mel(lambda)",
+      "formula": "mu_a.melanosome = 519 cm^-1 (lambda/500 nm)^(-m), m approx 3",
+      "value": {
+        "a_cm-1": 519,
+        "m": 3
+      },
+      "units_source": "cm^-1",
+      "condition": "interior of a typical cutaneous melanosome; tissue value = f_v,melanosome x mu_a.melanosome (Eq. 9)",
+      "source": {
+        "authors": "S. L. Jacques",
+        "year": 2013,
+        "title": "Optical properties of biological tissues: a review",
+        "venue": "Phys. Med. Biol. 58(11), R37-R61",
+        "doi": "10.1088/0031-9155/58/11/R37",
+        "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+      },
+      "location": "Sec. 5.3, Eq. (8), p. R53; Eq. (9)",
+      "notes": "'an approximate value for m is 3'; m varies between reports (figure in Sec. 5.3).",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "melanin_formula_omlc",
+      "group": "2_melanin",
+      "name": "Melanosome absorption coefficient power law (OMLC)",
+      "symbol": "mu_a,mel(lambda)",
+      "formula": "mu_a = 1.70e12 * lambda[nm]^-3.48 cm^-1 (skin); mu_a = 6.49e12 * lambda[nm]^-3.48 cm^-1 (retina)",
+      "value": {
+        "skin_coeff": 1700000000000.0,
+        "retina_coeff": 6490000000000.0,
+        "exponent": -3.48
+      },
+      "units_source": "cm^-1, lambda in nm",
+      "condition": "melanosome interior; melanin concentration within melanosomes varies about ten-fold",
+      "source": {
+        "authors": "S. L. Jacques",
+        "year": 1998,
+        "title": "Melanosome Absorption Coefficient",
+        "venue": "OMLC web resource (data from Jacques & McAuliffe 1991 Photochem. Photobiol. 53:769-775; Jacques, Glickman & Schwartz 1996 SPIE 2681:468-477)",
+        "url": "https://omlc.org/spectra/melanin/mua.html"
+      },
+      "location": "mua.html, section 'A key lesson'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "mua_mel_532",
+      "group": "2_melanin",
+      "name": "Melanosome absorption coefficient at 532 nm",
+      "symbol": "mu_a,mel",
+      "value": {
+        "Jacques2013_Eq8_m3": 430.87,
+        "OMLC_skin_-3.48": 554.98,
+        "OMLC_retina_-3.48": 2118.7
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Jacques2013_Eq8_m3": 43087.0,
+        "OMLC_skin_-3.48": 55498.0
+      },
+      "units_SI": "m^-1",
+      "condition": "melanosome interior (multiply by melanosome volume fraction for tissue)",
+      "status": "DERIVED",
+      "source": [
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 1998,
+          "title": "Melanosome Absorption Coefficient",
+          "venue": "OMLC web resource (data from Jacques & McAuliffe 1991 Photochem. Photobiol. 53:769-775; Jacques, Glickman & Schwartz 1996 SPIE 2681:468-477)",
+          "url": "https://omlc.org/spectra/melanin/mua.html"
+        }
+      ],
+      "location": "computed from Eq. (8) and OMLC formula",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_mel_750",
+      "group": "2_melanin",
+      "name": "Melanosome absorption coefficient at 750 nm",
+      "symbol": "mu_a,mel",
+      "value": {
+        "Jacques2013_Eq8_m3": 153.78,
+        "OMLC_skin_-3.48": 167.97,
+        "OMLC_retina_-3.48": 641.3
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Jacques2013_Eq8_m3": 15378.0,
+        "OMLC_skin_-3.48": 16797.0
+      },
+      "units_SI": "m^-1",
+      "condition": "melanosome interior (multiply by melanosome volume fraction for tissue)",
+      "status": "DERIVED",
+      "source": [
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 1998,
+          "title": "Melanosome Absorption Coefficient",
+          "venue": "OMLC web resource (data from Jacques & McAuliffe 1991 Photochem. Photobiol. 53:769-775; Jacques, Glickman & Schwartz 1996 SPIE 2681:468-477)",
+          "url": "https://omlc.org/spectra/melanin/mua.html"
+        }
+      ],
+      "location": "computed from Eq. (8) and OMLC formula",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_mel_800",
+      "group": "2_melanin",
+      "name": "Melanosome absorption coefficient at 800 nm",
+      "symbol": "mu_a,mel",
+      "value": {
+        "Jacques2013_Eq8_m3": 126.71,
+        "OMLC_skin_-3.48": 134.18,
+        "OMLC_retina_-3.48": 512.3
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Jacques2013_Eq8_m3": 12671.0,
+        "OMLC_skin_-3.48": 13418.0
+      },
+      "units_SI": "m^-1",
+      "condition": "melanosome interior (multiply by melanosome volume fraction for tissue)",
+      "status": "DERIVED",
+      "source": [
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 1998,
+          "title": "Melanosome Absorption Coefficient",
+          "venue": "OMLC web resource (data from Jacques & McAuliffe 1991 Photochem. Photobiol. 53:769-775; Jacques, Glickman & Schwartz 1996 SPIE 2681:468-477)",
+          "url": "https://omlc.org/spectra/melanin/mua.html"
+        }
+      ],
+      "location": "computed from Eq. (8) and OMLC formula",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_mel_850",
+      "group": "2_melanin",
+      "name": "Melanosome absorption coefficient at 850 nm",
+      "symbol": "mu_a,mel",
+      "value": {
+        "Jacques2013_Eq8_m3": 105.64,
+        "OMLC_skin_-3.48": 108.66,
+        "OMLC_retina_-3.48": 414.8
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Jacques2013_Eq8_m3": 10564.0,
+        "OMLC_skin_-3.48": 10866.0
+      },
+      "units_SI": "m^-1",
+      "condition": "melanosome interior (multiply by melanosome volume fraction for tissue)",
+      "status": "DERIVED",
+      "source": [
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 1998,
+          "title": "Melanosome Absorption Coefficient",
+          "venue": "OMLC web resource (data from Jacques & McAuliffe 1991 Photochem. Photobiol. 53:769-775; Jacques, Glickman & Schwartz 1996 SPIE 2681:468-477)",
+          "url": "https://omlc.org/spectra/melanin/mua.html"
+        }
+      ],
+      "location": "computed from Eq. (8) and OMLC formula",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_fat_532",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of purified pig-lard fat at 532 nm",
+      "symbol": "mu_a,fat",
+      "value": 1.002,
+      "units_source": "m^-1 (unit not stated in fat.txt; m^-1 per axis labels of vanveen04.pdf)",
+      "value_SI": 1.002,
+      "units_SI": "m^-1",
+      "value_cm": 0.01002,
+      "condition": "purified porcine lard oil, liquid, averaged over 37 and 60 C (per OMLC page)",
+      "source": {
+        "authors": "R. L. P. van Veen, H. J. C. M. Sterenborg, A. Pifferi, A. Torricelli, R. Cubeddu",
+        "year": 2004,
+        "title": "Determination of VIS-NIR absorption coefficients of mammalian fat, with time- and spatially resolved diffuse reflectance and transmission spectroscopy",
+        "venue": "OSA Annual BIOMED Topical Meeting (per OMLC file header); data processed by S. Prahl",
+        "url": "https://omlc.org/spectra/fat/fat.txt ; https://omlc.org/spectra/fat/fat.orig.txt ; https://omlc.org/spectra/fat/vanveen04.pdf",
+        "year_note": "2004 per params/gapfill_round1.md section 8 (fat.txt header 'OSA Annual BIOMED Topical Meeting, 2004'; the PDF's '(c)2000' line is a template copyright)"
+      },
+      "location": "fat.txt row 532 nm (Prahl-processed, 3 significant digits); fat.orig.txt nearest row agrees",
+      "notes": "532 nm lies below the 600-1100 nm interval reported in the proceedings text; treat as lower confidence. Max in file 13.10 m^-1 at 930 nm; min 0.310 m^-1 at 708 nm.",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "mua_fat_750",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of purified pig-lard fat at 750 nm",
+      "symbol": "mu_a,fat",
+      "value": 0.972,
+      "units_source": "m^-1 (unit not stated in fat.txt; m^-1 per axis labels of vanveen04.pdf)",
+      "value_SI": 0.972,
+      "units_SI": "m^-1",
+      "value_cm": 0.00972,
+      "condition": "purified porcine lard oil, liquid, averaged over 37 and 60 C (per OMLC page)",
+      "source": {
+        "authors": "R. L. P. van Veen, H. J. C. M. Sterenborg, A. Pifferi, A. Torricelli, R. Cubeddu",
+        "year": 2004,
+        "title": "Determination of VIS-NIR absorption coefficients of mammalian fat, with time- and spatially resolved diffuse reflectance and transmission spectroscopy",
+        "venue": "OSA Annual BIOMED Topical Meeting (per OMLC file header); data processed by S. Prahl",
+        "url": "https://omlc.org/spectra/fat/fat.txt ; https://omlc.org/spectra/fat/fat.orig.txt ; https://omlc.org/spectra/fat/vanveen04.pdf",
+        "year_note": "2004 per params/gapfill_round1.md section 8 (fat.txt header 'OSA Annual BIOMED Topical Meeting, 2004'; the PDF's '(c)2000' line is a template copyright)"
+      },
+      "location": "fat.txt row 750 nm (Prahl-processed, 3 significant digits); fat.orig.txt nearest row agrees",
+      "notes": " Max in file 13.10 m^-1 at 930 nm; min 0.310 m^-1 at 708 nm.",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "mua_fat_800",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of purified pig-lard fat at 800 nm",
+      "symbol": "mu_a,fat",
+      "value": 0.403,
+      "units_source": "m^-1 (unit not stated in fat.txt; m^-1 per axis labels of vanveen04.pdf)",
+      "value_SI": 0.403,
+      "units_SI": "m^-1",
+      "value_cm": 0.004030000000000001,
+      "condition": "purified porcine lard oil, liquid, averaged over 37 and 60 C (per OMLC page)",
+      "source": {
+        "authors": "R. L. P. van Veen, H. J. C. M. Sterenborg, A. Pifferi, A. Torricelli, R. Cubeddu",
+        "year": 2004,
+        "title": "Determination of VIS-NIR absorption coefficients of mammalian fat, with time- and spatially resolved diffuse reflectance and transmission spectroscopy",
+        "venue": "OSA Annual BIOMED Topical Meeting (per OMLC file header); data processed by S. Prahl",
+        "url": "https://omlc.org/spectra/fat/fat.txt ; https://omlc.org/spectra/fat/fat.orig.txt ; https://omlc.org/spectra/fat/vanveen04.pdf",
+        "year_note": "2004 per params/gapfill_round1.md section 8 (fat.txt header 'OSA Annual BIOMED Topical Meeting, 2004'; the PDF's '(c)2000' line is a template copyright)"
+      },
+      "location": "fat.txt row 800 nm (Prahl-processed, 3 significant digits); fat.orig.txt nearest row agrees",
+      "notes": " Max in file 13.10 m^-1 at 930 nm; min 0.310 m^-1 at 708 nm.",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "mua_fat_850",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of purified pig-lard fat at 850 nm",
+      "symbol": "mu_a,fat",
+      "value": 0.637,
+      "units_source": "m^-1 (unit not stated in fat.txt; m^-1 per axis labels of vanveen04.pdf)",
+      "value_SI": 0.637,
+      "units_SI": "m^-1",
+      "value_cm": 0.00637,
+      "condition": "purified porcine lard oil, liquid, averaged over 37 and 60 C (per OMLC page)",
+      "source": {
+        "authors": "R. L. P. van Veen, H. J. C. M. Sterenborg, A. Pifferi, A. Torricelli, R. Cubeddu",
+        "year": 2004,
+        "title": "Determination of VIS-NIR absorption coefficients of mammalian fat, with time- and spatially resolved diffuse reflectance and transmission spectroscopy",
+        "venue": "OSA Annual BIOMED Topical Meeting (per OMLC file header); data processed by S. Prahl",
+        "url": "https://omlc.org/spectra/fat/fat.txt ; https://omlc.org/spectra/fat/fat.orig.txt ; https://omlc.org/spectra/fat/vanveen04.pdf",
+        "year_note": "2004 per params/gapfill_round1.md section 8 (fat.txt header 'OSA Annual BIOMED Topical Meeting, 2004'; the PDF's '(c)2000' line is a template copyright)"
+      },
+      "location": "fat.txt row 850 nm (Prahl-processed, 3 significant digits); fat.orig.txt nearest row agrees",
+      "notes": " Max in file 13.10 m^-1 at 930 nm; min 0.310 m^-1 at 708 nm.",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "mua_water_532",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of pure water at 532 nm",
+      "symbol": "mu_a,water",
+      "value": {
+        "Hale1973_interp_525_550": 0.0003564,
+        "Segelstein1981_interp_530_535": 0.000427516
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Hale1973_interp_525_550": 0.03564,
+        "Segelstein1981_interp_530_535": 0.04275
+      },
+      "units_SI": "m^-1",
+      "condition": "pure liquid water, room temperature",
+      "status": "DERIVED (linear interpolation between tabulated rows)",
+      "source": [
+        {
+          "authors": "G. M. Hale, M. R. Querry",
+          "year": 1973,
+          "title": "Optical constants of water in the 200-nm to 200-micron wavelength region",
+          "venue": "Appl. Opt. 12, 555-563 (as tabulated by OMLC)",
+          "url": "https://omlc.org/spectra/water/data/hale73.txt"
+        },
+        {
+          "authors": "D. J. Segelstein",
+          "year": 1981,
+          "title": "The complex refractive index of water",
+          "venue": "as tabulated by OMLC (thesis venue not verified in this session)",
+          "url": "https://omlc.org/spectra/water/data/segelstein81.txt"
+        }
+      ],
+      "location": "hale73.txt and segelstein81.txt rows; 532: Hale rows 525 (0.00032) & 550 (0.00045), Segelstein rows 530 (0.00041682) & 535 (0.00044356); 850: Hale exact row, Segelstein rows 849 (0.043343) & 855 (0.046336)",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_water_750",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of pure water at 750 nm",
+      "symbol": "mu_a,water",
+      "value": {
+        "Hale1973": 0.026,
+        "Segelstein1981": 0.026125
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Hale1973": 2.6,
+        "Segelstein1981": 2.6125
+      },
+      "units_SI": "m^-1",
+      "condition": "pure liquid water, room temperature",
+      "status": "VERIFIED",
+      "source": [
+        {
+          "authors": "G. M. Hale, M. R. Querry",
+          "year": 1973,
+          "title": "Optical constants of water in the 200-nm to 200-micron wavelength region",
+          "venue": "Appl. Opt. 12, 555-563 (as tabulated by OMLC)",
+          "url": "https://omlc.org/spectra/water/data/hale73.txt"
+        },
+        {
+          "authors": "D. J. Segelstein",
+          "year": 1981,
+          "title": "The complex refractive index of water",
+          "venue": "as tabulated by OMLC (thesis venue not verified in this session)",
+          "url": "https://omlc.org/spectra/water/data/segelstein81.txt"
+        }
+      ],
+      "location": "hale73.txt and segelstein81.txt rows; 532: Hale rows 525 (0.00032) & 550 (0.00045), Segelstein rows 530 (0.00041682) & 535 (0.00044356); 850: Hale exact row, Segelstein rows 849 (0.043343) & 855 (0.046336)",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_water_800",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of pure water at 800 nm",
+      "symbol": "mu_a,water",
+      "value": {
+        "Hale1973": 0.02,
+        "Segelstein1981": 0.01964
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Hale1973": 2.0,
+        "Segelstein1981": 1.964
+      },
+      "units_SI": "m^-1",
+      "condition": "pure liquid water, room temperature",
+      "status": "VERIFIED",
+      "source": [
+        {
+          "authors": "G. M. Hale, M. R. Querry",
+          "year": 1973,
+          "title": "Optical constants of water in the 200-nm to 200-micron wavelength region",
+          "venue": "Appl. Opt. 12, 555-563 (as tabulated by OMLC)",
+          "url": "https://omlc.org/spectra/water/data/hale73.txt"
+        },
+        {
+          "authors": "D. J. Segelstein",
+          "year": 1981,
+          "title": "The complex refractive index of water",
+          "venue": "as tabulated by OMLC (thesis venue not verified in this session)",
+          "url": "https://omlc.org/spectra/water/data/segelstein81.txt"
+        }
+      ],
+      "location": "hale73.txt and segelstein81.txt rows; 532: Hale rows 525 (0.00032) & 550 (0.00045), Segelstein rows 530 (0.00041682) & 535 (0.00044356); 850: Hale exact row, Segelstein rows 849 (0.043343) & 855 (0.046336)",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "mua_water_850",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of pure water at 850 nm",
+      "symbol": "mu_a,water",
+      "value": {
+        "Hale1973": 0.043,
+        "Segelstein1981_interp_849_855": 0.0438418
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Hale1973": 4.3,
+        "Segelstein1981_interp_849_855": 4.38418
+      },
+      "units_SI": "m^-1",
+      "condition": "pure liquid water, room temperature",
+      "status": "DERIVED (linear interpolation between tabulated rows)",
+      "source": [
+        {
+          "authors": "G. M. Hale, M. R. Querry",
+          "year": 1973,
+          "title": "Optical constants of water in the 200-nm to 200-micron wavelength region",
+          "venue": "Appl. Opt. 12, 555-563 (as tabulated by OMLC)",
+          "url": "https://omlc.org/spectra/water/data/hale73.txt"
+        },
+        {
+          "authors": "D. J. Segelstein",
+          "year": 1981,
+          "title": "The complex refractive index of water",
+          "venue": "as tabulated by OMLC (thesis venue not verified in this session)",
+          "url": "https://omlc.org/spectra/water/data/segelstein81.txt"
+        }
+      ],
+      "location": "hale73.txt and segelstein81.txt rows; 532: Hale rows 525 (0.00032) & 550 (0.00045), Segelstein rows 530 (0.00041682) & 535 (0.00044356); 850: Hale exact row, Segelstein rows 849 (0.043343) & 855 (0.046336)",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "musp_powerlaw_soft",
+      "group": "4_scattering",
+      "name": "Reduced scattering coefficient power law, 'other soft tissues'",
+      "symbol": "mu_s'(lambda) = a (lambda/500 nm)^-b",
+      "value": {
+        "a_cm-1": 18.9,
+        "a_SD": 10.2,
+        "b": 1.286,
+        "b_SD": 0.521,
+        "n": 18
+      },
+      "units_source": "a in cm^-1; b dimensionless",
+      "value_SI": {
+        "a_m-1": 1890,
+        "a_SD_m-1": 1020
+      },
+      "units_SI": "m^-1",
+      "condition": "mean over 18 cited 'other soft tissues' values",
+      "source": [
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review, Table 2 data file",
+          "venue": "Phys. Med. Biol. 58 R37 (supplementary CSV on OMLC)",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/table2_JacquesPMB2013.csv"
+        }
+      ],
+      "location": "Eq. (1) Sec. 2; Table 2 p. R42 (row 'Other soft tissues'); table2 CSV",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "musp_powerlaw_by_tissue",
+      "group": "4_scattering",
+      "name": "Reduced scattering power-law parameters by tissue type",
+      "symbol": "a, b",
+      "value": [
+        {
+          "tissue": "Skin",
+          "a_cm-1": 46.0,
+          "a_SD": 13.7,
+          "b": 1.421,
+          "b_SD": 0.517,
+          "n": 8
+        },
+        {
+          "tissue": "Brain",
+          "a_cm-1": 24.2,
+          "a_SD": 11.7,
+          "b": 1.611,
+          "b_SD": 1.063,
+          "n": 8
+        },
+        {
+          "tissue": "Breast",
+          "a_cm-1": 16.8,
+          "a_SD": 8.1,
+          "b": 1.055,
+          "b_SD": 0.771,
+          "n": 8
+        },
+        {
+          "tissue": "Bone",
+          "a_cm-1": 22.9,
+          "a_SD": 14.6,
+          "b": 0.716,
+          "b_SD": 0.682,
+          "n": 3
+        },
+        {
+          "tissue": "Other soft tissues",
+          "a_cm-1": 18.9,
+          "a_SD": 10.2,
+          "b": 1.286,
+          "b_SD": 0.521,
+          "n": 18
+        },
+        {
+          "tissue": "Other fibrous tissues",
+          "a_cm-1": 27.1,
+          "a_SD": 5.0,
+          "b": 1.627,
+          "b_SD": 0.115,
+          "n": 5
+        },
+        {
+          "tissue": "Fatty tissue",
+          "a_cm-1": 18.4,
+          "a_SD": 9.0,
+          "b": 0.672,
+          "b_SD": 0.242,
+          "n": 6
+        }
+      ],
+      "range": {
+        "a_cm-1": [
+          16.8,
+          46.0
+        ],
+        "b": [
+          0.672,
+          1.627
+        ]
+      },
+      "units_source": "a in cm^-1",
+      "condition": "tissue-type means",
+      "source": {
+        "authors": "S. L. Jacques",
+        "year": 2013,
+        "title": "Optical properties of biological tissues: a review, Table 2 data file",
+        "venue": "Phys. Med. Biol. 58 R37 (supplementary CSV on OMLC)",
+        "doi": "10.1088/0031-9155/58/11/R37",
+        "url": "https://omlc.org/news/dec14/Jacques_PMB2013/table2_JacquesPMB2013.csv"
+      },
+      "location": "Table 2 p. R42, CSV rows Mean/SD/n",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "musp_soft_at_wavelengths",
+      "group": "4_scattering",
+      "name": "Reduced scattering coefficient of 'other soft tissues' at the four wavelengths",
+      "symbol": "mu_s'",
+      "value": {
+        "532": 17.451,
+        "750": 11.22,
+        "800": 10.327,
+        "850": 9.552
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "532": 1745.1,
+        "750": 1122.0,
+        "800": 1032.7,
+        "850": 955.2
+      },
+      "units_SI": "m^-1",
+      "status": "DERIVED",
+      "condition": "a=18.9 cm^-1, b=1.286",
+      "source": {
+        "authors": "S. L. Jacques",
+        "year": 2013,
+        "title": "Optical properties of biological tissues: a review, Table 2 data file",
+        "venue": "Phys. Med. Biol. 58 R37 (supplementary CSV on OMLC)",
+        "doi": "10.1088/0031-9155/58/11/R37",
+        "url": "https://omlc.org/news/dec14/Jacques_PMB2013/table2_JacquesPMB2013.csv"
+      },
+      "location": "computed from Table 2",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "g_anisotropy",
+      "group": "4_scattering",
+      "name": "Scattering anisotropy",
+      "symbol": "g",
+      "value": null,
+      "range": [
+        0.9,
+        0.95
+      ],
+      "units_source": "dimensionless",
+      "condition": "'g greater than 0.90 for visible wavelengths' (tissues); cell suspensions g = 0.925, 0.950, 0.930 (Mourant et al 2002 as cited)",
+      "source": {
+        "authors": "S. L. Jacques",
+        "year": 2013,
+        "title": "Optical properties of biological tissues: a review",
+        "venue": "Phys. Med. Biol. 58(11), R37-R61",
+        "doi": "10.1088/0031-9155/58/11/R37",
+        "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+      },
+      "location": "Sec. 3, pp. R44-R47; Fig. 6 caption p. R46 (HG g = 0.930)",
+      "notes": "No single typical tissue value is given; mu_s(1-g) 'remains somewhat constant in the range of 30-50 cm^-1' at 488 nm (Fig. 5); mean free path 1/mu_s 'typically 100 um or less' (p. R44).",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "l_tr_800_soft",
+      "group": "5_transport",
+      "name": "Transport mean free path, generic soft tissue, 800 nm",
+      "symbol": "l_tr = 1/(mu_a + mu_s')",
+      "value": 0.964,
+      "units_source": "mm",
+      "value_SI": 0.000964,
+      "units_SI": "m",
+      "range": {
+        "a_plus_minus_1SD_mm": [
+          0.627,
+          2.084
+        ],
+        "b_plus_minus_1SD_mm": [
+          0.756,
+          1.23
+        ],
+        "across_tissue_types_mm": [
+          0.423,
+          0.973
+        ]
+      },
+      "status": "DERIVED",
+      "condition": "mu_s'(800)=10.327 cm^-1 (Table 2 soft); mu_a = 0.0438 cm^-1 (Jacques 2013 Sec. 5 example: B=0.01 blood at 806 nm)",
+      "arithmetic": "mu_s' = 18.9 x (800/500)^-1.286 = 18.9 x 1.6^-1.286 = 10.327 cm^-1; l_tr = 1/(0.0438 + 10.327) = 1/10.371 cm = 0.0964 cm = 0.964 mm. With mu_a=0: 0.968 mm; adding pure water mu_a(800)=0.0196 cm^-1 as an upper bound: 0.962 mm.",
+      "source": [
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review, Table 2 data file",
+          "venue": "Phys. Med. Biol. 58 R37 (supplementary CSV on OMLC)",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/table2_JacquesPMB2013.csv"
+        }
+      ],
+      "location": "Table 2; Sec. 5 worked example",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "l_tr_750_850_soft",
+      "group": "5_transport",
+      "name": "Transport mean free path, generic soft tissue, 750 and 850 nm (mu_a neglected, <0.5% effect)",
+      "symbol": "l_tr",
+      "value": {
+        "750": 0.891,
+        "850": 1.047
+      },
+      "units_source": "mm",
+      "value_SI": {
+        "750": 0.000891,
+        "850": 0.001047
+      },
+      "units_SI": "m",
+      "status": "DERIVED",
+      "condition": "mu_s'(750)=11.220, mu_s'(850)=9.552 cm^-1",
+      "source": {
+        "authors": "S. L. Jacques",
+        "year": 2013,
+        "title": "Optical properties of biological tissues: a review, Table 2 data file",
+        "venue": "Phys. Med. Biol. 58 R37 (supplementary CSV on OMLC)",
+        "doi": "10.1088/0031-9155/58/11/R37",
+        "url": "https://omlc.org/news/dec14/Jacques_PMB2013/table2_JacquesPMB2013.csv"
+      },
+      "location": "computed",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "l_tr_literature_statement",
+      "group": "5_transport",
+      "name": "Transport mean free path / optical diffusion limit as stated in photoacoustics literature",
+      "symbol": "l_tr",
+      "value": 1,
+      "units_source": "mm (approximate)",
+      "value_SI": 0.001,
+      "units_SI": "m",
+      "condition": "tissue, optical (ballistic/quasi-ballistic) regime limit",
+      "source": [
+        {
+          "authors": "Y. Zhou, J. Yao, L. V. Wang",
+          "year": 2016,
+          "title": "Tutorial on photoacoustic tomography",
+          "venue": "J. Biomed. Opt. 21(6), 061007",
+          "doi": "10.1117/1.JBO.21.6.061007",
+          "url": "https://coilab.caltech.edu/documents/26057/ZhouY_2016_JBO_v21_061007.pdf",
+          "cited_for": "the number: l_tr about 1 mm in tissue"
+        },
+        {
+          "authors": "L. V. Wang",
+          "year": 2008,
+          "title": "Tutorial on photoacoustic microscopy and computed tomography",
+          "venue": "IEEE J. Sel. Top. Quantum Electron. 14(1), 171-179",
+          "doi": "10.1109/JSTQE.2007.913398",
+          "url": "https://www.its.caltech.edu/~coil/epub/2008/WangL_2008_IEEE_J_Selected_Topics_QuanTum_Electronics_14_p171.pdf",
+          "cited_for": "the correlation only: the 1 mm optical penetration limit is approximately correlated with l_tr (no l_tr number stated)"
+        },
+        {
+          "authors": "L. V. Wang, S. Hu",
+          "year": 2012,
+          "title": "Photoacoustic tomography: in vivo imaging from organelles to organs",
+          "venue": "Science 335(6075), 1458-1462",
+          "doi": "10.1126/science.1216210",
+          "url": "https://www.its.caltech.edu/~coil/epub/2012/WangL_2012_Science_v335_p1458.pdf",
+          "cited_for": "penetration 'up to ~1 mm, as defined by the optical diffusion limit' (a depth statement; not re-checked 2026-10-21)"
+        }
+      ],
+      "location": "Zhou 2016 Sec. 4.2 p. 061007-5 ('the penetration of an OR-PAM system is limited to about one transport mean free path in tissue (~1 mm)'), source of the number; Wang 2008 Sec. VIII p. 177 ('The 1 mm optical penetration limit is approximately correlated with the optical transport mean free path'), source of the correlation only; Wang & Hu 2012 p. 1458 ('up to ~1 mm, as defined by the optical diffusion limit') and note 2",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED",
+      "notes": "Re-checked 2026-10-21 by page fetch of both PDFs. Zhou 2016 states the number (~1 mm). Wang 2008 does not state that l_tr is about 1 mm; it says only that the 1 mm penetration limit is approximately correlated with l_tr (p. 177), so it is cited for the correlation, not the number. Wang & Hu 2012 was not re-read in this check."
+    },
+    {
+      "id": "acoustic_table_culjat",
+      "group": "6_acoustic",
+      "name": "Acoustic properties of tissues (speed, density, attenuation, impedance)",
+      "symbol": "c, rho, alpha0, Z",
+      "value": [
+        {
+          "tissue": "Soft tissue (average)",
+          "c_m_s": 1561,
+          "rho_kg_m3": 1043,
+          "alpha0_dB_cm_MHz": 0.54,
+          "Z_MRayl": 1.63,
+          "table_source": "Mast 2000"
+        },
+        {
+          "tissue": "Fat",
+          "c_m_s": 1478,
+          "rho_kg_m3": 950,
+          "alpha0_dB_cm_MHz": 0.48,
+          "Z_MRayl": 1.4,
+          "table_source": "Mast 2000"
+        },
+        {
+          "tissue": "Muscle",
+          "c_m_s": 1547,
+          "rho_kg_m3": 1050,
+          "alpha0_dB_cm_MHz": 1.09,
+          "Z_MRayl": 1.62,
+          "table_source": "Mast 2000"
+        },
+        {
+          "tissue": "Blood",
+          "c_m_s": 1584,
+          "rho_kg_m3": 1060,
+          "alpha0_dB_cm_MHz": 0.2,
+          "Z_MRayl": 1.68,
+          "table_source": "ICRU 1998"
+        },
+        {
+          "tissue": "Liver",
+          "c_m_s": 1595,
+          "rho_kg_m3": 1060,
+          "alpha0_dB_cm_MHz": 0.5,
+          "Z_MRayl": 1.69,
+          "table_source": "ICRU 1998"
+        },
+        {
+          "tissue": "Water",
+          "c_m_s": 1480,
+          "rho_kg_m3": 1000,
+          "alpha0_dB_cm_MHz": 0.0022,
+          "Z_MRayl": 1.48,
+          "table_source": "none given"
+        }
+      ],
+      "units_source": "m/s; kg/m^3; dB cm^-1 MHz^-1; MRayl (1 MRayl = 1e6 kg m^-2 s^-1)",
+      "condition": "temperature not stated in fetched table",
+      "source": {
+        "authors": "M. O. Culjat, D. Goldenberg, P. Tewari, R. S. Singh",
+        "year": 2010,
+        "title": "A review of tissue substitutes for ultrasound imaging",
+        "venue": "Ultrasound Med. Biol. 36(6), 861-873",
+        "doi": "10.1016/j.ultrasmedbio.2010.02.012",
+        "url": "https://www.ccn.ucla.edu/wiki/images/2/26/Culjat2010.pdf"
+      },
+      "location": "Table 1",
+      "notes": "Secondary compilation. Mast 2000 (ARLO 1:37) was fetched in gap-fill round 1 (author copy; params/gapfill_round1.json g5_mast2000_table1) and confirms every Culjat row used here. ICRU Report 61 (1998) was not fetched; its rows are confirmed only as quoted by Mast 2000.",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "c_soft",
+      "group": "6_acoustic",
+      "name": "Speed of sound, soft tissue",
+      "symbol": "c_s",
+      "value": 1561,
+      "value_alt": {
+        "Wang2008_soft_tissue": 1540
+      },
+      "range": [
+        1430,
+        1595
+      ],
+      "units_source": "m s^-1",
+      "value_SI": 1561,
+      "units_SI": "m s^-1",
+      "condition": "'soft tissue (average)', Culjat Table 1 from Mast 2000; range spans fat (1430, Szabo via Stanford slides) to liver (1595, ICRU 1998 via Culjat)",
+      "source": [
+        {
+          "authors": "M. O. Culjat, D. Goldenberg, P. Tewari, R. S. Singh",
+          "year": 2010,
+          "title": "A review of tissue substitutes for ultrasound imaging",
+          "venue": "Ultrasound Med. Biol. 36(6), 861-873",
+          "doi": "10.1016/j.ultrasmedbio.2010.02.012",
+          "url": "https://www.ccn.ucla.edu/wiki/images/2/26/Culjat2010.pdf"
+        },
+        {
+          "authors": "L. V. Wang",
+          "year": 2008,
+          "title": "Tutorial on photoacoustic microscopy and computed tomography",
+          "venue": "IEEE J. Sel. Top. Quantum Electron. 14(1), 171-179",
+          "doi": "10.1109/JSTQE.2007.913398",
+          "url": "https://www.its.caltech.edu/~coil/epub/2008/WangL_2008_IEEE_J_Selected_Topics_QuanTum_Electronics_14_p171.pdf"
+        },
+        {
+          "authors": "Stanford RAD225/BIOE225 course slides (no individual author named); slide 19 table (density, speed of sound, impedance) credited to Szabo; slide 29 table (attenuation) credited to Duck",
+          "year": 2019,
+          "title": "Acoustic Properties of Tissue (Class 3)",
+          "venue": "Stanford University course notes, Fall 2019",
+          "url": "https://web.stanford.edu/class/rad225/subdir/Class3.pdf"
+        }
+      ],
+      "location": "Culjat 2010 Table 1; Wang 2008 Sec. V p.174 ('sound velocity in soft tissue (1.54 mm/us)'); Stanford RAD225 Class 3 slide 19",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "rho_soft",
+      "group": "6_acoustic",
+      "name": "Density, soft tissue",
+      "symbol": "rho",
+      "value": 1043,
+      "range": [
+        928,
+        1060
+      ],
+      "units_source": "kg m^-3",
+      "value_SI": 1043,
+      "units_SI": "kg m^-3",
+      "condition": "soft tissue average (Mast 2000 via Culjat); range fat (928 Szabo) to blood/liver (1060)",
+      "source": [
+        {
+          "authors": "M. O. Culjat, D. Goldenberg, P. Tewari, R. S. Singh",
+          "year": 2010,
+          "title": "A review of tissue substitutes for ultrasound imaging",
+          "venue": "Ultrasound Med. Biol. 36(6), 861-873",
+          "doi": "10.1016/j.ultrasmedbio.2010.02.012",
+          "url": "https://www.ccn.ucla.edu/wiki/images/2/26/Culjat2010.pdf"
+        },
+        {
+          "authors": "Stanford RAD225/BIOE225 course slides (no individual author named); slide 19 table (density, speed of sound, impedance) credited to Szabo; slide 29 table (attenuation) credited to Duck",
+          "year": 2019,
+          "title": "Acoustic Properties of Tissue (Class 3)",
+          "venue": "Stanford University course notes, Fall 2019",
+          "url": "https://web.stanford.edu/class/rad225/subdir/Class3.pdf"
+        }
+      ],
+      "location": "Culjat Table 1; Stanford slide 19",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "Z_soft",
+      "group": "6_acoustic",
+      "name": "Characteristic acoustic impedance, soft tissue",
+      "symbol": "Z = rho c",
+      "value": 1.63,
+      "value_check": 1.6281,
+      "range": [
+        1.33,
+        1.69
+      ],
+      "units_source": "MRayl",
+      "value_SI": 1630000.0,
+      "units_SI": "kg m^-2 s^-1 (Rayl)",
+      "condition": "soft tissue average; check 1561 x 1043 = 1.6281e6",
+      "source": [
+        {
+          "authors": "M. O. Culjat, D. Goldenberg, P. Tewari, R. S. Singh",
+          "year": 2010,
+          "title": "A review of tissue substitutes for ultrasound imaging",
+          "venue": "Ultrasound Med. Biol. 36(6), 861-873",
+          "doi": "10.1016/j.ultrasmedbio.2010.02.012",
+          "url": "https://www.ccn.ucla.edu/wiki/images/2/26/Culjat2010.pdf"
+        },
+        {
+          "authors": "Stanford RAD225/BIOE225 course slides (no individual author named); slide 19 table (density, speed of sound, impedance) credited to Szabo; slide 29 table (attenuation) credited to Duck",
+          "year": 2019,
+          "title": "Acoustic Properties of Tissue (Class 3)",
+          "venue": "Stanford University course notes, Fall 2019",
+          "url": "https://web.stanford.edu/class/rad225/subdir/Class3.pdf"
+        }
+      ],
+      "location": "Culjat Table 1; Stanford slide 19",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "alpha_soft",
+      "group": "6_acoustic",
+      "name": "Acoustic attenuation coefficient, soft tissue (linear-in-frequency slope)",
+      "symbol": "alpha0",
+      "value": 0.54,
+      "value_alt": {
+        "Stanford_slides_soft_tissue": 0.5,
+        "Parker_soft_vascularized_0.05Np_cm_MHz_in_dB": 0.434
+      },
+      "range": [
+        0.2,
+        1.09
+      ],
+      "units_source": "dB cm^-1 MHz^-1",
+      "value_SI": 6.2169,
+      "units_SI": "Np m^-1 MHz^-1 (= 6.217e-6 Np m^-1 Hz^-1); 1 Np = 8.686 dB",
+      "condition": "soft tissue average; range blood 0.2 to muscle 1.09 (Culjat Table 1)",
+      "source": [
+        {
+          "authors": "M. O. Culjat, D. Goldenberg, P. Tewari, R. S. Singh",
+          "year": 2010,
+          "title": "A review of tissue substitutes for ultrasound imaging",
+          "venue": "Ultrasound Med. Biol. 36(6), 861-873",
+          "doi": "10.1016/j.ultrasmedbio.2010.02.012",
+          "url": "https://www.ccn.ucla.edu/wiki/images/2/26/Culjat2010.pdf"
+        },
+        {
+          "authors": "Stanford RAD225/BIOE225 course slides (no individual author named); slide 19 table (density, speed of sound, impedance) credited to Szabo; slide 29 table (attenuation) credited to Duck",
+          "year": 2019,
+          "title": "Acoustic Properties of Tissue (Class 3)",
+          "venue": "Stanford University course notes, Fall 2019",
+          "url": "https://web.stanford.edu/class/rad225/subdir/Class3.pdf"
+        },
+        {
+          "authors": "K. J. Parker",
+          "year": "c. 2021-2022 (year not printed in fetched text)",
+          "title": "Power laws prevail in medical ultrasound",
+          "venue": "arXiv:2203.04239",
+          "url": "https://arxiv.org/pdf/2203.04239"
+        }
+      ],
+      "location": "Culjat Table 1; Stanford slide 29 (attenuation table credited to Duck); Parker Table 1",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED",
+      "notes": "value_alt.Stanford_slides_soft_tissue = 0.5 dB/cm/MHz is the 'Soft Tissue' row of Stanford RAD225 Class 3 slide 29, whose table is credited to Duck on the slide (not Szabo; Szabo is the credit on slide 19, the density/speed/impedance table). Re-checked 2026-10-21 by page fetch of Class3.pdf: slide 29 rows water 0.0022, blood 0.14, liver 0.45, muscle 1, soft tissue 0.5, air 12, bone 10, credit 'Duck'. Duck 1990 itself was not read (see unverified list)."
+    },
+    {
+      "id": "alpha_freq_dependence",
+      "group": "6_acoustic",
+      "name": "Frequency dependence of acoustic attenuation",
+      "symbol": "alpha(f) = alpha0 f^y",
+      "value": {
+        "y_typical": 1.0
+      },
+      "range": [
+        1.0,
+        2.0
+      ],
+      "units_source": "dimensionless exponent",
+      "condition": "soft tissue over diagnostic ultrasound frequencies; examples: liver-like y=1.139, alpha0=0.0459 Np cm^-1 MHz^-1.139 (=0.399 dB); fat-like y=1.5, alpha0=0.086 Np cm^-1 MHz^-1.5 (=0.747 dB), both from Duck via Kelly 2008; Suomi 2018 uses y=1.1",
+      "source": [
+        {
+          "authors": "k-Wave Toolbox documentation (B. E. Treeby and B. T. Cox)",
+          "year": "accessed 2026",
+          "title": "Modelling Power Law Absorption Example",
+          "venue": "k-Wave MATLAB Toolbox documentation",
+          "url": "https://www.k-wave.org/documentation/example_na_modelling_absorption.php"
+        },
+        {
+          "authors": "K. J. Parker",
+          "year": "c. 2021-2022 (year not printed in fetched text)",
+          "title": "Power laws prevail in medical ultrasound",
+          "venue": "arXiv:2203.04239",
+          "url": "https://arxiv.org/pdf/2203.04239"
+        },
+        {
+          "authors": "J. F. Kelly, R. J. McGough, M. M. Meerschaert",
+          "year": 2008,
+          "title": "Analytical time-domain Green's functions for power-law media",
+          "venue": "J. Acoust. Soc. Am. 124(5), 2861-2872",
+          "url": "https://www.stt.msu.edu/users/mcubed/szabo.pdf"
+        },
+        {
+          "authors": "V. Suomi, B. Treeby, J. Jaros, J. Saunavaara, A. Kiviniemi, R. Blanco",
+          "year": 2018,
+          "title": "The effect of tissue physiological variability on transurethral ultrasound therapy of the prostate",
+          "venue": "arXiv:1811.02874 (IEEE (c)2018); Table 1 cites Mast 2000, Hasgall et al. 2015, Parker et al. 1993; Table 2 cites Hasgall et al. 2015 (IT'IS database v3.0)",
+          "url": "https://arxiv.org/pdf/1811.02874"
+        }
+      ],
+      "location": "k-Wave power-law absorption example page ('exponent is between 1 and 2'); Parker Sec. 2.4 ('power law fit near 1 was adequate'), Table 1 (a1 ~ 1); Kelly 2008 Sec. IV; Suomi Table 1 header 'dB/MHz^1.1/cm'",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "alpha_water",
+      "group": "6_acoustic",
+      "name": "Ultrasonic absorption of water",
+      "symbol": "alpha_water",
+      "value": {
+        "37C_1MHz_dB_cm": 0.001394,
+        "22C_1MHz_dB_cm": 0.002059,
+        "Culjat_table_dB_cm_MHz": 0.0022
+      },
+      "units_source": "dB cm^-1 (scales as f^2)",
+      "condition": "distilled water; Pinkerton 1949 polynomial fit in k-Wave waterAbsorption.m",
+      "status": "DERIVED",
+      "source": [
+        {
+          "authors": "B. E. Treeby (k-Wave source code) implementing W. Marczak 1997 J. Acoust. Soc. Am. 102, 2776-2779; F. E. Jones & G. L. Harris 1992 J. Res. NIST 97(3), 335-340; Pinkerton 1949 Proc. Phys. Soc. B 2, 129-141",
+          "year": "2008-2019",
+          "title": "waterSoundSpeed.m, waterDensity.m, waterAbsorption.m",
+          "venue": "k-Wave Toolbox, GitHub ucl-bug/k-wave",
+          "url": "https://raw.githubusercontent.com/ucl-bug/k-wave/main/k-Wave/waterSoundSpeed.m"
+        },
+        {
+          "authors": "M. O. Culjat, D. Goldenberg, P. Tewari, R. S. Singh",
+          "year": 2010,
+          "title": "A review of tissue substitutes for ultrasound imaging",
+          "venue": "Ultrasound Med. Biol. 36(6), 861-873",
+          "doi": "10.1016/j.ultrasmedbio.2010.02.012",
+          "url": "https://www.ccn.ucla.edu/wiki/images/2/26/Culjat2010.pdf"
+        }
+      ],
+      "location": "waterAbsorption.m coefficients a_0..a_7; Culjat Table 1",
+      "notes": "Water absorption is proportional to f^2, so a per-MHz linear slope is not physically appropriate for water.",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "water37_thermal",
+      "group": "7_thermal",
+      "name": "Water at 37 C (310.15 K), 0.101325 MPa: density, cp, thermal conductivity, diffusivity",
+      "symbol": "rho, c_p, k, alpha_th",
+      "value": {
+        "rho_kg_m3": 993.33,
+        "cp_J_kgK": 4179.24,
+        "cv_J_kgK": 4086.95,
+        "k_W_mK": 0.624475,
+        "alpha_th_m2_s": 1.504e-07
+      },
+      "units_source": "kg m^-3; J kg^-1 K^-1; W m^-1 K^-1; m^2 s^-1",
+      "condition": "liquid water, IAPWS-95; alpha_th DERIVED as k/(rho cp) = 0.624475/(993.330 x 4179.24)",
+      "source": {
+        "authors": "NIST Chemistry WebBook SRD 69 (Lemmon, McLinden, Friend), implementing W. Wagner & A. Pruss, IAPWS-95, J. Phys. Chem. Ref. Data 31(2), 387-535 (2002)",
+        "year": "accessed 2026-10-20",
+        "title": "Isobaric Properties for Water, P = 0.101325 MPa",
+        "venue": "NIST Standard Reference Database 69",
+        "url": "https://webbook.nist.gov/cgi/fluid.cgi?Action=Load&ID=C7732185&Type=IsoBar&Digits=6&P=0.101325&THigh=311.15&TLow=293.15&TInc=1&RefState=DEF&TUnit=K&PUnit=MPa&DUnit=kg%2Fm3&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm"
+      },
+      "location": "NIST WebBook isobaric table row T=310.150 K",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "soft_tissue_alpha_th",
+      "group": "7_thermal",
+      "name": "Thermal diffusivity, tissue",
+      "symbol": "alpha_th",
+      "value": 1e-07,
+      "units_source": "m^2 s^-1 ('~0.1 mm^2/s for tissue')",
+      "condition": "generic tissue, approximate",
+      "source": {
+        "authors": "L. V. Wang",
+        "year": 2008,
+        "title": "Tutorial on photoacoustic microscopy and computed tomography",
+        "venue": "IEEE J. Sel. Top. Quantum Electron. 14(1), 171-179",
+        "doi": "10.1109/JSTQE.2007.913398",
+        "url": "https://www.its.caltech.edu/~coil/epub/2008/WangL_2008_IEEE_J_Selected_Topics_QuanTum_Electronics_14_p171.pdf"
+      },
+      "location": "p.172, below Eq. (3)",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "muscle_fat_thermal",
+      "group": "7_thermal",
+      "name": "Muscle and fat thermal parameters",
+      "symbol": "k, c, rho, alpha_th",
+      "value": {
+        "muscle": {
+          "k_W_mK": 0.49,
+          "c_J_kgK": 3421,
+          "rho_kg_m3": 1050,
+          "alpha_th_m2_s_derived": 1.364e-07
+        },
+        "fat": {
+          "k_W_mK": 0.21,
+          "c_J_kgK": 2348,
+          "rho_kg_m3": 950,
+          "alpha_th_m2_s_derived": 9.41e-08
+        },
+        "blood": {
+          "c_J_kgK": 3617
+        },
+        "water": {
+          "k_W_mK": 0.6,
+          "c_J_kgK": 4178
+        }
+      },
+      "units_source": "SI",
+      "condition": "simulation parameters; temperature not stated; k and c cite Hasgall et al. 2015 (IT'IS v3.0); densities in Table 1 cite Mast 2000 / Hasgall 2015",
+      "source": {
+        "authors": "V. Suomi, B. Treeby, J. Jaros, J. Saunavaara, A. Kiviniemi, R. Blanco",
+        "year": 2018,
+        "title": "The effect of tissue physiological variability on transurethral ultrasound therapy of the prostate",
+        "venue": "arXiv:1811.02874 (IEEE (c)2018); Table 1 cites Mast 2000, Hasgall et al. 2015, Parker et al. 1993; Table 2 cites Hasgall et al. 2015 (IT'IS database v3.0)",
+        "url": "https://arxiv.org/pdf/1811.02874"
+      },
+      "location": "Table 1 (density) and Table 2 (thermal) of arXiv:1811.02874",
+      "notes": "Secondary to the IT'IS database (v3.0 via Suomi 2018). The IT'IS V5.0 online tables were later read directly in the browser (record itis_v5_direct, 2026-10-20): muscle and fat k and C_p match.",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "tissue_k_range",
+      "group": "7_thermal",
+      "name": "Thermal conductivity range of biological tissues",
+      "symbol": "k",
+      "range": [
+        0.4,
+        0.7
+      ],
+      "units_source": "W m^-1 K^-1",
+      "condition": "most tissues, 20-60 C; porcine liver alpha_th ~0.141e-6 m^2/s at 35-40 C and volumetric heat capacity ~3.57 MJ m^-3 K^-1 at 35 C (Guntur et al. as cited)",
+      "value": null,
+      "source": {
+        "authors": "L. Bianchi, F. Cavarzan, L. Ciampitti, M. Cremonesi, F. Grilli, P. Saccomandi",
+        "year": 2022,
+        "title": "Thermophysical and mechanical properties of biological tissues as a function of temperature: a systematic literature review",
+        "venue": "Int. J. Hyperthermia 39(1), 297-340",
+        "doi": "10.1080/02656736.2022.2028908",
+        "url": "https://re.public.polimi.it/retrieve/e0c31c12-842c-4599-e053-1705fe0aef77/Thermophysical%20and%20mechanical%20properties%20of%20biological%20tissues%20as%20a%20function%20of%20temperature%20a%20systematic%20literature%20review.pdf"
+      },
+      "location": "Sec. 5.1, Fig. 4; Sec. 5.3, 5.5; Table 4",
+      "notes": "Values read through a text extraction that was partly garbled; confirm against the PDF before relying on them.",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "tissue_cp_wang",
+      "group": "7_thermal",
+      "name": "Specific heat capacity, muscle (approximate)",
+      "symbol": "C_p, C_V",
+      "value": 4000,
+      "units_source": "J kg^-1 K^-1",
+      "condition": "muscle, approximate",
+      "source": {
+        "authors": "L. V. Wang",
+        "year": 2008,
+        "title": "Tutorial on photoacoustic microscopy and computed tomography",
+        "venue": "IEEE J. Sel. Top. Quantum Electron. 14(1), 171-179",
+        "doi": "10.1109/JSTQE.2007.913398",
+        "url": "https://www.its.caltech.edu/~coil/epub/2008/WangL_2008_IEEE_J_Selected_Topics_QuanTum_Electronics_14_p171.pdf"
+      },
+      "location": "p.172 ('CP and CV [~4000 J/(kg K) for muscle]')",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "gamma_water_NIST",
+      "group": "8_gruneisen",
+      "name": "Grueneisen parameter of water, 20-37 C, computed from IAPWS-95 properties",
+      "symbol": "Gamma = beta c^2 / c_p",
+      "value": {
+        "20C": 0.1086,
+        "22C": 0.1205,
+        "37C": 0.201
+      },
+      "units_source": "dimensionless",
+      "status": "DERIVED",
+      "condition": "beta from central difference of NIST density over +/-1 K: 20C beta=2.069e-4 K^-1, 22C 2.275e-4, 37C 3.619e-4",
+      "source": {
+        "authors": "NIST Chemistry WebBook SRD 69 (Lemmon, McLinden, Friend), implementing W. Wagner & A. Pruss, IAPWS-95, J. Phys. Chem. Ref. Data 31(2), 387-535 (2002)",
+        "year": "accessed 2026-10-20",
+        "title": "Isobaric Properties for Water, P = 0.101325 MPa",
+        "venue": "NIST Standard Reference Database 69",
+        "url": "https://webbook.nist.gov/cgi/fluid.cgi?Action=Load&ID=C7732185&Type=IsoBar&Digits=6&P=0.101325&THigh=311.15&TLow=293.15&TInc=1&RefState=DEF&TUnit=K&PUnit=MPa&DUnit=kg%2Fm3&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm"
+      },
+      "location": "NIST WebBook rows 292.15-296.15 K and 309.15-311.15 K",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "gamma_water_formula",
+      "group": "8_gruneisen",
+      "name": "Grueneisen parameter of water, linear temperature model",
+      "symbol": "Gamma(T) = 0.0053 T + 0.0043 (T in C)",
+      "value": {
+        "20C": 0.1103,
+        "22C": 0.1209,
+        "37C": 0.2004
+      },
+      "units_source": "dimensionless",
+      "condition": "water; the source compares it with measurements over 22-50 C (Fig. 3 caption) and states no range for the formula itself",
+      "source": {
+        "authors": "M. Bakaric, A. Ivory, B. Zeqiri, B. T. Cox, B. E. Treeby",
+        "year": 2019,
+        "title": "Measurement of the temperature-dependent speed of sound and change in Gruneisen parameter of tissue-mimicking materials",
+        "venue": "2019 IEEE International Ultrasonics Symposium (IUS), Glasgow",
+        "url": "https://discovery-pp.ucl.ac.uk/10087155/1/2019-Bakaric-IEEEIUS.pdf"
+      },
+      "location": "Bakaric 2019 IUS paper: sentence introducing the water reference curve, Eq. (2) and the text after it; property data cited to ref. [14], L. V. Wang & H. Wu, Biomedical Optics: Principles and Imaging, Wiley 2012",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED",
+      "notes": "Attribution as Bakaric 2019 describes it: the literature curve for water 'was calculated using the approximation Gamma(T) = 0.0053T + 0.0043 derived from the definition of the Gruneisen parameter' (Eq. 2, Gamma = beta c^2/C_p as extracted) 'and knowledge of the temperature dependence of the speed of sound, volume expansion thermal coefficient and specific heat under constant volume for water and aqueous solutions [14]', where [14] is Wang & Wu 2012. The linear formula is therefore Bakaric et al.'s derivation from the definition using property data cited to Wang & Wu; it is not a formula attributed to Wang & Wu. Range: the paper states no range for the formula itself; its measurements and Fig. 3 span 22 to 50 C. Re-checked 2026-10-21 by page fetch of the UCL PDF."
+    },
+    {
+      "id": "gamma_water_reported",
+      "group": "8_gruneisen",
+      "name": "Grueneisen parameter of water, reported point values",
+      "symbol": "Gamma_water",
+      "value": {
+        "room_temp_Petrova2013": 0.11,
+        "22C_Yao2014": 0.12,
+        "24C_Yao2013": 0.13
+      },
+      "units_source": "dimensionless",
+      "condition": "distilled water",
+      "source": [
+        {
+          "authors": "E. Petrova, S. Ermilov, R. Su, V. Nadvoretskiy, A. Conjusteau, A. Oraevsky",
+          "year": 2013,
+          "title": "Using optoacoustic imaging for measuring the temperature dependence of Gruneisen parameter in optically absorbing solutions",
+          "venue": "Opt. Express 21(21), 25077-25090",
+          "doi": "10.1364/OE.21.025077",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3867102"
+        },
+        {
+          "authors": "D.-K. Yao, C. Zhang, K. Maslov, L. V. Wang",
+          "year": 2014,
+          "title": "Photoacoustic measurement of the Gruneisen parameter of tissue",
+          "venue": "J. Biomed. Opt. 19(1), 017007",
+          "doi": "10.1117/1.JBO.19.1.017007",
+          "url": "https://coilab.caltech.edu/documents/26117/YaoDK_2014_JBO_v19_017007.pdf"
+        },
+        {
+          "authors": "D.-K. Yao, L. V. Wang",
+          "year": 2013,
+          "title": "Measurement of Gruneisen parameter of tissue by photoacoustic spectrometry",
+          "venue": "Proc. SPIE 8581, 858138",
+          "doi": "10.1117/12.2004117",
+          "url": "https://authors.library.caltech.edu/records/fn8h4-8ny17/preview/858138.pdf"
+        }
+      ],
+      "location": "Petrova 2013 Introduction (refs 10-12); Yao 2014 Sec. 2.2 (citing Wang & Wu 2007); Yao & Wang 2013 Sec. 2.2 p. 858138-2",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "gamma_tissue_measured",
+      "group": "8_gruneisen",
+      "name": "Grueneisen parameter of tissues, measured at 22 C",
+      "symbol": "Gamma",
+      "value": {
+        "porcine_subcutaneous_fat": "0.81 +/- 0.05 (n=6)",
+        "porcine_lipid_lard": "0.69 +/- 0.02 (n=5)",
+        "bovine_serum": "0.132 +/- 0.002",
+        "RBC_suspension_15.9_mg_ml": "0.129 +/- 0.006",
+        "RBC_suspension_59.3_mg_ml": "0.144 +/- 0.002",
+        "blood_110_mg_ml_estimate": 0.16,
+        "RBC_fit": "Gamma = 0.124 + 0.000333 C_HbO2 [mg/ml]"
+      },
+      "units_source": "dimensionless",
+      "condition": "22 C (room temperature)",
+      "source": {
+        "authors": "D.-K. Yao, C. Zhang, K. Maslov, L. V. Wang",
+        "year": 2014,
+        "title": "Photoacoustic measurement of the Gruneisen parameter of tissue",
+        "venue": "J. Biomed. Opt. 19(1), 017007",
+        "doi": "10.1117/1.JBO.19.1.017007",
+        "url": "https://coilab.caltech.edu/documents/26117/YaoDK_2014_JBO_v19_017007.pdf"
+      },
+      "location": "Abstract; Secs. 3.1-3.4; Figs. 3-6; Eq. (3)",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "gamma_soft_tissue_estimate",
+      "group": "8_gruneisen",
+      "name": "Grueneisen parameter of soft tissue (estimate from tutorial inputs)",
+      "symbol": "Gamma = beta/(kappa rho C_V)",
+      "value": 0.2,
+      "units_source": "dimensionless",
+      "status": "DERIVED",
+      "condition": "inputs: beta ~4e-4 K^-1 (muscle), kappa ~5e-10 Pa^-1 (water or soft tissue), rho ~1000 kg/m^3, C_V ~4000 J/(kg K) (muscle); temperature not stated",
+      "source": {
+        "authors": "L. V. Wang",
+        "year": 2008,
+        "title": "Tutorial on photoacoustic microscopy and computed tomography",
+        "venue": "IEEE J. Sel. Top. Quantum Electron. 14(1), 171-179",
+        "doi": "10.1109/JSTQE.2007.913398",
+        "url": "https://www.its.caltech.edu/~coil/epub/2008/WangL_2008_IEEE_J_Selected_Topics_QuanTum_Electronics_14_p171.pdf"
+      },
+      "location": "p.172, Eq. (7) and surrounding definitions",
+      "notes": "Order-of-magnitude estimate from approximate inputs, not a measurement.",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "gamma_temperature_coeff",
+      "group": "8_gruneisen",
+      "name": "Temperature dependence of tissue Grueneisen parameter / PA amplitude",
+      "symbol": "dGamma/dT / Gamma",
+      "value": {
+        "Larina2005_tissue_per_C": 0.015,
+        "WangHu2012_PA_pressure_per_degree_phantom": 0.05
+      },
+      "units_source": "fraction per C",
+      "condition": "biological tissue (Larina, as cited); tissue phantoms (Wang & Hu)",
+      "source": [
+        {
+          "authors": "S. Mahmoodkalayeh et al. (citing I. V. Larina, K. V. Larin, R. O. Esenaliev, J. Phys. D 38, 2633-2639, 2005)",
+          "year": "c. 2018",
+          "title": "Low temperature-mediated enhancement of photoacoustic imaging depth",
+          "venue": "arXiv:1802.07114",
+          "url": "https://arxiv.org/pdf/1802.07114"
+        },
+        {
+          "authors": "L. V. Wang, S. Hu",
+          "year": 2012,
+          "title": "Photoacoustic tomography: in vivo imaging from organelles to organs",
+          "venue": "Science 335(6075), 1458-1462",
+          "doi": "10.1126/science.1216210",
+          "url": "https://www.its.caltech.edu/~coil/epub/2012/WangL_2012_Science_v335_p1458.pdf"
+        }
+      ],
+      "location": "Mahmoodkalayeh et al. Results (citing Larina et al. 2005 [17]); Wang & Hu 2012 p.1462",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "gamma_soft_tissue_37C_measured",
+      "group": "8_gruneisen",
+      "name": "Measured Grueneisen parameter of non-fatty soft tissue at 37 C",
+      "symbol": "Gamma",
+      "value": null,
+      "status": "UNVERIFIED",
+      "units_source": "dimensionless",
+      "condition": "soft tissue, 37 C",
+      "source": null,
+      "location": null,
+      "notes": "No source read reports a measured value for non-fatty solid soft tissue at 37 C. Beard 2011 (Interface Focus 1:602, doi 10.1098/rsfs.2011.0028) was read in gap-fill round 1 (path /articles/3262268) and gives no numerical Grueneisen value. Villanueva-Palero 2017 (record gamma_blood_human_37C_measured) measures whole blood, not solid tissue. Gap-fill round 1 gives a DERIVED bounding range of 0.16 to 0.25 (gapfill_round1.json g1_softtissue_37C_bounds), which is not a measurement. Updated 2026-10-21.",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "cell_diameter_mammalian",
+      "group": "9_cell",
+      "name": "Typical mammalian (tissue culture) cell diameter",
+      "symbol": "d_cell",
+      "value": 15,
+      "range": [
+        10,
+        20
+      ],
+      "units_source": "um",
+      "value_SI": 1.5e-05,
+      "range_SI": [
+        1e-05,
+        2e-05
+      ],
+      "units_SI": "m",
+      "condition": "mammalian tissue culture cell",
+      "source": {
+        "authors": "BioNumbers (Milo et al.), primary source: Roskams and Rodgers, LabRef",
+        "year": "accessed 2026-10-20",
+        "title": "BNID 100432: Cell diameter, mammalian tissue culture cell",
+        "venue": "BioNumbers database, Harvard Medical School",
+        "url": "https://bionumbers.hms.harvard.edu/bionumber.aspx?id=100432"
+      },
+      "location": "BNID 100432 (primary: Roskams and Rodgers, LabRef)",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "cell_diameter_examples",
+      "group": "9_cell",
+      "name": "Cell diameters, specific human cell types",
+      "symbol": "d_cell",
+      "value": {
+        "HeLa_3d_after_seeding": 17.5,
+        "HeLa_5d_after_seeding": 15.0,
+        "red_blood_cell": 7.7,
+        "lymphocyte": 7.0,
+        "HeLa_equivalent_sphere_from_1.16pl_DERIVED": 13.0
+      },
+      "units_source": "um",
+      "condition": "HeLa in suspension (Coulter); RBC; lymphocyte",
+      "source": [
+        {
+          "authors": "BioNumbers; primary: A. M. Luciani et al., Eur. J. Cell Biol. 80(2):187-95 (2001), p.189 Fig. 2a",
+          "year": 2001,
+          "title": "BNID 108870 / 108871: Diameter of HeLa cells 3 and 5 days after seeding",
+          "venue": "BioNumbers database",
+          "url": "https://bionumbers.hms.harvard.edu/bionumber.aspx?id=108870 ; https://bionumbers.hms.harvard.edu/bionumber.aspx?id=108871"
+        },
+        {
+          "authors": "BioNumbers",
+          "year": "accessed 2026-10-20",
+          "title": "BNID 108239: Red blood cell diameter (human)",
+          "venue": "BioNumbers database",
+          "url": "https://bionumbers.hms.harvard.edu/bionumber.aspx?id=108239"
+        },
+        {
+          "authors": "BioNumbers; primary: S. Marguerat, J. Bahler, Trends Genet. 28(11):560-5 (2012), doi:10.1016/j.tig.2012.07.003",
+          "year": 2012,
+          "title": "BNID 109546: Lymphocyte diameter (human)",
+          "venue": "BioNumbers database",
+          "url": "https://bionumbers.hms.harvard.edu/bionumber.aspx?id=109546"
+        },
+        {
+          "authors": "BioNumbers; primary: A. Fujioka et al., J. Biol. Chem. 281:8917-8926 (2006)",
+          "year": 2006,
+          "title": "BNID 104990: Volume of cells and nuclei of HeLa and COS7",
+          "venue": "BioNumbers database",
+          "url": "https://bionumbers.hms.harvard.edu/bionumber.aspx?id=104990"
+        }
+      ],
+      "location": "BNIDs 108870, 108871, 108239, 109546, 104990 (HeLa nucleus 0.22 pl + cytoplasm 0.94 pl; sphere d=(6V/pi)^(1/3))",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "c0",
+      "group": "10_refractive",
+      "name": "Speed of light in vacuum",
+      "symbol": "c0",
+      "value": 299792458,
+      "units_source": "m s^-1",
+      "units_SI": "m s^-1",
+      "condition": "exact (SI definition)",
+      "source": {
+        "authors": "NIST / CODATA",
+        "year": 2022,
+        "title": "CODATA Internationally recommended 2022 values of the Fundamental Physical Constants (allascii table)",
+        "venue": "NIST Physical Measurement Laboratory",
+        "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
+      },
+      "location": "allascii.txt line 'speed of light in vacuum 299 792 458 (exact) m s^-1', 2022 CODATA adjustment",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "n_tissue_model",
+      "group": "10_refractive",
+      "name": "Tissue refractive index vs water content",
+      "symbol": "n = n_dry - (n_dry - n_water) W",
+      "value": {
+        "n_water": 1.33,
+        "n_dry": 1.5,
+        "n_dry_alt_Biswas_Luu_2011": 1.514
+      },
+      "units_source": "dimensionless",
+      "condition": "W = water volume fraction; evaluated (assumed W, not sourced): W=0.6 -> 1.398, W=0.7 -> 1.381, W=0.8 -> 1.364",
+      "source": {
+        "authors": "S. L. Jacques",
+        "year": 2013,
+        "title": "Optical properties of biological tissues: a review",
+        "venue": "Phys. Med. Biol. 58(11), R37-R61",
+        "doi": "10.1088/0031-9155/58/11/R37",
+        "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+      },
+      "location": "Sec. 4, Eq. (3), p. R47",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "n_liver_NIR",
+      "group": "10_refractive",
+      "name": "Refractive index of normal human liver, NIR",
+      "symbol": "n",
+      "value": {
+        "964nm": "1.369 +/- 0.005",
+        "632.8nm": "1.378 +/- 0.008",
+        "1551nm": "1.362 +/- 0.003",
+        "Cauchy_A": 1.3591,
+        "Cauchy_B_um2": 0.00827,
+        "Cauchy_C_um4": -0.000576,
+        "800nm_from_Cauchy_DERIVED": 1.3706
+      },
+      "units_source": "dimensionless",
+      "condition": "freshly excised human liver, 24 +/- 2 C, prism-coupling refractometer; Cauchy form assumed n = A + B/lambda^2 + C/lambda^4 (equation rendered as image; form inferred from coefficient units)",
+      "source": {
+        "authors": "P. Giannios, K. G. Toutouzas, M. Matiatou, K. Stasinos, M. M. Konstadoulakis, G. C. Zografos, K. Moutzouris",
+        "year": 2016,
+        "title": "Visible to near-infrared refractive properties of freshly-excised human-liver tissues: marking hepatic malignancies",
+        "venue": "Sci. Rep. 6, 27910",
+        "doi": "10.1038/srep27910",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4906272"
+      },
+      "location": "Table 2 (normal tissue group N)",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED",
+      "notes": "Re-checked 2026-10-21 by reading PMC4906272 in a browser, Table 2, normal tissue group N. Every value in this record matches the source: 632.8 nm 1.378 +/- 0.008, 964 nm 1.369 +/- 0.005, 1551 nm 1.362 +/- 0.003, Cauchy A = 1.35910, B = 0.00827 um^2, C = -0.000576 um^4. The derived 800 nm value recomputes as 1.35910 + 0.00827/0.64 - 0.000576/0.4096 = 1.3706. The audit (MINOR 13) had listed this record as unconfirmed because its own re-fetch failed; it is now confirmed. The Cauchy form A + B/lambda^2 + C/lambda^4 is still inferred from the coefficient units, as stated in condition."
+    },
+    {
+      "id": "c_tissue",
+      "group": "10_refractive",
+      "name": "Speed of light in soft tissue (NIR)",
+      "symbol": "c = c0/n",
+      "value": 218826612.0,
+      "range": [
+        214443818,
+        219789192
+      ],
+      "units_source": "m s^-1",
+      "units_SI": "m s^-1",
+      "status": "DERIVED",
+      "condition": "n = 1.37 (liver, 800-964 nm); range from Jacques Eq. (3) with W 0.6-0.8 (W assumed)",
+      "arithmetic": "299792458/1.37 = 2.1883e8 m/s; /1.369 = 2.1899e8; /1.33 (water) = 2.2541e8",
+      "source": [
+        {
+          "authors": "NIST / CODATA",
+          "year": 2022,
+          "title": "CODATA Internationally recommended 2022 values of the Fundamental Physical Constants (allascii table)",
+          "venue": "NIST Physical Measurement Laboratory",
+          "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
+        },
+        {
+          "authors": "P. Giannios, K. G. Toutouzas, M. Matiatou, K. Stasinos, M. M. Konstadoulakis, G. C. Zografos, K. Moutzouris",
+          "year": 2016,
+          "title": "Visible to near-infrared refractive properties of freshly-excised human-liver tissues: marking hepatic malignancies",
+          "venue": "Sci. Rep. 6, 27910",
+          "doi": "10.1038/srep27910",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4906272"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        }
+      ],
+      "location": "computed",
+      "fetched": "2026-10-20"
+    },
+    {
+      "id": "water37_acoustic",
+      "group": "11_layered",
+      "name": "Water (coupling medium) at 37 C: speed of sound, density, impedance",
+      "symbol": "c_w, rho_w, Z_w",
+      "value": {
+        "c_m_s_NIST_IAPWS95": 1523.66,
+        "c_m_s_Marczak1997_poly": 1523.93,
+        "rho_kg_m3_NIST": 993.33,
+        "rho_kg_m3_JonesHarris1992_air_saturated": 993.325,
+        "Z_MRayl_DERIVED": 1.5135
+      },
+      "units_source": "m/s; kg/m^3; MRayl",
+      "condition": "pure water, 310.15 K, 0.101325 MPa",
+      "source": [
+        {
+          "authors": "NIST Chemistry WebBook SRD 69 (Lemmon, McLinden, Friend), implementing W. Wagner & A. Pruss, IAPWS-95, J. Phys. Chem. Ref. Data 31(2), 387-535 (2002)",
+          "year": "accessed 2026-10-20",
+          "title": "Isobaric Properties for Water, P = 0.101325 MPa",
+          "venue": "NIST Standard Reference Database 69",
+          "url": "https://webbook.nist.gov/cgi/fluid.cgi?Action=Load&ID=C7732185&Type=IsoBar&Digits=6&P=0.101325&THigh=311.15&TLow=293.15&TInc=1&RefState=DEF&TUnit=K&PUnit=MPa&DUnit=kg%2Fm3&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm"
+        },
+        {
+          "authors": "B. E. Treeby (k-Wave source code) implementing W. Marczak 1997 J. Acoust. Soc. Am. 102, 2776-2779; F. E. Jones & G. L. Harris 1992 J. Res. NIST 97(3), 335-340; Pinkerton 1949 Proc. Phys. Soc. B 2, 129-141",
+          "year": "2008-2019",
+          "title": "waterSoundSpeed.m, waterDensity.m, waterAbsorption.m",
+          "venue": "k-Wave Toolbox, GitHub ucl-bug/k-wave",
+          "url": "https://raw.githubusercontent.com/ucl-bug/k-wave/main/k-Wave/waterSoundSpeed.m"
+        }
+      ],
+      "location": "NIST row T=310.150 K; k-Wave waterSoundSpeed.m polynomial p(1..6) and waterDensity.m (evaluated at T=37)",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "fat_acoustic",
+      "group": "11_layered",
+      "name": "Fat: speed of sound, density, impedance",
+      "symbol": "c, rho, Z",
+      "value": {
+        "Mast2000_via_Culjat": {
+          "c": 1478,
+          "rho": 950,
+          "Z_MRayl": 1.4,
+          "Z_check": 1.4041
+        },
+        "Szabo_via_Stanford": {
+          "c": 1430,
+          "rho": 928,
+          "Z_MRayl": 1.33
+        }
+      },
+      "units_source": "m/s; kg/m^3; MRayl",
+      "condition": "temperature not stated",
+      "source": [
+        {
+          "authors": "M. O. Culjat, D. Goldenberg, P. Tewari, R. S. Singh",
+          "year": 2010,
+          "title": "A review of tissue substitutes for ultrasound imaging",
+          "venue": "Ultrasound Med. Biol. 36(6), 861-873",
+          "doi": "10.1016/j.ultrasmedbio.2010.02.012",
+          "url": "https://www.ccn.ucla.edu/wiki/images/2/26/Culjat2010.pdf"
+        },
+        {
+          "authors": "Stanford RAD225/BIOE225 course slides (no individual author named); slide 19 table (density, speed of sound, impedance) credited to Szabo; slide 29 table (attenuation) credited to Duck",
+          "year": 2019,
+          "title": "Acoustic Properties of Tissue (Class 3)",
+          "venue": "Stanford University course notes, Fall 2019",
+          "url": "https://web.stanford.edu/class/rad225/subdir/Class3.pdf"
+        }
+      ],
+      "location": "Culjat Table 1; Stanford slide 19",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "muscle_acoustic",
+      "group": "11_layered",
+      "name": "Muscle: speed of sound, density, impedance",
+      "symbol": "c, rho, Z",
+      "value": {
+        "Mast2000_via_Culjat": {
+          "c": 1547,
+          "rho": 1050,
+          "Z_MRayl": 1.62,
+          "Z_check": 1.6244
+        },
+        "Szabo_via_Stanford_skeletal": {
+          "c": 1580,
+          "rho": 1041,
+          "Z_MRayl": 1.65
+        }
+      },
+      "units_source": "m/s; kg/m^3; MRayl",
+      "condition": "temperature not stated",
+      "source": [
+        {
+          "authors": "M. O. Culjat, D. Goldenberg, P. Tewari, R. S. Singh",
+          "year": 2010,
+          "title": "A review of tissue substitutes for ultrasound imaging",
+          "venue": "Ultrasound Med. Biol. 36(6), 861-873",
+          "doi": "10.1016/j.ultrasmedbio.2010.02.012",
+          "url": "https://www.ccn.ucla.edu/wiki/images/2/26/Culjat2010.pdf"
+        },
+        {
+          "authors": "Stanford RAD225/BIOE225 course slides (no individual author named); slide 19 table (density, speed of sound, impedance) credited to Szabo; slide 29 table (attenuation) credited to Duck",
+          "year": 2019,
+          "title": "Acoustic Properties of Tissue (Class 3)",
+          "venue": "Stanford University course notes, Fall 2019",
+          "url": "https://web.stanford.edu/class/rad225/subdir/Class3.pdf"
+        }
+      ],
+      "location": "Culjat Table 1; Stanford slide 19",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "gamma_blood_human_37C_measured",
+      "name": "Gruneisen parameter of fresh human whole blood at 37 C and 22 C",
+      "symbol": "Gamma",
+      "value": {
+        "37C_donors": {
+          "1": 0.245,
+          "2": 0.216,
+          "3": 0.208,
+          "4": 0.226,
+          "5": 0.24
+        },
+        "37C_mean": 0.226,
+        "37C_sd_between_donors": 0.015,
+        "22C_donors": {
+          "D1": 0.177,
+          "D2": 0.152,
+          "D3": 0.166,
+          "D4": 0.176,
+          "D5": 0.141
+        },
+        "22C_mean": 0.162,
+        "22C_sd_between_donors": 0.016,
+        "plasma_hct0_22C": 0.12,
+        "rbc_hct100_22C": 0.196,
+        "same_donor_22C_to_37C": {
+          "22C": 0.15,
+          "37C": 0.245
+        }
+      },
+      "units": "dimensionless",
+      "applies_to": "fresh human whole blood from healthy donors, 750 nm, measured in vitro in a tube inside an integrating sphere; 37 C values from five donors",
+      "source": "Villanueva-Palero Y, Hondebrink E, Petersen W, Steenbergen W. Quantitative photoacoustic integrating sphere (QPAIS) platform for absorption coefficient and Gruneisen parameter measurements: demonstration with human blood. Photoacoustics 6:9-15 (2017). doi:10.1016/j.pacs.2017.03.004. PMC5388938",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5388938/",
+      "location": "Table 6 (37 C, five donors); Table 4 (22 C, five donors D1-D5); Table 5 (same donor 22 and 37 C); Fig. 4 and Sec. 3.2 (hct 0 and 100); Sec. 5 (37 C mean 0.226 +/- 0.015)",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED",
+      "notes": "Read in the built-in browser on 2026-10-20 after automated fetching was blocked. Authors note acoustic impedance mismatch between calibration ink and blood was not corrected. Whole blood, not solid soft tissue; no measured 37 C value for non-fatty solid soft tissue was found. PMC10026575 (Chen et al., Biomed Opt Express 2023) was also checked: its 0.20 at 37 C for blood is an assumed simulation input, not a measurement, so it is not used."
+    },
+    {
+      "id": "itis_v5_direct",
+      "name": "IT'IS database values read directly (sound speed, attenuation constant, density, heat capacity, thermal conductivity)",
+      "symbol": "c, alpha, rho, C_p, k",
+      "value": {
+        "speed_of_sound_m_s": {
+          "Blood": {
+            "avg": 1578.2,
+            "sd": 11.3,
+            "n": 9,
+            "min": 1559.2,
+            "max": 1590.0
+          },
+          "Fat": {
+            "avg": 1440.2,
+            "sd": 21.9,
+            "n": 16,
+            "min": 1412.0,
+            "max": 1490.0
+          },
+          "SAT": {
+            "avg": 1477.0,
+            "sd": 1.4,
+            "n": 2
+          },
+          "Muscle": {
+            "avg": 1588.4,
+            "sd": 21.6,
+            "n": 24,
+            "min": 1545.0,
+            "max": 1631.0
+          },
+          "Liver": {
+            "avg": 1585.7,
+            "sd": 19.5,
+            "n": 10
+          },
+          "Skin": {
+            "avg": 1624.0,
+            "sd": 91.8,
+            "n": 3
+          },
+          "Connective Tissue": {
+            "avg": 1545.0
+          },
+          "Water": {
+            "avg": 1482.3
+          }
+        },
+        "attenuation_constant_Np_m": {
+          "Blood": 2.3676,
+          "Fat": 4.3578,
+          "Liver": 6.915,
+          "Connective Tissue": 14.506
+        },
+        "density_kg_m3": {
+          "Blood": {
+            "avg": 1050,
+            "sd": 19
+          },
+          "Fat": {
+            "avg": 911,
+            "sd": 51
+          },
+          "Muscle": {
+            "avg": 1090,
+            "sd": 55
+          },
+          "Liver": {
+            "avg": 1079,
+            "sd": 56
+          },
+          "Skin": {
+            "avg": 1109,
+            "sd": 38
+          },
+          "Water": {
+            "avg": 994
+          }
+        },
+        "heat_capacity_J_kgK": {
+          "Blood": {
+            "avg": 3617,
+            "sd": 301
+          },
+          "Fat": {
+            "avg": 2348,
+            "sd": 372
+          },
+          "Muscle": {
+            "avg": 3421,
+            "sd": 460
+          },
+          "Liver": {
+            "avg": 3540,
+            "sd": 119
+          },
+          "Skin": {
+            "avg": 3391,
+            "sd": 233
+          },
+          "Water": {
+            "avg": 4178
+          }
+        },
+        "thermal_conductivity_W_mK": {
+          "Blood": {
+            "avg": 0.52,
+            "sd": 0.03
+          },
+          "Fat": {
+            "avg": 0.21,
+            "sd": 0.02
+          },
+          "Muscle": {
+            "avg": 0.49,
+            "sd": 0.04
+          },
+          "Liver": {
+            "avg": 0.52,
+            "sd": 0.03
+          },
+          "Skin": {
+            "avg": 0.37,
+            "sd": 0.06
+          },
+          "Water": {
+            "avg": 0.6,
+            "sd": 0.01
+          }
+        }
+      },
+      "units": "SI as named in each key; attenuation constant in Np/m at the database's reference frequency (the page gives no frequency in the extracted table; treat as UNVERIFIED for frequency dependence)",
+      "applies_to": "human/mammalian tissues as compiled by IT'IS",
+      "source": "IT'IS Foundation Tissue Properties Database V5.0 (current online version as listed on the downloads page), DOI 10.13099/VIP21000-05-0. Per-property online tables.",
+      "url": "https://itis.swiss/virtual-population/tissue-properties/database/",
+      "location": "acoustic-properties/speed-of-sound, acoustic-properties/attenuation-constant, density, heat-capacity, thermal-conductivity pages; rows named above",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED",
+      "notes": "Read in the built-in browser on 2026-10-20; the tables are drawn by JavaScript, which is why automated fetching saw no numbers. Muscle and fat k and C_p match the second-hand values already used (via Suomi 2018). The heat solver's diffusivity range used Culjat densities (fat 950, muscle 1050 kg/m3) with IT'IS k and C_p, giving [9.41e-8, 1.364e-7] m2/s; IT'IS's own densities give [9.82e-8, 1.314e-7] m2/s, which lies inside the range used. IT'IS muscle sound speed (1588 m/s) and fat (1440 m/s) differ from Culjat/Mast (1547, 1478); both lie inside or within 2 per cent of the training range [1430, 1595]."
+    },
+    {
+      "id": "eps_HbO2_700",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of oxyhaemoglobin at 700 nm",
+      "symbol": "epsilon_HbO2",
+      "value": 290,
+      "units_source": "cm^-1 M^-1 (decadic)",
+      "value_SI": 29.0,
+      "units_SI": "m^2 mol^-1 (decadic); 1 cm^-1 M^-1 = 0.1 m^2 mol^-1",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=700 nm, column 'Hb02' (neighbouring rows 698: 286 / 1846.08; 702: 294 / 1741)",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED",
+      "notes": "read 2026-10-20 through a page-fetch tool that quotes table rows (direct download refused by the session proxy, HTTP 403), as for the existing OMLC records",
+      "added_by": "tissue solver build, 2026-10-20 (700 nm OOD wavelength)"
+    },
+    {
+      "id": "eps_Hb_700",
+      "group": "1_haemoglobin",
+      "name": "Molar extinction coefficient of deoxyhaemoglobin at 700 nm",
+      "symbol": "epsilon_Hb",
+      "value": 1794.28,
+      "units_source": "cm^-1 M^-1 (decadic)",
+      "value_SI": 179.428,
+      "units_SI": "m^2 mol^-1 (decadic); 1 cm^-1 M^-1 = 0.1 m^2 mol^-1",
+      "condition": "Hb in water (Prahl compilation)",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "summary.html table, row lambda=700 nm, column 'Hb' (neighbouring rows 698: 286 / 1846.08; 702: 294 / 1741)",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED",
+      "notes": "read 2026-10-20 through a page-fetch tool that quotes table rows (direct download refused by the session proxy, HTTP 403), as for the existing OMLC records",
+      "added_by": "tissue solver build, 2026-10-20 (700 nm OOD wavelength)"
+    },
+    {
+      "id": "mua_blood_HbO2_700",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% oxyhaemoglobin, 700 nm",
+      "symbol": "mu_a,blood,HbO2",
+      "value": 1.5529,
+      "units_source": "cm^-1",
+      "value_SI": 155.29,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "arithmetic": "290 x 2.302585 x 150 / 64500 = 290 x 0.00535485 = 1.5529 cm^-1",
+      "fetched": "2026-10-20",
+      "added_by": "tissue solver build, 2026-10-20"
+    },
+    {
+      "id": "mua_blood_Hb_700",
+      "group": "1_haemoglobin",
+      "name": "Absorption coefficient of whole blood, 100% deoxyhaemoglobin, 700 nm",
+      "symbol": "mu_a,blood,Hb",
+      "value": 9.6081,
+      "units_source": "cm^-1",
+      "value_SI": 960.81,
+      "units_SI": "m^-1",
+      "condition": "whole blood, 150 g/L Hb, MW 64,500, ln(10)",
+      "status": "DERIVED",
+      "source": {
+        "authors": "S. Prahl (compiler), using data from W. B. Gratzer (Med. Res. Council Labs, London) and N. Kollias (Wellman Laboratories, Harvard Medical School)",
+        "year": 1999,
+        "title": "Optical Absorption of Hemoglobin / Tabulated Molar Extinction Coefficient for Hemoglobin in Water",
+        "venue": "Oregon Medical Laser Center (OMLC) web resource",
+        "url": "https://omlc.org/spectra/hemoglobin/summary.html ; https://omlc.org/spectra/hemoglobin/"
+      },
+      "location": "computed: epsilon (summary.html) x ln(10) x 150 / 64500",
+      "arithmetic": "1794.28 x 2.302585 x 150 / 64500 = 1794.28 x 0.00535485 = 9.6081 cm^-1",
+      "fetched": "2026-10-20",
+      "added_by": "tissue solver build, 2026-10-20"
+    },
+    {
+      "id": "mua_water_700",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of pure water at 700 nm",
+      "symbol": "mu_a,water",
+      "value": {
+        "Hale1973": 0.006,
+        "Pope1997": 0.00624
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Hale1973": 0.6,
+        "Pope1997": 0.624
+      },
+      "units_SI": "m^-1",
+      "condition": "pure liquid water, room temperature",
+      "status": "VERIFIED",
+      "source": [
+        {
+          "authors": "G. M. Hale, M. R. Querry",
+          "year": 1973,
+          "title": "Optical constants of water in the 200-nm to 200-micron wavelength region",
+          "venue": "Appl. Opt. 12, 555-563 (as tabulated by OMLC)",
+          "url": "https://omlc.org/spectra/water/data/hale73.txt"
+        },
+        {
+          "authors": "R. M. Pope, E. S. Fry",
+          "year": 1997,
+          "title": "Absorption spectrum (380-700 nm) of pure water. II. Integrating cavity measurements",
+          "venue": "Appl. Opt. 36, 8710-8723 (as tabulated by OMLC)",
+          "url": "https://omlc.org/spectra/water/data/pope97.txt"
+        }
+      ],
+      "location": "hale73.txt row 700.00 (0.0060000; neighbours 675: 0.0041500, 725: 0.015900); pope97.txt row 700 (0.00624; neighbours 697.5: 0.00592, 702.5: 0.00663). Pope and Fry data run 380 to 727.5 nm, so 700 nm is covered.",
+      "fetched": "2026-10-20",
+      "notes": "read 2026-10-20 through a page-fetch tool that quotes table rows (direct download refused by the session proxy, HTTP 403), as for the existing OMLC records. The two tabulations differ by 4 per cent at 700 nm. light.py uses the Hale1973 column, as at the other wavelengths.",
+      "added_by": "tissue solver build, 2026-10-20"
+    },
+    {
+      "id": "mua_fat_700",
+      "group": "3_lipid_water",
+      "name": "Absorption coefficient of purified pig-lard fat at 700 nm",
+      "symbol": "mu_a,fat",
+      "value": 0.323,
+      "units_source": "m^-1 (per vanveen04.pdf axis labels; confirmed by JBO 2005, gapfill_round1.md section 8)",
+      "value_SI": 0.323,
+      "units_SI": "m^-1",
+      "value_cm": 0.00323,
+      "condition": "purified porcine lard oil, liquid, averaged over 37 and 60 C (per OMLC page)",
+      "source": {
+        "authors": "R. L. P. van Veen, H. J. C. M. Sterenborg, A. Pifferi, A. Torricelli, R. Cubeddu",
+        "year": 2004,
+        "title": "Determination of VIS-NIR absorption coefficients of mammalian fat, with time- and spatially resolved diffuse reflectance and transmission spectroscopy",
+        "venue": "OSA Annual BIOMED Topical Meeting (per OMLC file header); data processed by S. Prahl",
+        "url": "https://omlc.org/spectra/fat/fat.txt ; https://omlc.org/spectra/fat/fat.orig.txt ; https://omlc.org/spectra/fat/vanveen04.pdf",
+        "year_note": "2004 per params/gapfill_round1.md section 8 (fat.txt header 'OSA Annual BIOMED Topical Meeting, 2004'; the PDF's '(c)2000' line is a template copyright)"
+      },
+      "location": "fat.txt row 700 nm (Prahl-processed, 3 significant digits; neighbours 698: 0.327, 699: 0.325, 701: 0.320, 702: 0.319)",
+      "fetched": "2026-10-20",
+      "status": "VERIFIED",
+      "notes": "read 2026-10-20 through a page-fetch tool that quotes table rows (direct download refused by the session proxy, HTTP 403), as for the existing OMLC records. 700 nm lies inside the 600-1100 nm interval reported in the proceedings text.",
+      "added_by": "tissue solver build, 2026-10-20"
+    },
+    {
+      "id": "mua_mel_700",
+      "group": "2_melanin",
+      "name": "Melanosome absorption coefficient at 700 nm",
+      "symbol": "mu_a,mel",
+      "value": {
+        "Jacques2013_Eq8_m3": 189.14,
+        "OMLC_skin_-3.48": 213.55,
+        "OMLC_retina_-3.48": 815.3
+      },
+      "units_source": "cm^-1",
+      "value_SI": {
+        "Jacques2013_Eq8_m3": 18914.0,
+        "OMLC_skin_-3.48": 21355.4
+      },
+      "units_SI": "m^-1",
+      "condition": "melanosome interior (multiply by melanosome volume fraction for tissue)",
+      "status": "DERIVED",
+      "source": [
+        {
+          "authors": "S. L. Jacques",
+          "year": 2013,
+          "title": "Optical properties of biological tissues: a review",
+          "venue": "Phys. Med. Biol. 58(11), R37-R61",
+          "doi": "10.1088/0031-9155/58/11/R37",
+          "url": "https://omlc.org/news/dec14/Jacques_PMB2013/Jacques_PMB2013.pdf"
+        },
+        {
+          "authors": "S. L. Jacques",
+          "year": 1998,
+          "title": "Melanosome Absorption Coefficient",
+          "venue": "OMLC web resource (data from Jacques & McAuliffe 1991 Photochem. Photobiol. 53:769-775; Jacques, Glickman & Schwartz 1996 SPIE 2681:468-477)",
+          "url": "https://omlc.org/spectra/melanin/mua.html"
+        }
+      ],
+      "location": "computed from melanin_formula_jacques and melanin_formula_omlc",
+      "arithmetic": "519 x (700/500)^-3 = 519 / 2.744 = 189.14 cm^-1; 1.70e12 x 700^-3.48 = 213.55 cm^-1; 6.49e12 x 700^-3.48 = 815.3 cm^-1",
+      "fetched": "2026-10-20",
+      "added_by": "tissue solver build, 2026-10-20"
+    },
+    {
+      "id": "musp_soft_700",
+      "group": "4_scattering",
+      "name": "Reduced scattering coefficient of 'other soft tissues' at 700 nm",
+      "symbol": "mu_s'",
+      "value": 12.261,
+      "units_source": "cm^-1",
+      "value_SI": 1226.1,
+      "units_SI": "m^-1",
+      "status": "DERIVED",
+      "condition": "a=18.9 cm^-1, b=1.286",
+      "source": {
+        "authors": "S. L. Jacques",
+        "year": 2013,
+        "title": "Optical properties of biological tissues: a review, Table 2 data file",
+        "venue": "Phys. Med. Biol. 58 R37 (supplementary CSV on OMLC)",
+        "doi": "10.1088/0031-9155/58/11/R37",
+        "url": "https://omlc.org/news/dec14/Jacques_PMB2013/table2_JacquesPMB2013.csv"
+      },
+      "location": "computed from Table 2 ('Other soft tissues')",
+      "arithmetic": "18.9 x (700/500)^-1.286 = 18.9 x 1.4^-1.286 = 12.261 cm^-1",
+      "fetched": "2026-10-20",
+      "added_by": "tissue solver build, 2026-10-20"
+    }
+  ],
+  "unverified": [
+    {
+      "item": "IT'IS attenuation constant: reference frequency, frequency exponent and measurement temperature",
+      "reason": "the V5.0 online tables were read directly in the browser on 2026-10-20 (record itis_v5_direct), but the extracted attenuation table states no frequency, and the documentation (v4.1) gives no temperature for acoustic or thermal properties"
+    },
+    {
+      "item": "Duck 1990, Physical Properties of Tissue (primary, with table numbers)",
+      "reason": "book; not retrieved. Duck-derived values are available only second-hand (Mast 2000 Table 1 rows marked 3; Chatelin et al.; Shah 2008; Stanford slide 29; Kelly et al. 2008)"
+    },
+    {
+      "item": "Beard 2011 reference list (refs 78, 156-158, 181) and whether the 1.6 mm^-1 in Sec. 3.1 is mu_s or mu_s'",
+      "reason": "the article text was read in gap-fill round 1 (gapfill_round1.json g2_beard2011_values) but the reference list was not reached and the PDF was not checked for the prime"
+    },
+    {
+      "item": "ICRU Report 61 (1998) and Mast et al. 1997 primaries; temperature of the Culjat/Mast fat, muscle, blood and liver rows",
+      "reason": "not retrieved (paywalled or no access terms); Mast 2000 itself was fetched in gap-fill round 1 and states no temperature for these rows"
+    },
+    {
+      "item": "Temperature of the Stanford RAD225 acoustic tables (slides 19 and 29)",
+      "reason": "not stated in the fetched slides, except the water row on slide 19 (22 C)"
+    },
+    {
+      "item": "Measured Grueneisen parameter of non-fatty solid soft tissue at 37 C",
+      "reason": "no source read reports one; value null. Villanueva-Palero 2017 (record gamma_blood_human_37C_measured) measures whole blood at 37 C, not solid tissue; the gap-fill bounding range 0.16 to 0.25 is DERIVED, not measured"
+    },
+    {
+      "item": "Anisotropy g single typical value stated by a source",
+      "reason": "Jacques 2013 gives only '>0.90' and 0.925-0.950 for cell suspensions; the gap-fill median 0.95 of eight Cheong-table values (790-850 nm) is DERIVED, not a stated typical value"
+    },
+    {
+      "item": "Soft-tissue water volume fraction W for refractive index Eq. (3)",
+      "reason": "no generic soft-tissue value exists in the sources read; per-tissue mass fractions (JASN 2011 Table 3) and a dermis volume fraction (Jacques 2013 Table 3) were found in gap-fill round 1; W = 0.6-0.8 remains illustrative"
+    },
+    {
+      "item": "Larina et al. 2005 primary statement of 1.5% per C",
+      "reason": "only the abstract was read (no coefficient in it); the figure is used as cited by Mahmoodkalayeh et al. 2018"
+    }
+  ],
+  "check": [
+    {
+      "claim": "Speed of sound in soft tissue about 1,540 m/s",
+      "verdict": "CONFIRMED WITH QUALIFICATION",
+      "evidence": "Wang 2008 p.174 uses 1.54 mm/us; Culjat 2010 Table 1 (Mast 2000) soft-tissue average 1561 m/s; tissue range 1430 (fat) to 1595 (liver) m/s"
+    },
+    {
+      "claim": "Transport mean free path about 1 mm in NIR tissue",
+      "verdict": "CONFIRMED WITH QUALIFICATION",
+      "evidence": "0.964 mm at 800 nm from Jacques 2013 Table 2 soft-tissue mean; 0.42 (skin) to 0.97 mm across tissue means; 0.63-2.08 mm across +/-1 SD of a; Zhou 2016 states ~1 mm; Wang 2008 states only that the 1 mm penetration limit is approximately correlated with l_tr"
+    },
+    {
+      "claim": "A single cell is 10 to 20 um across",
+      "verdict": "CONFIRMED WITH QUALIFICATION",
+      "evidence": "BioNumbers BNID 100432: 15 um, range 10-20 um for mammalian tissue culture cells; but human RBC 7.7 um and lymphocyte ~7 um fall below"
+    }
+  ],
+  "change_log": [
+    {
+      "date": "2026-10-20",
+      "by": "tissue solver build",
+      "change": "added 700 nm records (eps_HbO2_700, eps_Hb_700, mua_blood_HbO2_700, mua_blood_Hb_700, mua_water_700 with Hale1973 and Pope1997, mua_fat_700, mua_mel_700, musp_soft_700) for the 700 nm OOD wavelength that replaces 532 nm; 532 nm records kept"
+    },
+    {
+      "date": "2026-10-20",
+      "by": "browser round (recorded retrospectively on 2026-10-21)",
+      "change": "added gamma_blood_human_37C_measured (Villanueva-Palero et al. 2017, Photoacoustics 6:9-15, PMC5388938, read in the built-in browser after automated fetching was blocked) and itis_v5_direct (IT'IS Foundation Tissue Properties Database V5.0 online tables, read directly in the built-in browser). No existing record's value changed."
+    },
+    {
+      "date": "2026-10-21",
+      "by": "parameter-file housekeeping (audit round 1 MINOR 13 and drafting review)",
+      "change": "text fields only; no value or number changed (asserted by params/check_values_unchanged.py against tissue_params.before_housekeeping.json). (a) Stanford source credit: slide 29 attenuation table credited to Duck, slide 19 to Szabo (alpha_soft and every record citing the slides); (b) l_tr_literature_statement: Zhou 2016 cited for the ~1 mm number, Wang 2008 for the correlation only; (c) gamma_water_formula: attribution reworded as Bakaric 2019 describes it (derived from the definition with property data cited to Wang & Wu 2012); (d) mua_fat_532/750/800/850: source year 2004 with the year_note of mua_fat_700 (gapfill_round1.md section 8); (e) unverified list rewritten and acoustic_table_culjat / muscle_fat_thermal notes updated (Mast 2000 fetched in gap-fill round 1; IT'IS V5.0 read directly); (g) n_liver_NIR: notes record the 2026-10-21 browser re-check of Giannios 2016 Table 2 (all values match). Sources re-checked 2026-10-21 by page fetch: Stanford Class3.pdf, Wang 2008, Zhou 2016, Bakaric 2019."
+    }
+  ]
+}

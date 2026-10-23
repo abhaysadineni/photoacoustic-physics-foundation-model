@@ -1,0 +1,49 @@
+[
+  {
+    "system": "light_r3",
+    "split": "train",
+    "n": 600,
+    "seconds": 131.00652980804443,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "light_r3",
+    "split": "val",
+    "n": 60,
+    "seconds": 12.513233661651611,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "light_r3",
+    "split": "test",
+    "n": 100,
+    "seconds": 24.344414234161377,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "light_r3",
+    "split": "test_bc",
+    "n": 100,
+    "seconds": 21.770378351211548,
+    "regime": "train",
+    "bc_set": "test"
+  },
+  {
+    "system": "light_r3",
+    "split": "test_ood",
+    "n": 100,
+    "seconds": 20.450451374053955,
+    "regime": "ood",
+    "bc_set": "train"
+  },
+  {
+    "norm_scale": [
+      0.7496235370635986,
+      1.0,
+      1.0
+    ]
+  }
+]

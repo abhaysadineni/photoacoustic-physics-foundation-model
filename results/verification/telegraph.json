@@ -1,0 +1,372 @@
+{
+  "system": "telegraph",
+  "check": "single periodic Fourier mode, underdamped (top level) and overdamped (in cases); passed requires both",
+  "n": [
+    128,
+    256,
+    512
+  ],
+  "error": [
+    0.0006220848822949268,
+    0.0001531134288468935,
+    3.812787557976538e-05
+  ],
+  "observed_order": [
+    2.0225106265000337,
+    2.0056827663645254
+  ],
+  "promised_order": 2.0,
+  "passed": true,
+  "rk4_steps": [
+    320,
+    640,
+    1280
+  ],
+  "exact_amplitude_at_T": 0.3664172874929132,
+  "cases": {
+    "underdamped": {
+      "system": "telegraph",
+      "check": "underdamped: periodic single mode m=2 (k=12.57), c=1.0, gamma=1.0, c k=12.57, cos/sin exact form, q(0)=0, final time T=1.0",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.0006220848822949268,
+        0.0001531134288468935,
+        3.812787557976538e-05
+      ],
+      "observed_order": [
+        2.0225106265000337,
+        2.0056827663645254
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "rk4_steps": [
+        320,
+        640,
+        1280
+      ],
+      "exact_amplitude_at_T": 0.3664172874929132
+    },
+    "overdamped": {
+      "system": "telegraph",
+      "check": "overdamped: periodic single mode m=2 (k=12.57), c=1.0, gamma=20.0, c k=12.57, cosh/sinh exact form, q(0)=0, final time T=1.0",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.003934530791674089,
+        0.0009825125624290268,
+        0.00024555817493944883
+      ],
+      "observed_order": [
+        2.0016438399778966,
+        2.0004110013632985
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "rk4_steps": [
+        320,
+        640,
+        1280
+      ],
+      "exact_amplitude_at_T": 0.01346752650488402
+    }
+  },
+  "error_metric": "relative L2 of p on the internal grid at t = T (point values)",
+  "supplementary_walls": {
+    "pressure_release/underdamped": {
+      "system": "telegraph",
+      "check": "pressure_release, sin(4 pi x), underdamped c=1.0, gamma=1.0, T=1.0 (reported, not part of passed)",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.0006220848822950372,
+        0.00015311342884703346,
+        3.8127875579379016e-05
+      ],
+      "observed_order": [
+        2.0225106264989714,
+        2.005682766380463
+      ],
+      "promised_order": 2.0,
+      "passed": true
+    },
+    "pressure_release/overdamped": {
+      "system": "telegraph",
+      "check": "pressure_release, sin(4 pi x), overdamped c=1.0, gamma=20.0, T=1.0 (reported, not part of passed)",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.00393453079167402,
+        0.000982512562429001,
+        0.00024555817493933455
+      ],
+      "observed_order": [
+        2.0016438399779095,
+        2.000411001363932
+      ],
+      "promised_order": 2.0,
+      "passed": true
+    },
+    "rigid/underdamped": {
+      "system": "telegraph",
+      "check": "rigid, cos(4 pi x), underdamped c=1.0, gamma=1.0, T=1.0 (reported, not part of passed)",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.0006220848822949066,
+        0.00015311342884687692,
+        3.8127875579760784e-05
+      ],
+      "observed_order": [
+        2.0225106265001433,
+        2.0056827663645427
+      ],
+      "promised_order": 2.0,
+      "passed": true
+    },
+    "rigid/overdamped": {
+      "system": "telegraph",
+      "check": "rigid, cos(4 pi x), overdamped c=1.0, gamma=20.0, T=1.0 (reported, not part of passed)",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.003934530791674001,
+        0.000982512562428868,
+        0.0002455581749392801
+      ],
+      "observed_order": [
+        2.001643839978098,
+        2.0004110013640566
+      ],
+      "promised_order": 2.0,
+      "passed": true
+    }
+  },
+  "verify_seconds": 0.7174780710001869,
+  "batch_check": {
+    "passed": true,
+    "blowup_factor": 1.5,
+    "blowup_rule": "max|u| over frames <= blowup_factor * max(max|u| at frame 0, scale_floor)",
+    "scale_floor": 0.0,
+    "rows": [
+      {
+        "bc": "periodic",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.0,
+        "min_value": -0.7902885675430298,
+        "max_value": 1.6126985549926758,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          0.0006009615384615385,
+          0.0013020833333333333,
+          0.00048828125,
+          0.0006510416666666666,
+          0.0007102272727272727,
+          0.00048828125,
+          0.00045955882352941176,
+          0.0005580357142857143
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.05240723863244057,
+        "mean_rel_change_per_frame_frames_56to63": 0.04737674444913864,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "pressure_release",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.0,
+        "min_value": -1.867255687713623,
+        "max_value": 0.7156741619110107,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          0.0007102272727272727,
+          0.0011160714285714285,
+          0.0009765625,
+          0.00048828125,
+          0.0007102272727272727,
+          0.0005208333333333333,
+          0.0009765625,
+          0.0009765625
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.03384532034397125,
+        "mean_rel_change_per_frame_frames_56to63": 0.04797152429819107,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "rigid",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.0,
+        "min_value": -1.028601884841919,
+        "max_value": 0.8792192339897156,
+        "channels": [
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "internal_dt": [
+          0.0009765625,
+          0.00048828125,
+          0.0006510416666666666,
+          0.0011160714285714285,
+          0.0009765625,
+          0.0007102272727272727,
+          0.00078125,
+          0.0008680555555555555
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.03684692084789276,
+        "mean_rel_change_per_frame_frames_56to63": 0.04812972992658615,
+        "failures": [],
+        "passed": true
+      }
+    ]
+  },
+  "timing_64x64": [
+    {
+      "bc": "periodic",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 1.289966617000573,
+      "seconds_per_trajectory": 0.020155728390633953,
+      "rk4_substeps_per_frame_max": 20,
+      "rk4_substeps_per_frame_min": 6
+    },
+    {
+      "bc": "pressure_release",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 1.1849113360003685,
+      "seconds_per_trajectory": 0.018514239625005757,
+      "rk4_substeps_per_frame_max": 20,
+      "rk4_substeps_per_frame_min": 6
+    },
+    {
+      "bc": "rigid",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 0.9011575519998587,
+      "seconds_per_trajectory": 0.014080586749997792,
+      "rk4_substeps_per_frame_max": 20,
+      "rk4_substeps_per_frame_min": 6
+    }
+  ],
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "machine": "x86_64"
+  }
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "system": "sound_lossy_r2",
+    "split": "train",
+    "n": 600,
+    "seconds": 11.325748443603516,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "sound_lossy_r2",
+    "split": "val",
+    "n": 60,
+    "seconds": 1.0399680137634277,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "sound_lossy_r2",
+    "split": "test",
+    "n": 100,
+    "seconds": 1.796095609664917,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "sound_lossy_r2",
+    "split": "test_bc",
+    "n": 100,
+    "seconds": 1.7702338695526123,
+    "regime": "train",
+    "bc_set": "test"
+  },
+  {
+    "system": "sound_lossy_r2",
+    "split": "test_ood",
+    "n": 100,
+    "seconds": 1.748713731765747,
+    "regime": "ood",
+    "bc_set": "train"
+  },
+  {
+    "norm_scale": [
+      1.0,
+      1.0,
+      0.2757086455821991
+    ]
+  }
+]

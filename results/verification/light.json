@@ -1,0 +1,695 @@
+{
+  "system": "light",
+  "check": "Green's function, plane/line/point source, d = 1, 2, 3; record window (production path) for each bc",
+  "n": [
+    128,
+    256,
+    512
+  ],
+  "error": [
+    0.0009800671072881567,
+    0.0002444830618828129,
+    6.10876199684813e-05
+  ],
+  "observed_order": [
+    2.0031460202447935,
+    2.0007825789152522
+  ],
+  "promised_order": 2.0,
+  "passed": true,
+  "d": 1,
+  "norm": "relative L2, volume weighted, at t1",
+  "t0_s": 1.7447380606726322e-12,
+  "t1_s": 6.978952242690529e-12,
+  "D_m2_s": 58690.75840560429,
+  "mu_a_m-1": 6.780189384679487,
+  "c_m_s": 217083604.63432294,
+  "mu_a_c_(t1-t0)": 0.00770407210700068,
+  "domain_m": 0.0128,
+  "bc": "neumann (walls at least 5 final 1/e radii from the source)",
+  "cases": {
+    "d1": {
+      "system": "light",
+      "check": "green_function_d1",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.0009800671072881567,
+        0.0002444830618828129,
+        6.10876199684813e-05
+      ],
+      "observed_order": [
+        2.0031460202447935,
+        2.0007825789152522
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 1,
+      "norm": "relative L2, volume weighted, at t1",
+      "t0_s": 1.7447380606726322e-12,
+      "t1_s": 6.978952242690529e-12,
+      "D_m2_s": 58690.75840560429,
+      "mu_a_m-1": 6.780189384679487,
+      "c_m_s": 217083604.63432294,
+      "mu_a_c_(t1-t0)": 0.00770407210700068,
+      "domain_m": 0.0128,
+      "bc": "neumann (walls at least 5 final 1/e radii from the source)"
+    },
+    "d2": {
+      "system": "light",
+      "check": "green_function_d2",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.0028697989404731193,
+        0.0007146044319841928,
+        0.00017847477914791722
+      ],
+      "observed_order": [
+        2.0057328978431896,
+        2.001424644835862
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "norm": "relative L2, volume weighted, at t1",
+      "t0_s": 1.7447380606726322e-12,
+      "t1_s": 6.978952242690529e-12,
+      "D_m2_s": 58690.75840560429,
+      "mu_a_m-1": 6.780189384679487,
+      "c_m_s": 217083604.63432294,
+      "mu_a_c_(t1-t0)": 0.00770407210700068,
+      "domain_m": 0.0128,
+      "bc": "neumann (walls at least 5 final 1/e radii from the source)"
+    },
+    "d3": {
+      "system": "light",
+      "check": "green_function_d3",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.005169143579727425,
+        0.0012908154962545714,
+        0.00032261226202071356
+      ],
+      "observed_order": [
+        2.00164247297161,
+        2.0004096232327604
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "norm": "relative L2, volume weighted, at t1",
+      "t0_s": 1.7447380606726322e-12,
+      "t1_s": 6.978952242690529e-12,
+      "D_m2_s": 58690.75840560429,
+      "mu_a_m-1": 6.780189384679487,
+      "c_m_s": 217083604.63432294,
+      "mu_a_c_(t1-t0)": 0.00770407210700068,
+      "domain_m": 0.0128,
+      "bc": "neumann (walls at least 5 final 1/e radii from the source)"
+    },
+    "window_periodic": {
+      "system": "light",
+      "check": "record_window_periodic",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        1.0421308417537908e-05,
+        2.604045391033085e-06,
+        6.492634991654062e-07
+      ],
+      "observed_order": [
+        2.0007099210259334,
+        2.0038785861649133
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "bc": "periodic",
+      "t_start_s": 6.581389315847188e-11,
+      "t_last_s": 1.4497215056643e-10,
+      "norm": "relative L2 on the 128 output cells (exact cell averages)",
+      "note": "float32 output limits the floor to about 1e-7"
+    },
+    "window_dirichlet": {
+      "system": "light",
+      "check": "record_window_dirichlet",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        4.2661309487879304e-05,
+        1.066725536673732e-05,
+        2.666140366153809e-06
+      ],
+      "observed_order": [
+        1.999739224403199,
+        2.0003643833325175
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "bc": "dirichlet",
+      "t_start_s": 6.581389315847188e-11,
+      "t_last_s": 1.4497215056643e-10,
+      "norm": "relative L2 on the 128 output cells (exact cell averages)",
+      "note": "float32 output limits the floor to about 1e-7"
+    },
+    "window_neumann": {
+      "system": "light",
+      "check": "record_window_neumann",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        1.0233809035657995e-05,
+        2.558319652739832e-06,
+        6.439235502592873e-07
+      ],
+      "observed_order": [
+        2.0000747777207697,
+        1.9902352151459985
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "bc": "neumann",
+      "t_start_s": 6.581389315847188e-11,
+      "t_last_s": 1.4497215056643e-10,
+      "norm": "relative L2 on the 128 output cells (exact cell averages)",
+      "note": "float32 output limits the floor to about 1e-7"
+    }
+  },
+  "time_window": {
+    "T_START_s": 6.581389315847188e-11,
+    "T_END_s": 1.4497215056643e-10,
+    "DT_FRAME_s": 1.2564802763167955e-12,
+    "t_tr_max_s": 6.581389315847188e-12,
+    "musp_min_m-1": 708.547363949688,
+    "c_min_m_s": 214443818.3118741,
+    "D_ref_m2_s": 70634.25602773111,
+    "spread_ref_start_m": 0.004312175960944657,
+    "spread_ref_end_m": 0.0064
+  },
+  "verify_seconds": 4.565149960995768,
+  "smoke_test": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "channels": [
+          [
+            0
+          ]
+        ],
+        "ch0_min": 0.023708118125796318,
+        "ch0_max": 3.175755023956299,
+        "ch0_mean_rel_change_per_frame_1to8": 0.00940545555204153,
+        "ch0_mean_rel_change_per_frame_56to63": 0.00471275020390749,
+        "mua_over_musp_max": 0.09791591187624159,
+        "wavelengths_nm": [
+          750,
+          800,
+          850
+        ],
+        "ood_kinds": [
+          "None"
+        ],
+        "start_over_t_tr_min": 13.708578724848,
+        "init_width_over_l_tr_min": 4.275290044717901,
+        "internal_dt_s": [
+          7.179887293238831e-15,
+          8.212289387691474e-15,
+          4.777491544930781e-15,
+          6.189558011412786e-15,
+          8.6653812159779e-15,
+          4.146799591804606e-15,
+          9.893545482809413e-15,
+          6.9418799796508035e-15
+        ],
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "train",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "channels": [
+          [
+            0
+          ]
+        ],
+        "ch0_min": 2.9840453862561844e-05,
+        "ch0_max": 2.78468918800354,
+        "ch0_mean_rel_change_per_frame_1to8": 0.015391088090837002,
+        "ch0_mean_rel_change_per_frame_56to63": 0.007611260749399662,
+        "mua_over_musp_max": 0.14752454465875148,
+        "wavelengths_nm": [
+          750,
+          800,
+          850
+        ],
+        "ood_kinds": [
+          "None"
+        ],
+        "start_over_t_tr_min": 15.258248938437413,
+        "init_width_over_l_tr_min": 4.51046914609961,
+        "internal_dt_s": [
+          1.3510540605556941e-14,
+          1.0648137934888098e-14,
+          5.7112739832581615e-15,
+          1.2564802763167955e-14,
+          1.0558657784174751e-14,
+          8.489731596735105e-15,
+          1.163407663256292e-14,
+          5.95488282614595e-15
+        ],
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "neumann",
+        "regime": "train",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "channels": [
+          [
+            0
+          ]
+        ],
+        "ch0_min": 5.192323078517802e-05,
+        "ch0_max": 2.8928892612457275,
+        "ch0_mean_rel_change_per_frame_1to8": 0.009949557483196259,
+        "ch0_mean_rel_change_per_frame_56to63": 0.004703038837760687,
+        "mua_over_musp_max": 0.10113563821637993,
+        "wavelengths_nm": [
+          750,
+          800,
+          850
+        ],
+        "ood_kinds": [
+          "None"
+        ],
+        "start_over_t_tr_min": 18.980376579917067,
+        "init_width_over_l_tr_min": 5.030623099897542,
+        "internal_dt_s": [
+          8.212289387691474e-15,
+          7.569158291065033e-15,
+          1.2691719962795914e-14,
+          1.2691719962795914e-14,
+          1.0051842210534363e-14,
+          1.5904813624263233e-14,
+          1.5706003453959945e-14,
+          7.0194428844513715e-15
+        ],
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "channels": [
+          [
+            0
+          ]
+        ],
+        "ch0_min": 0.008457253687083721,
+        "ch0_max": 2.960725784301758,
+        "ch0_mean_rel_change_per_frame_1to8": 0.024664733558893204,
+        "ch0_mean_rel_change_per_frame_56to63": 0.007444038055837154,
+        "mua_over_musp_max": 0.28986589558243736,
+        "wavelengths_nm": [
+          700,
+          750,
+          800,
+          850
+        ],
+        "ood_kinds": [
+          "blood_fraction",
+          "wavelength"
+        ],
+        "start_over_t_tr_min": 17.493053872512064,
+        "init_width_over_l_tr_min": 4.829500163579673,
+        "internal_dt_s": [
+          1.0299018658334389e-14,
+          5.192067257507419e-15,
+          1.2564802763167955e-14,
+          7.479049263790449e-15,
+          1.2953404910482428e-14,
+          9.238825561152908e-15,
+          9.171388878224785e-15,
+          6.791785277388084e-15
+        ],
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "ood",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "channels": [
+          [
+            0
+          ]
+        ],
+        "ch0_min": 2.3564138246001676e-05,
+        "ch0_max": 2.643916368484497,
+        "ch0_mean_rel_change_per_frame_1to8": 0.015614595264196396,
+        "ch0_mean_rel_change_per_frame_56to63": 0.006551118567585945,
+        "mua_over_musp_max": 0.18455315038082348,
+        "wavelengths_nm": [
+          700,
+          750,
+          800
+        ],
+        "ood_kinds": [
+          "blood_fraction",
+          "wavelength"
+        ],
+        "start_over_t_tr_min": 18.69952087665159,
+        "init_width_over_l_tr_min": 4.99326491408198,
+        "internal_dt_s": [
+          1.4958098527580898e-14,
+          1.1966478822064719e-14,
+          1.2821227309355056e-14,
+          8.106324363334164e-15,
+          6.980445979537753e-15,
+          1.4958098527580898e-14,
+          1.0299018658334389e-14,
+          9.104929538527504e-15
+        ],
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "neumann",
+        "regime": "ood",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "channels": [
+          [
+            0
+          ]
+        ],
+        "ch0_min": 0.0003242317179683596,
+        "ch0_max": 2.7226829528808594,
+        "ch0_mean_rel_change_per_frame_1to8": 0.01662382483482361,
+        "ch0_mean_rel_change_per_frame_56to63": 0.006695754360407591,
+        "mua_over_musp_max": 0.1900918464081515,
+        "wavelengths_nm": [
+          700,
+          750,
+          850
+        ],
+        "ood_kinds": [
+          "blood_fraction",
+          "wavelength"
+        ],
+        "start_over_t_tr_min": 16.407666602880067,
+        "init_width_over_l_tr_min": 4.6772736507328805,
+        "internal_dt_s": [
+          1.2081541118430726e-14,
+          1.4610235771125528e-14,
+          7.179887293238831e-15,
+          1.1966478822064719e-14,
+          6.040770559215363e-15,
+          1.6532635214694676e-14,
+          1.3960891959075505e-14,
+          1.2440398775413816e-14
+        ],
+        "failures": [],
+        "passed": true
+      }
+    ]
+  },
+  "timing_64x64": [
+    {
+      "bc": "periodic",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 12.562263392996101,
+      "seconds_per_trajectory": 0.19628536551556408,
+      "rk4_substeps_per_frame_max": 342,
+      "rk4_substeps_per_frame_min": 98
+    },
+    {
+      "bc": "dirichlet",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 12.409168047001003,
+      "seconds_per_trajectory": 0.19389325073439068,
+      "rk4_substeps_per_frame_max": 243,
+      "rk4_substeps_per_frame_min": 73
+    },
+    {
+      "bc": "neumann",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 12.293700938993425,
+      "seconds_per_trajectory": 0.19208907717177226,
+      "rk4_substeps_per_frame_max": 257,
+      "rk4_substeps_per_frame_min": 70
+    }
+  ],
+  "dt_frame_s": 1.2564802763167955e-12,
+  "length_m": 0.0128,
+  "param_ranges": {
+    "train": {
+      "wavelength_nm": [
+        750,
+        800,
+        850
+      ],
+      "blood_fraction": [
+        0.002,
+        0.03
+      ],
+      "saturation": [
+        0.6,
+        1.0
+      ],
+      "melanosome_fraction": [
+        0.0,
+        0.0005
+      ],
+      "water_fraction": [
+        0.6,
+        0.8
+      ],
+      "fat_fraction": [
+        0.0,
+        0.2
+      ],
+      "scat_a_m-1": [
+        1680.0,
+        4600.0
+      ],
+      "scat_b": [
+        0.672,
+        1.627
+      ],
+      "vessel_blood_fraction": [
+        0.05,
+        0.3
+      ],
+      "n_absorbers": [
+        0,
+        3
+      ],
+      "absorber_width_m": [
+        0.0002,
+        0.001
+      ],
+      "absorber_edge_m": [
+        5e-05,
+        0.00015
+      ],
+      "n_impulses": [
+        1,
+        4
+      ],
+      "impulse_amp": [
+        0.5,
+        1.0
+      ],
+      "impulse_centre_frac": [
+        0.2,
+        0.8
+      ],
+      "mua_over_musp_cap": 0.3
+    },
+    "ood": {
+      "wavelength_nm": [
+        700
+      ],
+      "blood_fraction": [
+        0.04,
+        0.08
+      ],
+      "vessel_blood_fraction": [
+        0.4,
+        1.0
+      ]
+    }
+  },
+  "param_sources": {
+    "wavelength_nm": "design choice (PLAN section 2); eps_HbO2_<l>, eps_Hb_<l>, mua_water_<l>, mua_fat_<l> must exist for each l",
+    "c0": "c0",
+    "n (refractive index)": "n_tissue_model (n_dry, n_water) with the drawn water_fraction",
+    "mu_a,blood": "eps_HbO2_<l>, eps_Hb_<l>, C_Hb_blood, MW_Hb (ln10 eps C/MW, x100)",
+    "mu_a,water": "mua_water_<l> (Hale1973 column, value_SI)",
+    "mu_a,fat": "mua_fat_<l> (value_SI)",
+    "mu_a,melanosome": "melanin_formula_jacques (a_cm-1 x100, m, reference wavelength parsed from the formula)",
+    "scat_a_m-1": "musp_powerlaw_by_tissue.range.a_cm-1 x100 (Table 2 tissue-type means)",
+    "scat_b": "musp_powerlaw_by_tissue.range.b",
+    "scattering reference wavelength": "musp_powerlaw_soft.symbol ('lambda/500 nm')",
+    "D_ref for dt_frame": "musp_powerlaw_soft (a_m-1, b) at 800 nm, c_tissue.value",
+    "T_START": "derived: 10 / (mu_s'_min c_min); mu_s'_min from musp_powerlaw_by_tissue.range (a min, b max) at 850 nm; c_min = c0 / n_tissue_model(W = 0.6)",
+    "T_END, DT_FRAME": "derived: T_END = (L/2)^2 / (4 D_ref), DT_FRAME = (T_END - T_START)/63",
+    "700 nm chromophores": "eps_HbO2_700, eps_Hb_700, mua_water_700 (Hale1973), mua_fat_700, melanin_formula_jacques (added 20 Oct 2026)",
+    "MUA_MUSP_CAP": "modelling choice (0.3) after audit round 1, which suggested about 0.1; applied by rejection sampling",
+    "blood_fraction": "modelling choice (Jacques 2013 Sec. 5 worked example B = 0.01 is quoted in l_tr_800_soft.condition; bounds not sourced)",
+    "saturation": "modelling choice",
+    "melanosome_fraction": "modelling choice (uniform background; melanin is sourced only as a melanosome-interior coefficient)",
+    "water_fraction": "modelling choice, matched to the illustrative W = 0.6 to 0.8 in n_tissue_model.condition (not sourced)",
+    "fat_fraction": "modelling choice",
+    "vessel_blood_fraction": "modelling choice",
+    "absorber geometry, impulse number, amplitudes and centres": "modelling choice",
+    "LENGTH": "modelling choice (12.8 mm)"
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "machine": "x86_64"
+  },
+  "chromophores_m-1": {
+    "750": {
+      "mua_HbO2": 277.3811809699804,
+      "mua_Hb": 752.4848083904542,
+      "mua_water": 2.6,
+      "mua_fat": 0.972,
+      "mua_mel": 15377.777777777777
+    },
+    "800": {
+      "mua_HbO2": 436.9556827635213,
+      "mua_Hb": 407.88956210126156,
+      "mua_water": 2.0,
+      "mua_fat": 0.403,
+      "mua_mel": 12670.898437499998
+    },
+    "850": {
+      "mua_HbO2": 566.5430298576048,
+      "mua_Hb": 370.1914247648009,
+      "mua_water": 4.3,
+      "mua_fat": 0.637,
+      "mua_mel": 10563.810299206189
+    },
+    "700": {
+      "mua_HbO2": 155.29062255076124,
+      "mua_Hb": 960.8098559668271,
+      "mua_water": 0.6,
+      "mua_fat": 0.323,
+      "mua_mel": 18913.994169096215
+    }
+  },
+  "sampling_stats": {
+    "train": {
+      "n_accepted": 5000,
+      "n_rejected": 0,
+      "rejection_rate": 0.0,
+      "by_ood_kind": {
+        "None": {
+          "accepted": 5000,
+          "rejected": 0,
+          "rejection_rate": 0.0
+        }
+      },
+      "mua_over_musp_max_accepted": 0.2804084593970359,
+      "light_start_over_t_tr_min": 10.721604812773142,
+      "light_init_width_over_l_tr_min": 3.7809354773253565,
+      "note": "light_* ratios refer to light.T_START and the background medium"
+    },
+    "ood": {
+      "n_accepted": 5000,
+      "n_rejected": 464,
+      "rejection_rate": 0.0849194729136164,
+      "by_ood_kind": {
+        "wavelength": {
+          "accepted": 2443,
+          "rejected": 0,
+          "rejection_rate": 0.0
+        },
+        "blood_fraction": {
+          "accepted": 2557,
+          "rejected": 464,
+          "rejection_rate": 0.15359152598477324
+        }
+      },
+      "mua_over_musp_max_accepted": 0.29990768267364354,
+      "light_start_over_t_tr_min": 11.769985131402828,
+      "light_init_width_over_l_tr_min": 3.9614787022697855,
+      "note": "light_* ratios refer to light.T_START and the background medium"
+    }
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "verify": {
+    "system": "light",
+    "check": "Green's function (d = 2) and record window per bc",
+    "n": [
+      64,
+      128,
+      256
+    ],
+    "error": [
+      0.0014479014627494164,
+      0.0003611723184923282,
+      9.024312641274656e-05
+    ],
+    "observed_order": [
+      2.003204193852642,
+      2.0007983689504627
+    ],
+    "promised_order": 2.0,
+    "passed": true,
+    "d": 2,
+    "norm": "relative L2 at t1 (point values at cell centres)",
+    "t0_s": 6.978952242690529e-12,
+    "t1_s": 2.7915808970762115e-11,
+    "D_m2_s": 58690.75840560429,
+    "mu_a_m-1": 6.780189384679487,
+    "c_m_s": 217083604.63432294,
+    "w0_m": 0.00128,
+    "source": [
+      0.0065664,
+      0.006732800000000001
+    ],
+    "rk4_steps": [
+      99,
+      394,
+      1573
+    ],
+    "bc": "periodic, images summed in the exact solution",
+    "cases": {
+      "green": {
+        "system": "light",
+        "check": "green_function_d2",
+        "n": [
+          64,
+          128,
+          256
+        ],
+        "error": [
+          0.0014479014627494164,
+          0.0003611723184923282,
+          9.024312641274656e-05
+        ],
+        "observed_order": [
+          2.003204193852642,
+          2.0007983689504627
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 2,
+        "norm": "relative L2 at t1 (point values at cell centres)",
+        "t0_s": 6.978952242690529e-12,
+        "t1_s": 2.7915808970762115e-11,
+        "D_m2_s": 58690.75840560429,
+        "mu_a_m-1": 6.780189384679487,
+        "c_m_s": 217083604.63432294,
+        "w0_m": 0.00128,
+        "source": [
+          0.0065664,
+          0.006732800000000001
+        ],
+        "rk4_steps": [
+          99,
+          394,
+          1573
+        ],
+        "bc": "periodic, images summed in the exact solution"
+      },
+      "window_periodic": {
+        "system": "light",
+        "check": "record_window_periodic_d2",
+        "n": [
+          64,
+          128,
+          256
+        ],
+        "error": [
+          0.00010645754188663965,
+          2.6603547655329038e-05,
+          6.649778483975027e-06
+        ],
+        "observed_order": [
+          2.0005876088443144,
+          2.000240458084476
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 2,
+        "bc": "periodic",
+        "t_start_s": 6.581389315847188e-11,
+        "t_last_s": 1.4497215056643e-10,
+        "norm": "relative L2 on the 64^2 output cells (exact cell averages)"
+      },
+      "window_dirichlet": {
+        "system": "light",
+        "check": "record_window_dirichlet_d2",
+        "n": [
+          64,
+          128,
+          256
+        ],
+        "error": [
+          0.00033628247480009147,
+          8.405976577604979e-05,
+          2.1014731896297575e-05
+        ],
+        "observed_order": [
+          2.0001862537775748,
+          2.0000143857149038
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 2,
+        "bc": "dirichlet",
+        "t_start_s": 6.581389315847188e-11,
+        "t_last_s": 1.4497215056643e-10,
+        "norm": "relative L2 on the 64^2 output cells (exact cell averages)"
+      },
+      "window_neumann": {
+        "system": "light",
+        "check": "record_window_neumann_d2",
+        "n": [
+          64,
+          128,
+          256
+        ],
+        "error": [
+          0.00010710556398215531,
+          2.6765454309419825e-05,
+          6.690967837699704e-06
+        ],
+        "observed_order": [
+          2.000589382116258,
+          2.000085326184291
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 2,
+        "bc": "neumann",
+        "t_start_s": 6.581389315847188e-11,
+        "t_last_s": 1.4497215056643e-10,
+        "norm": "relative L2 on the 64^2 output cells (exact cell averages)"
+      }
+    },
+    "time_window": {
+      "T_START_s": 6.581389315847188e-11,
+      "T_END_s": 1.4497215056643e-10,
+      "DT_FRAME_s": 2.553492174450262e-12
+    }
+  },
+  "verify_seconds": 54.50428140800068,
+  "smoke": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 2.2540440559387207,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          7.093033817917395e-14,
+          7.093033817917395e-14,
+          5.5510699444570914e-14,
+          1.0213968697801048e-13
+        ],
+        "seconds": 2.6655444010029896,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.08160515837116135,
+          0.03216872901673809,
+          0.014421305257913712,
+          0.053937639335575584
+        ]
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "train",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.798091173171997,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          1.0639550726876092e-13,
+          4.118535765242358e-14,
+          6.228029693781127e-14,
+          5.106984348900524e-14
+        ],
+        "seconds": 3.789349515995127,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.06247922766987775,
+          0.1592028169475508,
+          0.012786940876712559,
+          0.014744661553861197
+        ]
+      },
+      {
+        "bc": "neumann",
+        "regime": "train",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.7642818689346313,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          6.547415831923749e-14,
+          4.9105618739428115e-14,
+          3.450665100608462e-14,
+          9.821123747885623e-14
+        ],
+        "seconds": 3.3821504169973196,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.0738785370075573,
+          0.10745518307336271,
+          0.1985901618627163,
+          0.0037225104616273167
+        ]
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.6755173206329346,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          1.3439432497106642e-13,
+          1.1606782611137555e-13,
+          6.719716248553321e-14,
+          8.805145429138835e-14
+        ],
+        "seconds": 1.6300740799997584,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.006450133192069202,
+          0.009369679292840997,
+          0.019320893640584626,
+          0.03944316967644192
+        ]
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "ood",
+        "n_traj": 4,
+        "shape": [
+          32,
+          3,
+          64,
+          64
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.538619041442871,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          9.45737842388986e-14,
+          7.295691927000749e-14,
+          1.1606782611137555e-13,
+          7.093033817917395e-14
+        ],
+        "seconds": 1.918348330000299,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.16996912366707848,
+          0.2406220095013132,
+          0.0028980757305104004,
+          0.022508857405101685
+        ]
+      }
+    ]
+  },
+  "resolution": {
+    "bc": "periodic",
+    "n": [
+      128,
+      256
+    ],
+    "n_traj": 2,
+    "rel_L2_diff_all_frames": [
+      6.54358396098779e-05,
+      0.00015320730377198506
+    ],
+    "max": 0.00015320730377198506,
+    "estimated_error_default_grid": [
+      8.724778614650387e-05,
+      0.0002042764050293134
+    ],
+    "seconds": [
+      0.9342348149948521,
+      20.429578176997893
+    ]
+  },
+  "timing": {
+    "bc": "periodic",
+    "n_traj": 16,
+    "n_frames": 32,
+    "n_internal": 128,
+    "seconds": 12.650428251996345,
+    "seconds_per_trajectory": 0.7906517657497716,
+    "batch_per_call": 16,
+    "rk4_substeps_per_frame": [
+      23,
+      64
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "load_average_at_end": [
+      1.16845703125,
+      0.54638671875,
+      0.64404296875
+    ],
+    "nice": 0
+  },
+  "passed": true
+}

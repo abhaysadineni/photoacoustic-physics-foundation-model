@@ -1,0 +1,39 @@
+{
+  "note": "locked chain test sets of the grid rounds; made before any grid network existed; evaluated once (PLAN.md section 23)",
+  "d2": {
+    "system": "chain",
+    "dim": 2,
+    "split": "final_locked",
+    "n": 200,
+    "seconds": 65.67589974403381,
+    "regime": "train",
+    "bc_set": "train",
+    "seed": 2702179619,
+    "sha256": {
+      "data2d/chain/final_locked_bc.npy": "2211c28577f65e71065f75102d23437691b8d8885c8f70326301c9a9f8f9dd0a",
+      "data2d/chain/final_locked_chan.npy": "d5cbc32f58d3985d0ea5b24dfef7d6708ed0711c7846c61278c8759163719d10",
+      "data2d/chain/final_locked_fields.npy": "6a63b19204bdd9816c8a7073755ab972cd93205afec4aa445bc0f077a68b195d",
+      "data2d/chain/final_locked_meta.json": "5fb39d678c729cbb8973b1be9c604457a0090970ae10cfcbd30c4afe23e341bb"
+    },
+    "seed_string": "chain/d2/final_locked_2026-10-21",
+    "made_at_pdt": "2026-10-21 14:40 PDT"
+  },
+  "d3": {
+    "system": "chain",
+    "dim": 3,
+    "split": "final_locked",
+    "n": 100,
+    "seconds": 605.9702758789062,
+    "regime": "train",
+    "bc_set": "train",
+    "seed": 75787565,
+    "sha256": {
+      "data2d/d3/chain/final_locked_bc.npy": "f863f0310913506fe80fcc3256f611607fdd19e6f627f804e19ab18f68f61724",
+      "data2d/d3/chain/final_locked_chan.npy": "54f3f3ffa77b82f919706c87e08ec4c5924b667f725ae999b4ef6f024615c30b",
+      "data2d/d3/chain/final_locked_fields.npy": "5ec6fa7ae4d70858f3f33a36604a5943e574575f7e82461ecfc1464c4de46efd",
+      "data2d/d3/chain/final_locked_meta.json": "bd8bc887b56185b16e6bf10c52ba7d1ea3f14267ae618aa07be86d90b9afeaf1"
+    },
+    "seed_string": "chain/d3/final_locked_2026-10-21",
+    "made_at_pdt": "2026-10-21 14:51 PDT"
+  }
+}

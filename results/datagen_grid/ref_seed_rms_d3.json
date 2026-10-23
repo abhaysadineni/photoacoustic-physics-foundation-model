@@ -1,0 +1,19 @@
+{
+  "dim": 3,
+  "systems": [
+    "light",
+    "heat",
+    "sound_uniform",
+    "sound_layered",
+    "photothermal",
+    "thermoacoustic",
+    "advdiff"
+  ],
+  "split": "train",
+  "ref_seed_rms": [
+    0.9918366074562073,
+    0.18544583022594452,
+    0.6561748385429382
+  ],
+  "definition": "per channel, median over training-system trajectories occupying the channel of the RMS of their four seed frames (normalised units), pfm2d.evaluate.reference_seed_rms"
+}

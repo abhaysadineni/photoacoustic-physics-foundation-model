@@ -1,0 +1,287 @@
+{
+  "system": "transport",
+  "check": "periodic translation after one full period, v = +1.0 (top level) and v = -0.6 (in cases); passed requires both",
+  "n": [
+    128,
+    256,
+    512
+  ],
+  "error": [
+    0.009129757247354715,
+    0.0022878588172607094,
+    0.000572172565277335
+  ],
+  "observed_order": [
+    1.9965784738586767,
+    1.9994757971957244
+  ],
+  "promised_order": 2.0,
+  "passed": true,
+  "rk4_steps": [
+    320,
+    640,
+    1280
+  ],
+  "cases": {
+    "v=+1.0": {
+      "system": "transport",
+      "check": "periodic, sin(2 pi x) + Gaussian bump, v=+1.0, exact translation after one period T = L/|v|",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.009129757247354715,
+        0.0022878588172607094,
+        0.000572172565277335
+      ],
+      "observed_order": [
+        1.9965784738586767,
+        1.9994757971957244
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "rk4_steps": [
+        320,
+        640,
+        1280
+      ]
+    },
+    "v=-0.6": {
+      "system": "transport",
+      "check": "periodic, sin(2 pi x) + Gaussian bump, v=-0.6, exact translation after one period T = L/|v|",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.009129757247354552,
+        0.0022878588172603686,
+        0.000572172565277283
+      ],
+      "observed_order": [
+        1.9965784738588657,
+        1.99947579719564
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "rk4_steps": [
+        320,
+        640,
+        1280
+      ]
+    }
+  },
+  "error_metric": "relative L2 on the internal grid at t = T (point values)",
+  "verify_seconds": 0.14188892399943143,
+  "batch_check": {
+    "passed": true,
+    "blowup_factor": 1.5,
+    "blowup_rule": "max|u| over frames <= blowup_factor * max(max|u| at frame 0, scale_floor)",
+    "scale_floor": 0.0,
+    "rows": [
+      {
+        "bc": "periodic",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.000648021697998,
+        "min_value": -1.0338213443756104,
+        "max_value": 0.9974749684333801,
+        "channels": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          0.0015625,
+          0.0026041666666666665,
+          0.0007102272727272727,
+          0.0006009615384615385,
+          0.00078125,
+          0.0011160714285714285,
+          0.0007102272727272727,
+          0.0026041666666666665
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.05388345569372177,
+        "mean_rel_change_per_frame_frames_56to63": 0.05391501635313034,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "dirichlet",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.0010734796524048,
+        "min_value": -1.344180703163147,
+        "max_value": 0.6241863965988159,
+        "channels": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "internal_dt": [
+          0.0005580357142857143,
+          0.001953125,
+          0.0015625,
+          0.0013020833333333333,
+          0.0013020833333333333,
+          0.0011160714285714285,
+          0.00078125,
+          0.0011160714285714285
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.07398894429206848,
+        "mean_rel_change_per_frame_frames_56to63": 0.03136102110147476,
+        "failures": [],
+        "passed": true
+      },
+      {
+        "bc": "neumann",
+        "n_traj": 8,
+        "shape": [
+          64,
+          3,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true,
+        "max_growth_ratio": 1.002411127090454,
+        "min_value": -0.9218844771385193,
+        "max_value": 1.1973530054092407,
+        "channels": [
+          [
+            2
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          0.0015625,
+          0.0007102272727272727,
+          0.0009765625,
+          0.00078125,
+          0.0026041666666666665,
+          0.0015625,
+          0.0011160714285714285,
+          0.001953125
+        ],
+        "mean_rel_change_per_frame_frames_1to8": 0.043572403490543365,
+        "mean_rel_change_per_frame_frames_56to63": 0.03331191837787628,
+        "failures": [],
+        "passed": true
+      }
+    ]
+  },
+  "timing_64x64": [
+    {
+      "bc": "periodic",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 0.345811414000309,
+      "seconds_per_trajectory": 0.005403303343754828,
+      "rk4_substeps_per_frame_max": 15,
+      "rk4_substeps_per_frame_min": 3
+    },
+    {
+      "bc": "dirichlet",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 0.3672779860007722,
+      "seconds_per_trajectory": 0.005738718531262066,
+      "rk4_substeps_per_frame_max": 15,
+      "rk4_substeps_per_frame_min": 3
+    },
+    {
+      "bc": "neumann",
+      "n_traj": 64,
+      "n_frames": 64,
+      "n_internal": 512,
+      "seconds": 0.32370990900017205,
+      "seconds_per_trajectory": 0.005057967328127688,
+      "rk4_substeps_per_frame_max": 15,
+      "rk4_substeps_per_frame_min": 3
+    }
+  ],
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "machine": "x86_64"
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "verify": {
+    "system": "light",
+    "check": "Green's function (d = 3) and record window per bc",
+    "n": [
+      32,
+      64,
+      128
+    ],
+    "error": [
+      0.0074367914326029716,
+      0.0018419826708656847,
+      0.0004594401681915695
+    ],
+    "observed_order": [
+      2.0134208230249033,
+      2.003310588714855
+    ],
+    "promised_order": 2.0,
+    "passed": true,
+    "d": 3,
+    "norm": "relative L2 at t1 (point values at cell centres)",
+    "t0_s": 6.978952242690529e-12,
+    "t1_s": 2.7915808970762115e-11,
+    "D_m2_s": 58690.75840560429,
+    "mu_a_m-1": 6.780189384679487,
+    "c_m_s": 217083604.63432294,
+    "w0_m": 0.00128,
+    "source": [
+      0.0065664,
+      0.006732800000000001,
+      0.0068992
+    ],
+    "rk4_steps": [
+      37,
+      148,
+      590
+    ],
+    "bc": "periodic, images summed in the exact solution",
+    "cases": {
+      "green": {
+        "system": "light",
+        "check": "green_function_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.0074367914326029716,
+          0.0018419826708656847,
+          0.0004594401681915695
+        ],
+        "observed_order": [
+          2.0134208230249033,
+          2.003310588714855
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "norm": "relative L2 at t1 (point values at cell centres)",
+        "t0_s": 6.978952242690529e-12,
+        "t1_s": 2.7915808970762115e-11,
+        "D_m2_s": 58690.75840560429,
+        "mu_a_m-1": 6.780189384679487,
+        "c_m_s": 217083604.63432294,
+        "w0_m": 0.00128,
+        "source": [
+          0.0065664,
+          0.006732800000000001,
+          0.0068992
+        ],
+        "rk4_steps": [
+          37,
+          148,
+          590
+        ],
+        "bc": "periodic, images summed in the exact solution"
+      },
+      "window_periodic": {
+        "system": "light",
+        "check": "record_window_periodic_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.0005981661703992071,
+          0.00014927955292278605,
+          3.7303604075888905e-05
+        ],
+        "observed_order": [
+          2.002529749808862,
+          2.0006296427313375
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "bc": "periodic",
+        "t_start_s": 6.581389315847188e-11,
+        "t_last_s": 1.4497215056643e-10,
+        "norm": "relative L2 on the 32^3 output cells (exact cell averages)"
+      },
+      "window_dirichlet": {
+        "system": "light",
+        "check": "record_window_dirichlet_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.002063188356082191,
+          0.0005153658765899042,
+          0.00012881439699291518
+        ],
+        "observed_order": [
+          2.0012066144581806,
+          2.000303170766961
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "bc": "dirichlet",
+        "t_start_s": 6.581389315847188e-11,
+        "t_last_s": 1.4497215056643e-10,
+        "norm": "relative L2 on the 32^3 output cells (exact cell averages)"
+      },
+      "window_neumann": {
+        "system": "light",
+        "check": "record_window_neumann_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.0006060842938061055,
+          0.000151292710081887,
+          3.780896985633852e-05
+        ],
+        "observed_order": [
+          2.0021759826089296,
+          2.0005420268375196
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "bc": "neumann",
+        "t_start_s": 6.581389315847188e-11,
+        "t_last_s": 1.4497215056643e-10,
+        "norm": "relative L2 on the 32^3 output cells (exact cell averages)"
+      }
+    },
+    "time_window": {
+      "T_START_s": 6.581389315847188e-11,
+      "T_END_s": 1.4497215056643e-10,
+      "DT_FRAME_s": 3.4416633655633964e-12
+    }
+  },
+  "verify_seconds": 1469.7307808740006,
+  "smoke": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 2.0554988384246826,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          1.9120352030907758e-13,
+          1.7208316827816982e-13
+        ],
+        "seconds": 23.551731967003434,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.08477924520628874,
+          0.08141343588737433
+        ]
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.0936552286148071,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          2.8680528046361636e-13,
+          2.0245078620961156e-13
+        ],
+        "seconds": 17.593086750006478,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.03483555268110407,
+          0.007356430803483132
+        ]
+      },
+      {
+        "bc": "neumann",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.5272555351257324,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          1.7208316827816982e-13,
+          1.6388873169349507e-13
+        ],
+        "seconds": 21.645361179005704,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.051959341370618646,
+          0.025499227699157297
+        ]
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.8156639337539673,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          2.1510396034771227e-13,
+          2.6474333581256897e-13
+        ],
+        "seconds": 16.99881320499844,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.23729455521089615,
+          0.006824177944032609
+        ]
+      },
+      {
+        "bc": "dirichlet",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.0068374872207642,
+        "channels": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "internal_dt": [
+          2.458330975402426e-13,
+          2.294442243708931e-13
+        ],
+        "seconds": 16.485303313995246,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.23502858733376983,
+          0.006490091268120311
+        ]
+      }
+    ]
+  },
+  "resolution": {
+    "bc": "periodic",
+    "n": [
+      64,
+      128
+    ],
+    "n_traj": 1,
+    "rel_L2_diff_all_frames": [
+      0.0003863340033248605
+    ],
+    "max": 0.0003863340033248605,
+    "estimated_error_default_grid": [
+      0.0005151120044331473
+    ],
+    "seconds": [
+      13.48111864800012,
+      509.47531669599994
+    ]
+  },
+  "timing": {
+    "bc": "periodic",
+    "n_traj": 16,
+    "n_frames": 24,
+    "n_internal": 64,
+    "seconds": 121.75565023200033,
+    "seconds_per_trajectory": 7.609728139500021,
+    "batch_per_call": 4,
+    "rk4_substeps_per_frame": [
+      9,
+      36
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "load_average_at_end": [
+      2.21044921875,
+      2.64208984375,
+      2.5732421875
+    ],
+    "nice": 0
+  },
+  "passed": true
+}

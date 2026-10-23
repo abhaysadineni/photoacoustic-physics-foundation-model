@@ -1,0 +1,819 @@
+{
+  "system": "sound",
+  "sound_uniform": {
+    "system": "sound_uniform",
+    "check": "travelling_wave_one_period",
+    "n": [
+      128,
+      256,
+      512
+    ],
+    "error": [
+      0.040214981728341696,
+      0.010083873975947386,
+      0.0025214420327453434
+    ],
+    "observed_order": [
+      1.9956830713333085,
+      1.999729029591328
+    ],
+    "promised_order": 2.0,
+    "passed": true,
+    "norm": "relative L2 of p after one period",
+    "c_m_s": 1561.0,
+    "rho_kg_m3": 1043.0,
+    "pulse_1e_halfwidth_m": 0.0008,
+    "t_end_s": 8.199871877001921e-06,
+    "water37_inside_train_range": true,
+    "verify_seconds": 0.22635734300274635,
+    "smoke_test": {
+      "passed": true,
+      "rows": [
+        {
+          "bc": "periodic",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.0802080631256104,
+          "ch2_max": 0.9953608512878418,
+          "ch2_mean_rel_change_per_frame_1to8": 0.15510058403015137,
+          "ch2_mean_rel_change_per_frame_56to63": 0.16456976532936096,
+          "energy_ratio_max": 0.999999999405955,
+          "energy_ratio_min": 0.999999975801463,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.6748201847076416,
+          "ch2_max": 0.8881673812866211,
+          "ch2_mean_rel_change_per_frame_1to8": 0.1826859414577484,
+          "ch2_mean_rel_change_per_frame_56to63": 0.1881193220615387,
+          "energy_ratio_max": 0.9999999989671147,
+          "energy_ratio_min": 0.9999999144517322,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.6391103267669678,
+          "ch2_max": 1.4154449701309204,
+          "ch2_mean_rel_change_per_frame_1to8": 0.15410247445106506,
+          "ch2_mean_rel_change_per_frame_56to63": 0.1675800234079361,
+          "energy_ratio_max": 0.9999999991408574,
+          "energy_ratio_min": 0.9999998760240232,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ]
+    },
+    "timing_64x64": [
+      {
+        "bc": "periodic",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.7508671659961692,
+        "seconds_per_trajectory": 0.027357299468690144,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "pressure_release",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.5854066219981178,
+        "seconds_per_trajectory": 0.02477197846872059,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "rigid",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.8089383080005064,
+        "seconds_per_trajectory": 0.028264661062507912,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "dt_frame_s": null,
+    "length_m": null,
+    "environment": {
+      "python": "3.13.16",
+      "numpy": "2.5.3",
+      "cpu_count": 2,
+      "machine": "x86_64"
+    }
+  },
+  "sound_layered": {
+    "system": "sound_layered",
+    "check": "reflection_coefficient_sharp_interface",
+    "n": [
+      128,
+      256,
+      512
+    ],
+    "error": [
+      0.005479468857729768,
+      0.001364829420615638,
+      0.00034052081234171535
+    ],
+    "observed_order": [
+      2.005315403752643,
+      2.0029057688755514
+    ],
+    "promised_order": null,
+    "passed": true,
+    "pass_rule": "relative error falls with refinement and < 1 per cent at the finest grid; no formal order promised (sharp interface)",
+    "media": [
+      "fat",
+      "soft_tissue"
+    ],
+    "Z1": 1404100.0,
+    "Z2": 1628123.0,
+    "R_exact": 0.07388077987667793,
+    "measure": "primary: sqrt(energy of the left-going characteristic (p - Z1 u)/2 in medium 1 after reflection / energy of the incident (p + Z1 u)/2 at t = 0), compared with |R|",
+    "R_numerical_peak": [
+      0.06930463784448493,
+      0.07339850191593085,
+      0.07388376136583599
+    ],
+    "peak_error": [
+      0.061939546927245716,
+      0.006527786544106633,
+      4.035540993255776e-05
+    ],
+    "peak_note": "secondary: reflected / incident peak (three-point parabolic interpolation); converges, but not monotonically in rate, because dispersive trailing ripples move the sampled extreme",
+    "R_numerical_integral": [
+      0.07388077966867278,
+      0.07388077987667817,
+      0.07388077987667817
+    ],
+    "integral_note": "the integral ratio is conserved exactly by the discrete scheme (round-off agreement), so it cannot show refinement and is reported only",
+    "R_numerical_energy_sqrt": [
+      0.07428560730919698,
+      0.07398161453867165,
+      0.07390593781985798
+    ],
+    "domain_m": 0.0256,
+    "dx_m": [
+      0.0001,
+      5e-05,
+      2.5e-05
+    ],
+    "verify_seconds": 0.27435207599774003,
+    "smoke_test": {
+      "passed": true,
+      "rows": [
+        {
+          "bc": "periodic",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.9200717210769653,
+          "ch2_max": 1.1155421733856201,
+          "ch2_mean_rel_change_per_frame_1to8": 0.17807775735855103,
+          "ch2_mean_rel_change_per_frame_56to63": 0.1897411346435547,
+          "energy_ratio_max": 0.9999999995300909,
+          "energy_ratio_min": 0.9999986168846746,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -0.9656624794006348,
+          "ch2_max": 1.2904298305511475,
+          "ch2_mean_rel_change_per_frame_1to8": 0.14837592840194702,
+          "ch2_mean_rel_change_per_frame_56to63": 0.15656980872154236,
+          "energy_ratio_max": 0.999999997526626,
+          "energy_ratio_min": 0.9999986185065776,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.8887712955474854,
+          "ch2_max": 1.8710880279541016,
+          "ch2_mean_rel_change_per_frame_1to8": 0.20519354939460754,
+          "ch2_mean_rel_change_per_frame_56to63": 0.21085196733474731,
+          "energy_ratio_max": 0.999999995034656,
+          "energy_ratio_min": 0.9999873625309433,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ]
+    },
+    "timing_64x64": [
+      {
+        "bc": "periodic",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.6061634960060474,
+        "seconds_per_trajectory": 0.02509630462509449,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "pressure_release",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.2683187699949485,
+        "seconds_per_trajectory": 0.01981748078117107,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "rigid",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.240272791001189,
+        "seconds_per_trajectory": 0.01937926235939358,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "dt_frame_s": null,
+    "length_m": null,
+    "environment": {
+      "python": "3.13.16",
+      "numpy": "2.5.3",
+      "cpu_count": 2,
+      "machine": "x86_64"
+    }
+  },
+  "sound_lossy": {
+    "system": "sound_lossy",
+    "check": "damped Fourier mode (two loss levels)",
+    "n": [
+      128,
+      256,
+      512
+    ],
+    "error": [
+      0.034062957085587965,
+      0.008516096266629847,
+      0.002129029245765724
+    ],
+    "observed_order": [
+      1.9999395208753645,
+      1.999996490474281
+    ],
+    "promised_order": 2.0,
+    "passed": true,
+    "nu_m2_s": 0.0006196525587434103,
+    "c_m_s": 1561.0,
+    "rho_kg_m3": 1043.0,
+    "mode": 3,
+    "k_rad_m": 1472.6215563702156,
+    "t_end_s": 1.6399743754003843e-05,
+    "amplitude_factor_exact": 0.9890416012935839,
+    "omega_rad_s": 2298762.1513016876,
+    "norm": "relative energy norm over (p, u)",
+    "cases": {
+      "sourced_nu_alpha0_max": {
+        "system": "sound_lossy",
+        "check": "damped_fourier_mode_sourced",
+        "n": [
+          128,
+          256,
+          512
+        ],
+        "error": [
+          0.034062957085587965,
+          0.008516096266629847,
+          0.002129029245765724
+        ],
+        "observed_order": [
+          1.9999395208753645,
+          1.999996490474281
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "nu_m2_s": 0.0006196525587434103,
+        "c_m_s": 1561.0,
+        "rho_kg_m3": 1043.0,
+        "mode": 3,
+        "k_rad_m": 1472.6215563702156,
+        "t_end_s": 1.6399743754003843e-05,
+        "amplitude_factor_exact": 0.9890416012935839,
+        "omega_rad_s": 2298762.1513016876,
+        "norm": "relative energy norm over (p, u)"
+      },
+      "stiff_loss": {
+        "system": "sound_lossy",
+        "check": "damped_fourier_mode_stiff",
+        "n": [
+          128,
+          256,
+          512
+        ],
+        "error": [
+          0.03411282711575374,
+          0.008521423569643796,
+          0.0021299252979917094
+        ],
+        "observed_order": [
+          2.0011479548502744,
+          2.000291631658862
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "nu_m2_s": 0.05623550850335617,
+        "c_m_s": 1561.0,
+        "rho_kg_m3": 1043.0,
+        "mode": 3,
+        "k_rad_m": 1472.6215563702156,
+        "t_end_s": 1.6399743754003843e-05,
+        "amplitude_factor_exact": 0.3678794411714424,
+        "omega_rad_s": 2297953.3804070023,
+        "norm": "relative energy norm over (p, u)"
+      }
+    },
+    "f_ref_Hz": 3902500.0,
+    "nu_range_train_m2_s": [
+      8.740799298340901e-05,
+      0.0006610306553114689
+    ],
+    "verify_seconds": 2.390235851002217,
+    "smoke_test": {
+      "passed": true,
+      "rows": [
+        {
+          "bc": "periodic",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.1608238220214844,
+          "ch2_max": 1.3896182775497437,
+          "ch2_mean_rel_change_per_frame_1to8": 0.16899661719799042,
+          "ch2_mean_rel_change_per_frame_56to63": 0.17468610405921936,
+          "energy_ratio_max": 0.9994153367711304,
+          "energy_ratio_min": 0.993526311591679,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.2892098426818848,
+          "ch2_max": 1.2925852537155151,
+          "ch2_mean_rel_change_per_frame_1to8": 0.18463708460330963,
+          "ch2_mean_rel_change_per_frame_56to63": 0.1839786320924759,
+          "energy_ratio_max": 0.9991839454596029,
+          "energy_ratio_min": 0.9899924993463387,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.2846150398254395,
+          "ch2_max": 1.8818469047546387,
+          "ch2_mean_rel_change_per_frame_1to8": 0.16290444135665894,
+          "ch2_mean_rel_change_per_frame_56to63": 0.16646569967269897,
+          "energy_ratio_max": 0.9988003114945864,
+          "energy_ratio_min": 0.9845979824105474,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ]
+    },
+    "timing_64x64": [
+      {
+        "bc": "periodic",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.5433559360026265,
+        "seconds_per_trajectory": 0.02411493650004104,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "pressure_release",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.7682867609983077,
+        "seconds_per_trajectory": 0.027629480640598558,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      },
+      {
+        "bc": "rigid",
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.4921697809986654,
+        "seconds_per_trajectory": 0.023315152828104146,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "dt_frame_s": null,
+    "length_m": null,
+    "environment": {
+      "python": "3.13.16",
+      "numpy": "2.5.3",
+      "cpu_count": 2,
+      "machine": "x86_64"
+    }
+  },
+  "dt_frame_s": 6.406149903907751e-08,
+  "length_m": 0.0128,
+  "f_ref_Hz": 3902500.0,
+  "param_ranges": {
+    "uniform": {
+      "train": {
+        "c_m_s": [
+          1430.0,
+          1595.0
+        ],
+        "rho_kg_m3": [
+          928.0,
+          1060.0
+        ]
+      },
+      "ood": {
+        "c_m_s": {
+          "low": [
+            1215.5,
+            1358.5
+          ],
+          "high": [
+            1674.75,
+            1834.2499999999998
+          ]
+        },
+        "rho_kg_m3": {
+          "low": [
+            788.8,
+            881.5999999999999
+          ],
+          "high": [
+            1113.0,
+            1219.0
+          ]
+        }
+      }
+    },
+    "layered": {
+      "train": {
+        "materials": {
+          "water37": {
+            "c_m_s": 1523.66,
+            "rho_kg_m3": 993.33
+          },
+          "fat": {
+            "c_m_s": 1478.0,
+            "rho_kg_m3": 950.0
+          },
+          "muscle": {
+            "c_m_s": 1547.0,
+            "rho_kg_m3": 1050.0
+          },
+          "soft_tissue": {
+            "c_m_s": 1561.0,
+            "rho_kg_m3": 1043.0
+          }
+        },
+        "n_layers": [
+          2,
+          4
+        ],
+        "interface_width_m": [
+          0.0001,
+          0.0005
+        ]
+      },
+      "ood": {
+        "materials": {
+          "fat_szabo": {
+            "c_m_s": 1430.0,
+            "rho_kg_m3": 928.0
+          },
+          "muscle_szabo": {
+            "c_m_s": 1580.0,
+            "rho_kg_m3": 1041.0
+          },
+          "blood": {
+            "c_m_s": 1584.0,
+            "rho_kg_m3": 1060.0
+          },
+          "liver": {
+            "c_m_s": 1595.0,
+            "rho_kg_m3": 1060.0
+          }
+        },
+        "n_layers": [
+          2,
+          4
+        ]
+      }
+    },
+    "lossy": {
+      "train": {
+        "c_m_s": [
+          1430.0,
+          1595.0
+        ],
+        "rho_kg_m3": [
+          928.0,
+          1060.0
+        ],
+        "alpha0_dB_cm_MHz": [
+          0.2,
+          1.09
+        ],
+        "f_ref_Hz": 3902500.0
+      },
+      "ood": {
+        "alpha_ref_dB_cm": 0.021229931712499997,
+        "c_m_s": [
+          1430.0,
+          1595.0
+        ],
+        "rho_kg_m3": [
+          928.0,
+          1060.0
+        ],
+        "f_ref_Hz": 3902500.0
+      }
+    },
+    "train": {
+      "c_m_s": [
+        1430.0,
+        1595.0
+      ],
+      "rho_kg_m3": [
+        928.0,
+        1060.0
+      ]
+    },
+    "ood": {
+      "c_m_s": {
+        "low": [
+          1215.5,
+          1358.5
+        ],
+        "high": [
+          1674.75,
+          1834.2499999999998
+        ]
+      },
+      "rho_kg_m3": {
+        "low": [
+          788.8,
+          881.5999999999999
+        ],
+        "high": [
+          1113.0,
+          1219.0
+        ]
+      }
+    }
+  },
+  "param_sources": {
+    "c_m_s (train)": "c_soft.range",
+    "rho_kg_m3 (train)": "rho_soft.range",
+    "c_m_s, rho_kg_m3 (ood, uniform)": "modelling choice: 5 to 15 per cent beyond the ends of c_soft.range and rho_soft.range",
+    "c_ref (dt_frame, f_ref)": "c_soft.value",
+    "water37 layer": "water37_acoustic (c_m_s_NIST_IAPWS95, rho_kg_m3_NIST)",
+    "fat layer": "fat_acoustic.Mast2000_via_Culjat (c, rho)",
+    "muscle layer": "muscle_acoustic.Mast2000_via_Culjat (c, rho)",
+    "soft_tissue layer": "acoustic_table_culjat 'Soft tissue (average)'",
+    "ood layers": "fat_acoustic.Szabo_via_Stanford, muscle_acoustic.Szabo_via_Stanford_skeletal, acoustic_table_culjat 'Blood', 'Liver'",
+    "alpha0 (train)": "alpha_soft.range (dB cm^-1 MHz^-1)",
+    "alpha_ref (ood)": "alpha_water.37C_1MHz_dB_cm x (f_ref / 1 MHz)^2",
+    "f_ref": "modelling choice: c_ref / (4 output cells)",
+    "dB to Np": "definition ln(10)/20 (JSON conventions.attenuation)",
+    "LENGTH, pulses, layer geometry, OOD_BAND": "modelling choice"
+  },
+  "wave_spectral_radius_dr_over_c_n512": {
+    "d1_periodic": 2.0000000000000018,
+    "d1_pressure_release": 2.0000000000000266,
+    "d1_rigid": 1.9999905876191542,
+    "d2_pressure_release": 2.0000000000000133,
+    "d2_rigid": 1.9999944847231115,
+    "d3_pressure_release": 2.03011754660879,
+    "d3_rigid": 2.030117546608776
+  },
+  "passed": true,
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "machine": "x86_64"
+  }
+}

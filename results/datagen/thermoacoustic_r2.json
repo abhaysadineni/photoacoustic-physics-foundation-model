@@ -1,0 +1,49 @@
+[
+  {
+    "system": "thermoacoustic_r2",
+    "split": "train",
+    "n": 600,
+    "seconds": 16.817371368408203,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "thermoacoustic_r2",
+    "split": "val",
+    "n": 60,
+    "seconds": 1.5820584297180176,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "thermoacoustic_r2",
+    "split": "test",
+    "n": 100,
+    "seconds": 2.6654369831085205,
+    "regime": "train",
+    "bc_set": "train"
+  },
+  {
+    "system": "thermoacoustic_r2",
+    "split": "test_bc",
+    "n": 100,
+    "seconds": 2.693369150161743,
+    "regime": "train",
+    "bc_set": "test"
+  },
+  {
+    "system": "thermoacoustic_r2",
+    "split": "test_ood",
+    "n": 100,
+    "seconds": 2.7134816646575928,
+    "regime": "ood",
+    "bc_set": "train"
+  },
+  {
+    "norm_scale": [
+      1.0,
+      2.546172254369594e-05,
+      10.028496742248535
+    ]
+  }
+]

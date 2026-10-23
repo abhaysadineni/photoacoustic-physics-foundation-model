@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+data2d/
+examples/*.png
+results/my_check.json
+state.pt

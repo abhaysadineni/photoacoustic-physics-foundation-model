@@ -1,0 +1,417 @@
+{
+  "verify": {
+    "system": "photothermal",
+    "cases": {
+      "light_edge_pressure_release": {
+        "system": "chain",
+        "check": "light_steady_edge_pressure_release_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.0007845545720093128,
+          0.00019640039221208654,
+          4.91164819564236e-05
+        ],
+        "observed_order": [
+          1.99807599087496,
+          1.9995186764514628
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "bc": "pressure_release",
+        "mu_a_m-1": 14.374573758932081,
+        "musp_m-1": 1032.6746270444582,
+        "mu_eff_m-1": 212.49154782846696,
+        "solution": "sinh(mu_eff (L - x))/sinh(mu_eff L)",
+        "solver": [
+          {
+            "method": "direct",
+            "unknowns": 32768,
+            "relative_residual": 3.100189556362219e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          },
+          {
+            "method": "cg",
+            "unknowns": 262144,
+            "relative_residual": 9.261595131212404e-11,
+            "cg_iterations": 268,
+            "cg_rtol": 1e-10
+          },
+          {
+            "method": "cg",
+            "unknowns": 2097152,
+            "relative_residual": 9.922495855116973e-11,
+            "cg_iterations": 510,
+            "cg_rtol": 1e-10
+          }
+        ],
+        "norm": "relative L2 (point values)"
+      },
+      "light_edge_periodic": {
+        "system": "chain",
+        "check": "light_steady_edge_periodic_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.0007447621802231429,
+          0.0001864419926129449,
+          4.662623933310624e-05
+        ],
+        "observed_order": [
+          1.9980529762586678,
+          1.9995128589231193
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "bc": "periodic",
+        "mu_a_m-1": 14.374573758932081,
+        "musp_m-1": 1032.6746270444582,
+        "mu_eff_m-1": 212.49154782846696,
+        "solution": "cosh(mu_eff (x - L/2))/cosh(mu_eff L/2)",
+        "solver": [
+          {
+            "method": "direct",
+            "unknowns": 32768,
+            "relative_residual": 4.5233548215817706e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          },
+          {
+            "method": "cg",
+            "unknowns": 262144,
+            "relative_residual": 3.3312981680144684e-11,
+            "cg_iterations": 55,
+            "cg_rtol": 1e-10
+          },
+          {
+            "method": "cg",
+            "unknowns": 2097152,
+            "relative_residual": 3.2004643859871906e-11,
+            "cg_iterations": 118,
+            "cg_rtol": 1e-10
+          }
+        ],
+        "norm": "relative L2 (point values)"
+      },
+      "light_point_source": {
+        "system": "chain",
+        "check": "light_steady_point_source_d3",
+        "n": [
+          32,
+          64,
+          128
+        ],
+        "error": [
+          0.005219771630361311,
+          0.0012178278112099082,
+          0.0002969295661209285
+        ],
+        "observed_order": [
+          2.099676524113822,
+          2.0361175060385888
+        ],
+        "promised_order": 2.0,
+        "passed": true,
+        "d": 3,
+        "mu_eff_m-1": 212.49154782846696,
+        "D_m": 0.0003183549856850758,
+        "solver": [
+          {
+            "method": "direct",
+            "unknowns": 32768,
+            "relative_residual": 2.9303611874354265e-15,
+            "cg_iterations": null,
+            "cg_rtol": null
+          },
+          {
+            "method": "cg",
+            "unknowns": 262144,
+            "relative_residual": 9.568829352317756e-11,
+            "cg_iterations": 241,
+            "cg_rtol": 1e-10
+          },
+          {
+            "method": "cg",
+            "unknowns": 2097152,
+            "relative_residual": 9.741747418076678e-11,
+            "cg_iterations": 464,
+            "cg_rtol": 1e-10
+          }
+        ],
+        "solution": "exp(-mu_eff r)/(4 pi D r)",
+        "norm": "relative L2 over cells with r >= L/8",
+        "bc": "exact Dirichlet values at the face centres of all walls"
+      },
+      "uniform_heating": {
+        "system": "photothermal",
+        "check": "uniform_constant_heating_exact_d3",
+        "n": [
+          32,
+          64
+        ],
+        "error": [
+          7.6748456246679e-16,
+          9.20981474960148e-16
+        ],
+        "observed_order": [],
+        "promised_order": null,
+        "passed": true,
+        "pass_rule": "max relative error over all frames < 1e-12 (exact in the scheme)",
+        "rho_cp_J_m3K": 4172000.0,
+        "H0_W_m3": 1000000000.0,
+        "dt_frame_s": 2.5624599615631005e-07
+      }
+    },
+    "note": "steady fluence cases are the chain's (same steady_fluence function)",
+    "passed": true
+  },
+  "verify_seconds": 9.159994078800082e-07,
+  "smoke": {
+    "passed": true,
+    "rows": [
+      {
+        "bc": "periodic",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 9079524.0,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          6.406149903907751e-08
+        ],
+        "seconds": 5.165156838003895,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.08477924520628874,
+          0.02250567523497987
+        ],
+        "fluence_relative_residual_max": 9.808397033034414e-11,
+        "fluence_method": "cg"
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 8701656.0,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          5.124919923126201e-08
+        ],
+        "seconds": 5.521012444005464,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.03483555268110407,
+          0.06411604414786277
+        ],
+        "fluence_relative_residual_max": 9.53074450220233e-11,
+        "fluence_method": "cg"
+      },
+      {
+        "bc": "rigid",
+        "regime": "train",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 7023969.0,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          6.406149903907751e-08
+        ],
+        "seconds": 5.329887696003425,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.051959341370618646,
+          0.04022488434760081
+        ],
+        "fluence_relative_residual_max": 9.858814246366586e-11,
+        "fluence_method": "cg"
+      },
+      {
+        "bc": "periodic",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 6116328.5,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          6.406149903907751e-08
+        ],
+        "seconds": 3.8673237760085613,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.04753619227520975,
+          0.11070274993079733
+        ],
+        "fluence_relative_residual_max": 9.579957776133968e-11,
+        "fluence_method": "cg"
+      },
+      {
+        "bc": "pressure_release",
+        "regime": "ood",
+        "n_traj": 2,
+        "shape": [
+          24,
+          3,
+          32,
+          32,
+          32
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 6251573.5,
+        "channels": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "internal_dt": [
+          6.406149903907751e-08,
+          6.406149903907751e-08
+        ],
+        "seconds": 4.796590104000643,
+        "failures": [],
+        "passed": true,
+        "mua_over_musp_max": [
+          0.01301402396066659,
+          0.021575805897671118
+        ],
+        "fluence_relative_residual_max": 9.81747924932973e-11,
+        "fluence_method": "cg"
+      }
+    ]
+  },
+  "resolution": {
+    "bc": "periodic",
+    "n": [
+      64,
+      128
+    ],
+    "n_traj": 1,
+    "rel_L2_diff_all_frames": [
+      0.0002637924085228277
+    ],
+    "max": 0.0002637924085228277,
+    "estimated_error_default_grid": [
+      0.00035172321136377026
+    ],
+    "seconds": [
+      2.3376878249982838,
+      47.12734730799275
+    ]
+  },
+  "timing": {
+    "bc": "periodic",
+    "n_traj": 16,
+    "n_frames": 24,
+    "n_internal": 64,
+    "seconds": 41.50605443298991,
+    "seconds_per_trajectory": 2.5941284020618696,
+    "batch_per_call": 4,
+    "rk4_substeps_per_frame": [
+      4,
+      5
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "load_average_at_end": [
+      1.24609375,
+      1.67041015625,
+      1.83251953125
+    ],
+    "nice": 0
+  },
+  "passed": true
+}

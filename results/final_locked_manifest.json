@@ -1,0 +1,38 @@
+[
+ {
+  "system": "chain",
+  "split": "final_locked",
+  "n": 200,
+  "seconds": 8.353979110717773,
+  "regime": "train",
+  "bc_set": "train",
+  "sha256": "988dc147b8dde8a2f12061c2198e4ce2998838093ee47aa4ea138982aca7ab17"
+ },
+ {
+  "system": "telegraph",
+  "split": "final_locked",
+  "n": 200,
+  "seconds": 5.517450571060181,
+  "regime": "train",
+  "bc_set": "train",
+  "sha256": "8f2496de1cd3106061b149d2bd64584fca0e858a0d437443b9acd97584231107"
+ },
+ {
+  "system": "chain_r2",
+  "split": "final_locked",
+  "n": 200,
+  "seconds": 5.688132286071777,
+  "regime": "train",
+  "bc_set": "train",
+  "sha256": "809c71616cdca4aca20d4a20b4026ba98207119b37a7179bf36cc9ee3539230a"
+ },
+ {
+  "system": "chain_r3",
+  "split": "final_locked",
+  "n": 200,
+  "seconds": 5.443440198898315,
+  "regime": "train",
+  "bc_set": "train",
+  "sha256": "c2a4fb8550a6cbd533dd5f4eadf7a56db1374efb9d9bd59e6fa9cd2ba8211007"
+ }
+]

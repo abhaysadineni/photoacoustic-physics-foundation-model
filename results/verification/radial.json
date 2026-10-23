@@ -1,0 +1,3844 @@
+{
+  "system": "radial",
+  "dims": [
+    2,
+    3
+  ],
+  "allowed_bcs_d23": {
+    "light": [
+      "dirichlet",
+      "neumann"
+    ],
+    "heat": [
+      "dirichlet",
+      "neumann"
+    ],
+    "sound_uniform": [
+      "pressure_release",
+      "rigid"
+    ],
+    "sound_layered": [
+      "pressure_release",
+      "rigid"
+    ],
+    "sound_lossy": [
+      "pressure_release",
+      "rigid"
+    ],
+    "photothermal": [
+      "pressure_release",
+      "rigid"
+    ],
+    "thermoacoustic": [
+      "pressure_release",
+      "rigid"
+    ]
+  },
+  "checks": {
+    "light_d2_dirichlet": {
+      "system": "light",
+      "check": "radial_production_d2_dirichlet",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        3.1952661212263925e-05,
+        7.985368976247738e-06,
+        1.9986363280899696e-06
+      ],
+      "observed_order": [
+        2.0005051163761323,
+        1.998343087976746
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "dirichlet",
+      "t_last_s": 1.4497215056643e-10,
+      "reference": "bounded-domain Green's function (eigenfunction series, 200 modes), exact cell averages",
+      "sources": "shells at r = 0, 0.3 L, 0.55 L",
+      "norm": "volume-weighted rel L2"
+    },
+    "heat_d2_dirichlet": {
+      "system": "heat",
+      "check": "radial_production_d2_dirichlet",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.001465394208107463,
+        0.00036573534002098685,
+        9.139672538396067e-05
+      ],
+      "observed_order": [
+        2.002416876361866,
+        2.000585655562395
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "dirichlet",
+      "t_s": 25.6,
+      "alpha_m2_s": 1e-07,
+      "reference": "centred Gaussian hot spot (1 mm) spreading plus an always-on centred Gaussian heater (time integral by quad_vec), exact cell averages of the infinite-medium solution",
+      "wall_value_rel_to_peak": 4.671981078047647e-07,
+      "norm": "volume-weighted rel L2"
+    },
+    "light_d2_neumann": {
+      "system": "light",
+      "check": "radial_production_d2_neumann",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        3.354664853759566e-05,
+        8.38444661907159e-06,
+        2.0992429702323504e-06
+      ],
+      "observed_order": [
+        2.000381168954459,
+        1.9978464113121792
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "neumann",
+      "t_last_s": 1.4497215056643e-10,
+      "reference": "bounded-domain Green's function (eigenfunction series, 200 modes), exact cell averages",
+      "sources": "shells at r = 0, 0.3 L, 0.55 L",
+      "norm": "volume-weighted rel L2"
+    },
+    "heat_d2_neumann": {
+      "system": "heat",
+      "check": "radial_production_d2_neumann",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.0014653942100236754,
+        0.0003657353421505678,
+        9.139672866954078e-05
+      ],
+      "observed_order": [
+        2.0024168698479614,
+        2.0005856121000303
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "neumann",
+      "t_s": 25.6,
+      "alpha_m2_s": 1e-07,
+      "reference": "centred Gaussian hot spot (1 mm) spreading plus an always-on centred Gaussian heater (time integral by quad_vec), exact cell averages of the infinite-medium solution",
+      "wall_value_rel_to_peak": 4.671981078047647e-07,
+      "norm": "volume-weighted rel L2"
+    },
+    "sound_uniform_d2_pressure_release": {
+      "system": "sound_uniform",
+      "check": "radial_free_wave_d2_pressure_release",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.03565029037059388,
+        0.008900152041736914,
+        0.0022238213072736466
+      ],
+      "observed_order": [
+        2.002011940393975,
+        2.0007891153819055
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "pressure_release",
+      "t_s": 4.0358744394618836e-06,
+      "s_m": 0.0008,
+      "c_m_s": 1561.0,
+      "rho_kg_m3": 1043.0,
+      "reference": "Hankel transform (chain.hankel_gauss, scipy quad rel 1e-10), 8-point Gauss-Legendre cell averages",
+      "outer_wall": "pulse front c t + 4 s = 0.0095 m < L = 0.0128 m",
+      "norm": "volume-weighted rel L2"
+    },
+    "sound_lossy_mode_d2_pressure_release_sourced": {
+      "system": "sound_lossy",
+      "check": "radial_damped_mode_d2_pressure_release_sourced",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.008189364238980762,
+        0.0020512802643056337,
+        0.000513316595392585
+      ],
+      "observed_order": [
+        1.9972268369361614,
+        1.9986038108472084
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "pressure_release",
+      "mode_index": 3,
+      "k_rad_m": 921.2136280479907,
+      "nu_m2_s": 0.0006196525587434103,
+      "t_end_s": 1.6399743754003843e-05,
+      "amplitude_factor_exact": 0.9956973103127071,
+      "reference": "exact damped normal mode p = psi_m(r) e^{-gt}[cos wt + (g/w) sin wt], u = -e^{-gt} sin(wt) psi_m'(r)/(rho w), g = nu k^2/2",
+      "code_path": "sound.run_uniform_medium (radial.acoustic_rhs with the radial grad-div loss term, production CFL rule)",
+      "norm": "relative energy norm over (p, u)"
+    },
+    "sound_lossy_mode_d2_pressure_release_stiff": {
+      "system": "sound_lossy",
+      "check": "radial_damped_mode_d2_pressure_release_stiff",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.008202832513140246,
+        0.0020545208410162586,
+        0.0005141177359895519
+      ],
+      "observed_order": [
+        1.9973202063162332,
+        1.9986312772188553
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "pressure_release",
+      "mode_index": 3,
+      "k_rad_m": 921.2136280479907,
+      "nu_m2_s": 0.14370511454590773,
+      "t_end_s": 1.6399743754003843e-05,
+      "amplitude_factor_exact": 0.36787944117144233,
+      "reference": "exact damped normal mode p = psi_m(r) e^{-gt}[cos wt + (g/w) sin wt], u = -e^{-gt} sin(wt) psi_m'(r)/(rho w), g = nu k^2/2",
+      "code_path": "sound.run_uniform_medium (radial.acoustic_rhs with the radial grad-div loss term, production CFL rule)",
+      "norm": "relative energy norm over (p, u)"
+    },
+    "sound_lossy_reference_d2_pressure_release": {
+      "system": "sound_lossy",
+      "check": "radial_reference_d2_pressure_release",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.2553932076904364,
+        0.06580577322007036,
+        0.015691411058004427
+      ],
+      "observed_order": [
+        1.9564340923514085,
+        2.0682390656793395
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "pressure_release",
+      "nu_m2_s": 0.0006196525587434103,
+      "s_m": 0.0004,
+      "reference": "same production run at n = 2048",
+      "nu0_vs_uniform_max_abs_diff": 0.0,
+      "norm": "volume-weighted rel L2 (output cells, last frame)"
+    },
+    "sound_uniform_d2_rigid": {
+      "system": "sound_uniform",
+      "check": "radial_free_wave_d2_rigid",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.03565029037059388,
+        0.008900152041736914,
+        0.0022238213072736466
+      ],
+      "observed_order": [
+        2.002011940393975,
+        2.0007891153819055
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "rigid",
+      "t_s": 4.0358744394618836e-06,
+      "s_m": 0.0008,
+      "c_m_s": 1561.0,
+      "rho_kg_m3": 1043.0,
+      "reference": "Hankel transform (chain.hankel_gauss, scipy quad rel 1e-10), 8-point Gauss-Legendre cell averages",
+      "outer_wall": "pulse front c t + 4 s = 0.0095 m < L = 0.0128 m",
+      "norm": "volume-weighted rel L2"
+    },
+    "sound_lossy_mode_d2_rigid_sourced": {
+      "system": "sound_lossy",
+      "check": "radial_damped_mode_d2_rigid_sourced",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.00535364266050532,
+        0.0013383921498782824,
+        0.00033459687849663014
+      ],
+      "observed_order": [
+        2.0000199580308196,
+        2.0000049971823572
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "rigid",
+      "mode_index": 3,
+      "k_rad_m": 794.8021980517751,
+      "nu_m2_s": 0.0006196525587434103,
+      "t_end_s": 1.6399743754003843e-05,
+      "amplitude_factor_exact": 0.9967953793457304,
+      "reference": "exact damped normal mode p = psi_m(r) e^{-gt}[cos wt + (g/w) sin wt], u = -e^{-gt} sin(wt) psi_m'(r)/(rho w), g = nu k^2/2",
+      "code_path": "sound.run_uniform_medium (radial.acoustic_rhs with the radial grad-div loss term, production CFL rule)",
+      "norm": "relative energy norm over (p, u)"
+    },
+    "sound_lossy_mode_d2_rigid_stiff": {
+      "system": "sound_lossy",
+      "check": "radial_damped_mode_d2_rigid_stiff",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.005314667898377323,
+        0.0013285938757663588,
+        0.0003321438694648168
+      ],
+      "observed_order": [
+        2.000079374455558,
+        2.000019978078769
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "rigid",
+      "mode_index": 3,
+      "k_rad_m": 794.8021980517751,
+      "nu_m2_s": 0.1930522263455044,
+      "t_end_s": 1.6399743754003843e-05,
+      "amplitude_factor_exact": 0.36787944117144233,
+      "reference": "exact damped normal mode p = psi_m(r) e^{-gt}[cos wt + (g/w) sin wt], u = -e^{-gt} sin(wt) psi_m'(r)/(rho w), g = nu k^2/2",
+      "code_path": "sound.run_uniform_medium (radial.acoustic_rhs with the radial grad-div loss term, production CFL rule)",
+      "norm": "relative energy norm over (p, u)"
+    },
+    "sound_lossy_reference_d2_rigid": {
+      "system": "sound_lossy",
+      "check": "radial_reference_d2_rigid",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.2553932076904364,
+        0.06580577322007036,
+        0.015691411058004427
+      ],
+      "observed_order": [
+        1.9564340923514085,
+        2.0682390656793395
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "bc": "rigid",
+      "nu_m2_s": 0.0006196525587434103,
+      "s_m": 0.0004,
+      "reference": "same production run at n = 2048",
+      "nu0_vs_uniform_max_abs_diff": 0.0,
+      "norm": "volume-weighted rel L2 (output cells, last frame)"
+    },
+    "sound_layered_d2_rigid": {
+      "system": "sound_layered",
+      "check": "radial_interface_d2_rigid",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.3706738564211735,
+        0.10064007195026502,
+        0.02409835782121515
+      ],
+      "observed_order": [
+        1.8809455069005645,
+        2.0621981160593545
+      ],
+      "promised_order": null,
+      "passed": true,
+      "d": 2,
+      "bc": "rigid",
+      "pass_rule": "field error and reflected-energy error against the n = 2048 reference fall with refinement, reflected-energy error < 1 per cent at n = 512; discrete energy loss 1 - E_end/E_0 >= 0 at every n, falling with refinement, < 1e-4 at n = 512 (revised 21 Oct 2026 after a first run: the earlier rule '< 1e-4 at every n' failed at n = 128, where RK4 dissipation of the 4-cell-wide pulse is 3e-4 to 7e-4)",
+      "reference": "same production run at n = 2048 (no closed form exists for a curved interface)",
+      "media": [
+        "fat",
+        "soft_tissue"
+      ],
+      "interface_radius_m": 0.0064,
+      "pulse_s_m": 0.0004,
+      "t_measure_s": 6.470211402946829e-06,
+      "frames": 102,
+      "field_error_vs_ref": [
+        0.3706738564211735,
+        0.10064007195026502,
+        0.02409835782121515
+      ],
+      "field_observed_order": [
+        1.8809455069005645,
+        2.0621981160593545
+      ],
+      "reflected_energy_fraction": [
+        0.0037188897070479254,
+        0.003680387719290178,
+        0.0036712944047221255
+      ],
+      "reflected_energy_fraction_ref": 0.0036684983646520166,
+      "reflected_energy_rel_error": [
+        0.01373623139142078,
+        0.0032409322442997044,
+        0.0007621756348729178
+      ],
+      "reflected_energy_observed_order": [
+        2.083505482580766,
+        2.088213465524446
+      ],
+      "plane_wave_R2_for_comparison": 0.005458369635186139,
+      "energy_loss_1_minus_ratio": [
+        0.0003220775121058894,
+        1.1172026385342093e-05,
+        3.583267282891711e-07
+      ],
+      "energy_loss_ref": 3.527872438624513e-10,
+      "reflected_energy_measure": "2 x potential energy sum_{r < r_i} p^2 V / (2 K1) over E_0 (equipartition in the travelling reflected wave); output cells",
+      "norm": "volume-weighted rel L2 against the reference (output cells)"
+    },
+    "pt_a_light_source_d2": {
+      "system": "chain",
+      "check": "light_steady_source_d2",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.00032509079452956545,
+        8.131681276109056e-05,
+        2.0331964499404194e-05
+      ],
+      "observed_order": [
+        1.9992171298662047,
+        1.999804052504002
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "solution": "line source K0(mu_eff r)",
+      "mu_a_m-1": 14.374573758932081,
+      "musp_m-1": 1032.6746270444582,
+      "mu_eff_m-1": 212.49154782846696,
+      "domain_m": [
+        0.0016,
+        0.014400000000000001
+      ],
+      "norm": "relative L2, volume weighted",
+      "bc": "Dirichlet with exact values"
+    },
+    "pt_a_light_surface_d2": {
+      "system": "chain",
+      "check": "light_steady_surface_d2",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        3.113663454074211e-05,
+        7.784921219705339e-06,
+        1.9462778834674413e-06
+      ],
+      "observed_order": [
+        1.9998586715571989,
+        1.9999647315704998
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "solution": "outer-surface illumination I0(mu_eff r)/I0(mu_eff L)",
+      "mu_a_m-1": 14.374573758932081,
+      "musp_m-1": 1032.6746270444582,
+      "mu_eff_m-1": 212.49154782846696,
+      "domain_m": [
+        0.0,
+        0.0128
+      ],
+      "norm": "relative L2, volume weighted",
+      "bc": "chain code path (steady_fluence): d = 1 phi(0) = 1, phi(L) = 0; d = 2, 3 phi(L) = 1, symmetric centre"
+    },
+    "pt_b_uniform_heating_d2": {
+      "system": "photothermal",
+      "check": "uniform_constant_heating_exact_d2",
+      "d": 2,
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        1.3449253285132319e-15,
+        4.371007317668004e-15,
+        6.724626642566159e-15
+      ],
+      "observed_order": null,
+      "promised_order": null,
+      "passed": true,
+      "pass_rule": "max relative error over all 64 frames < 1e-12 (exact in the scheme; round-off only)",
+      "rho_cp_J_m3K": 4172000.0,
+      "H0_W_m3": 1000000000.0,
+      "dt_frame_s": 6.406149903907751e-08,
+      "code_path": "coupled.run_thermal (Photothermal's integrator), chain substep rule",
+      "norm": "max abs error / max |T| over all frames and cells"
+    },
+    "pt_b_gaussian_heater_d2": {
+      "system": "photothermal",
+      "check": "gaussian_heater_d2",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.002583926818163235,
+        0.0006434955238549956,
+        0.00016071988966053708
+      ],
+      "observed_order": [
+        2.0055631924499506,
+        2.0013816343894475
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "s0_m": 0.00064,
+      "t1_s": 3.0720000000000005,
+      "alpha_m2_s": 1e-07,
+      "code_path": "coupled.run_thermal with acoustics off (thermal substeps)",
+      "norm": "relative L2"
+    },
+    "ta_b_gaussian_heater_d2": {
+      "system": "chain",
+      "check": "heat_heated_d2",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.002583926818163235,
+        0.0006434955238549956,
+        0.00016071988966053708
+      ],
+      "observed_order": [
+        2.0055631924499506,
+        2.0013816343894475
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "s0_m": 0.00064,
+      "t1_s": 3.0720000000000005,
+      "alpha_m2_s": 1e-07,
+      "rho_cp_J_m3K": 4172000.0,
+      "H0_W_m3": 1358072.9166666665,
+      "centre": "r = 0 (symmetry wall for d = 1, axis/centre for d = 2, 3)",
+      "code_path": "chain.make_rhs + chain.run_chain (coupled T, p, u state) with acoustics switched off; thermal bc of the chain (neumann for wall boundaries)",
+      "norm": "relative L2, volume weighted"
+    },
+    "ta_d_constant_heating_d2": {
+      "system": "chain",
+      "check": "acoustic_constant_heating_d2",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.00818080098269147,
+        0.0020422441705225075,
+        0.0005103250659200384
+      ],
+      "observed_order": [
+        2.002086739424051,
+        2.0006669547824054
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 2,
+      "s_m": 0.0008,
+      "t_s": 4.099935938500961e-06,
+      "H0_W_m3": 1000000000.0,
+      "gruneisen": 0.201,
+      "reference": "Duhamel integral with the time integral done exactly: (1/c) int P0(k) J0(kr) sin(ckt) dk by scipy quad; checked against nested (time x wavenumber) quadrature",
+      "norm": "relative L2, volume weighted",
+      "quadrature_check": {
+        "max_abs_diff_vs_gauss_legendre_rel_to_max": 1.0856844092894822e-15,
+        "max_quad_error_estimate_rel_to_max": 4.049538347424853e-14,
+        "nested_vs_single_max_rel_to_max": 4.509766007817849e-15,
+        "nested_radii_m": [
+          5e-05,
+          0.00405,
+          0.00805
+        ],
+        "passed_1e-10": true
+      }
+    },
+    "light_d3_dirichlet": {
+      "system": "light",
+      "check": "radial_production_d3_dirichlet",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        7.234840139890806e-05,
+        1.8086686342888264e-05,
+        4.5166910202569105e-06
+      ],
+      "observed_order": [
+        2.000033023117998,
+        2.0015899866243347
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "dirichlet",
+      "t_last_s": 1.4497215056643e-10,
+      "reference": "bounded-domain Green's function (eigenfunction series, 200 modes), exact cell averages",
+      "sources": "shells at r = 0, 0.3 L, 0.55 L",
+      "norm": "volume-weighted rel L2"
+    },
+    "heat_d3_dirichlet": {
+      "system": "heat",
+      "check": "radial_production_d3_dirichlet",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.002739975191616901,
+        0.0006845031390355829,
+        0.00017109818308279717
+      ],
+      "observed_order": [
+        2.001033768134492,
+        2.000232717781663
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "dirichlet",
+      "t_s": 25.6,
+      "alpha_m2_s": 1e-07,
+      "reference": "centred Gaussian hot spot (1 mm) spreading plus an always-on centred Gaussian heater (time integral by quad_vec), exact cell averages of the infinite-medium solution",
+      "wall_value_rel_to_peak": 4.671981078047647e-07,
+      "norm": "volume-weighted rel L2"
+    },
+    "light_d3_neumann": {
+      "system": "light",
+      "check": "radial_production_d3_neumann",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        6.421288797457907e-05,
+        1.6056312475702638e-05,
+        4.016218199339472e-06
+      ],
+      "observed_order": [
+        1.9997222866524667,
+        1.999231041209231
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "neumann",
+      "t_last_s": 1.4497215056643e-10,
+      "reference": "bounded-domain Green's function (eigenfunction series, 200 modes), exact cell averages",
+      "sources": "shells at r = 0, 0.3 L, 0.55 L",
+      "norm": "volume-weighted rel L2"
+    },
+    "heat_d3_neumann": {
+      "system": "heat",
+      "check": "radial_production_d3_neumann",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.002739975195827687,
+        0.0006845031444688504,
+        0.00017109819405986912
+      ],
+      "observed_order": [
+        2.0010337589001796,
+        2.000232636674748
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "neumann",
+      "t_s": 25.6,
+      "alpha_m2_s": 1e-07,
+      "reference": "centred Gaussian hot spot (1 mm) spreading plus an always-on centred Gaussian heater (time integral by quad_vec), exact cell averages of the infinite-medium solution",
+      "wall_value_rel_to_peak": 4.671981078047647e-07,
+      "norm": "volume-weighted rel L2"
+    },
+    "sound_uniform_d3_pressure_release": {
+      "system": "sound_uniform",
+      "check": "radial_free_wave_d3_pressure_release",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.05265534829422626,
+        0.013148188352357648,
+        0.0032852264172078902
+      ],
+      "observed_order": [
+        2.001716046922753,
+        2.000799319418748
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "pressure_release",
+      "t_s": 4.0358744394618836e-06,
+      "s_m": 0.0008,
+      "c_m_s": 1561.0,
+      "rho_kg_m3": 1043.0,
+      "reference": "exact [(r-ct)p0(|r-ct|)+(r+ct)p0(r+ct)]/(2r), 8-point Gauss-Legendre cell averages",
+      "outer_wall": "pulse front c t + 4 s = 0.0095 m < L = 0.0128 m",
+      "norm": "volume-weighted rel L2"
+    },
+    "sound_lossy_mode_d3_pressure_release_sourced": {
+      "system": "sound_lossy",
+      "check": "radial_damped_mode_d3_pressure_release_sourced",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.009875415650618386,
+        0.0024641786533192945,
+        0.0006154474139455825
+      ],
+      "observed_order": [
+        2.0027346162374555,
+        2.0013993574270974
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "pressure_release",
+      "mode_index": 3,
+      "k_rad_m": 981.7477042468103,
+      "nu_m2_s": 0.0006196525587434103,
+      "t_end_s": 1.6399743754003843e-05,
+      "amplitude_factor_exact": 0.9951146902459835,
+      "reference": "exact damped normal mode p = psi_m(r) e^{-gt}[cos wt + (g/w) sin wt], u = -e^{-gt} sin(wt) psi_m'(r)/(rho w), g = nu k^2/2",
+      "code_path": "sound.run_uniform_medium (radial.acoustic_rhs with the radial grad-div loss term, production CFL rule)",
+      "norm": "relative energy norm over (p, u)"
+    },
+    "sound_lossy_mode_d3_pressure_release_stiff": {
+      "system": "sound_lossy",
+      "check": "radial_damped_mode_d3_pressure_release_stiff",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.009891085297147401,
+        0.00246730854973608,
+        0.0006161854998407397
+      ],
+      "observed_order": [
+        2.003190685643648,
+        2.0015015052229757
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "pressure_release",
+      "mode_index": 3,
+      "k_rad_m": 981.7477042468103,
+      "nu_m2_s": 0.12652989413255145,
+      "t_end_s": 1.6399743754003843e-05,
+      "amplitude_factor_exact": 0.36787944117144233,
+      "reference": "exact damped normal mode p = psi_m(r) e^{-gt}[cos wt + (g/w) sin wt], u = -e^{-gt} sin(wt) psi_m'(r)/(rho w), g = nu k^2/2",
+      "code_path": "sound.run_uniform_medium (radial.acoustic_rhs with the radial grad-div loss term, production CFL rule)",
+      "norm": "relative energy norm over (p, u)"
+    },
+    "sound_lossy_reference_d3_pressure_release": {
+      "system": "sound_lossy",
+      "check": "radial_reference_d3_pressure_release",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.37223552784044966,
+        0.09723492045529862,
+        0.023202612628927984
+      ],
+      "observed_order": [
+        1.9366693251304106,
+        2.0671872661802118
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "pressure_release",
+      "nu_m2_s": 0.0006196525587434103,
+      "s_m": 0.0004,
+      "reference": "same production run at n = 2048",
+      "nu0_vs_uniform_max_abs_diff": 0.0,
+      "norm": "volume-weighted rel L2 (output cells, last frame)"
+    },
+    "sound_uniform_d3_rigid": {
+      "system": "sound_uniform",
+      "check": "radial_free_wave_d3_rigid",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.05265534829422626,
+        0.013148188352357648,
+        0.0032852264172078902
+      ],
+      "observed_order": [
+        2.001716046922753,
+        2.000799319418748
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "rigid",
+      "t_s": 4.0358744394618836e-06,
+      "s_m": 0.0008,
+      "c_m_s": 1561.0,
+      "rho_kg_m3": 1043.0,
+      "reference": "exact [(r-ct)p0(|r-ct|)+(r+ct)p0(r+ct)]/(2r), 8-point Gauss-Legendre cell averages",
+      "outer_wall": "pulse front c t + 4 s = 0.0095 m < L = 0.0128 m",
+      "norm": "volume-weighted rel L2"
+    },
+    "sound_lossy_mode_d3_rigid_sourced": {
+      "system": "sound_lossy",
+      "check": "radial_damped_mode_d3_rigid_sourced",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.006608955656288427,
+        0.0016523478664408732,
+        0.00041309374172287156
+      ],
+      "observed_order": [
+        1.9999048685644472,
+        1.9999763382966271
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "rigid",
+      "mode_index": 3,
+      "k_rad_m": 851.8845046428827,
+      "nu_m2_s": 0.0006196525587434103,
+      "t_end_s": 1.6399743754003843e-05,
+      "amplitude_factor_exact": 0.9963194197179431,
+      "reference": "exact damped normal mode p = psi_m(r) e^{-gt}[cos wt + (g/w) sin wt], u = -e^{-gt} sin(wt) psi_m'(r)/(rho w), g = nu k^2/2",
+      "code_path": "sound.run_uniform_medium (radial.acoustic_rhs with the radial grad-div loss term, production CFL rule)",
+      "norm": "relative energy norm over (p, u)"
+    },
+    "sound_lossy_mode_d3_rigid_stiff": {
+      "system": "sound_lossy",
+      "check": "radial_damped_mode_d3_rigid_stiff",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.006730541489424501,
+        0.0016823007584722343,
+        0.00042055420512538403
+      ],
+      "observed_order": [
+        2.0002869271651673,
+        2.000071984699887
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "rigid",
+      "mode_index": 3,
+      "k_rad_m": 851.8845046428827,
+      "nu_m2_s": 0.1680472833195722,
+      "t_end_s": 1.6399743754003843e-05,
+      "amplitude_factor_exact": 0.3678794411714424,
+      "reference": "exact damped normal mode p = psi_m(r) e^{-gt}[cos wt + (g/w) sin wt], u = -e^{-gt} sin(wt) psi_m'(r)/(rho w), g = nu k^2/2",
+      "code_path": "sound.run_uniform_medium (radial.acoustic_rhs with the radial grad-div loss term, production CFL rule)",
+      "norm": "relative energy norm over (p, u)"
+    },
+    "sound_lossy_reference_d3_rigid": {
+      "system": "sound_lossy",
+      "check": "radial_reference_d3_rigid",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.37223552784044966,
+        0.09723492045529862,
+        0.023202612628927984
+      ],
+      "observed_order": [
+        1.9366693251304106,
+        2.0671872661802118
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "bc": "rigid",
+      "nu_m2_s": 0.0006196525587434103,
+      "s_m": 0.0004,
+      "reference": "same production run at n = 2048",
+      "nu0_vs_uniform_max_abs_diff": 0.0,
+      "norm": "volume-weighted rel L2 (output cells, last frame)"
+    },
+    "sound_layered_d3_rigid": {
+      "system": "sound_layered",
+      "check": "radial_interface_d3_rigid",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.5314475375946974,
+        0.1484902290949325,
+        0.03563252936741276
+      ],
+      "observed_order": [
+        1.8395592792136528,
+        2.05910120079098
+      ],
+      "promised_order": null,
+      "passed": true,
+      "d": 3,
+      "bc": "rigid",
+      "pass_rule": "field error and reflected-energy error against the n = 2048 reference fall with refinement, reflected-energy error < 1 per cent at n = 512; discrete energy loss 1 - E_end/E_0 >= 0 at every n, falling with refinement, < 1e-4 at n = 512 (revised 21 Oct 2026 after a first run: the earlier rule '< 1e-4 at every n' failed at n = 128, where RK4 dissipation of the 4-cell-wide pulse is 3e-4 to 7e-4)",
+      "reference": "same production run at n = 2048 (no closed form exists for a curved interface)",
+      "media": [
+        "fat",
+        "soft_tissue"
+      ],
+      "interface_radius_m": 0.0064,
+      "pulse_s_m": 0.0004,
+      "t_measure_s": 6.470211402946829e-06,
+      "frames": 102,
+      "field_error_vs_ref": [
+        0.5314475375946974,
+        0.1484902290949325,
+        0.03563252936741276
+      ],
+      "field_observed_order": [
+        1.8395592792136528,
+        2.05910120079098
+      ],
+      "reflected_energy_fraction": [
+        0.002826906004326704,
+        0.00275572546519845,
+        0.002738815422567219
+      ],
+      "reflected_energy_fraction_ref": 0.002733612573350932,
+      "reflected_energy_rel_error": [
+        0.03412825646372063,
+        0.008089255976903673,
+        0.0019032869789258665
+      ],
+      "reflected_energy_observed_order": [
+        2.0768877927207217,
+        2.087513905855183
+      ],
+      "plane_wave_R2_for_comparison": 0.005458369635186139,
+      "energy_loss_1_minus_ratio": [
+        0.0006932716987745335,
+        2.4335476690562352e-05,
+        7.829950939841623e-07
+      ],
+      "energy_loss_ref": 7.716709493621465e-10,
+      "reflected_energy_measure": "2 x potential energy sum_{r < r_i} p^2 V / (2 K1) over E_0 (equipartition in the travelling reflected wave); output cells",
+      "norm": "volume-weighted rel L2 against the reference (output cells)"
+    },
+    "pt_a_light_source_d3": {
+      "system": "chain",
+      "check": "light_steady_source_d3",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.0010762046688238503,
+        0.0002694142238623848,
+        6.73763060769002e-05
+      ],
+      "observed_order": [
+        1.9980545449128544,
+        1.9995127810186648
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "solution": "point source exp(-mu_eff r)/r",
+      "mu_a_m-1": 14.374573758932081,
+      "musp_m-1": 1032.6746270444582,
+      "mu_eff_m-1": 212.49154782846696,
+      "domain_m": [
+        0.0016,
+        0.014400000000000001
+      ],
+      "norm": "relative L2, volume weighted",
+      "bc": "Dirichlet with exact values"
+    },
+    "pt_a_light_surface_d3": {
+      "system": "chain",
+      "check": "light_steady_surface_d3",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        2.2539418045734225e-05,
+        5.635470736305888e-06,
+        1.4089061754778024e-06
+      ],
+      "observed_order": [
+        1.9998422362179034,
+        1.9999605849464241
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "solution": "outer-surface illumination sinh(mu_eff r)/r",
+      "mu_a_m-1": 14.374573758932081,
+      "musp_m-1": 1032.6746270444582,
+      "mu_eff_m-1": 212.49154782846696,
+      "domain_m": [
+        0.0,
+        0.0128
+      ],
+      "norm": "relative L2, volume weighted",
+      "bc": "chain code path (steady_fluence): d = 1 phi(0) = 1, phi(L) = 0; d = 2, 3 phi(L) = 1, symmetric centre"
+    },
+    "pt_b_uniform_heating_d3": {
+      "system": "photothermal",
+      "check": "uniform_constant_heating_exact_d3",
+      "d": 3,
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        1.3449253285132319e-15,
+        4.371007317668004e-15,
+        6.724626642566159e-15
+      ],
+      "observed_order": null,
+      "promised_order": null,
+      "passed": true,
+      "pass_rule": "max relative error over all 64 frames < 1e-12 (exact in the scheme; round-off only)",
+      "rho_cp_J_m3K": 4172000.0,
+      "H0_W_m3": 1000000000.0,
+      "dt_frame_s": 6.406149903907751e-08,
+      "code_path": "coupled.run_thermal (Photothermal's integrator), chain substep rule",
+      "norm": "max abs error / max |T| over all frames and cells"
+    },
+    "pt_b_gaussian_heater_d3": {
+      "system": "photothermal",
+      "check": "gaussian_heater_d3",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.004383236675033447,
+        0.0010953712048019943,
+        0.0002738151355248462
+      ],
+      "observed_order": [
+        2.0005767196931643,
+        2.0001457593524132
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "s0_m": 0.00064,
+      "t1_s": 3.0720000000000005,
+      "alpha_m2_s": 1e-07,
+      "code_path": "coupled.run_thermal with acoustics off (thermal substeps)",
+      "norm": "relative L2"
+    },
+    "ta_b_gaussian_heater_d3": {
+      "system": "chain",
+      "check": "heat_heated_d3",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.004383236675033447,
+        0.0010953712048019943,
+        0.0002738151355248462
+      ],
+      "observed_order": [
+        2.0005767196931643,
+        2.0001457593524132
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "s0_m": 0.00064,
+      "t1_s": 3.0720000000000005,
+      "alpha_m2_s": 1e-07,
+      "rho_cp_J_m3K": 4172000.0,
+      "H0_W_m3": 1358072.9166666665,
+      "centre": "r = 0 (symmetry wall for d = 1, axis/centre for d = 2, 3)",
+      "code_path": "chain.make_rhs + chain.run_chain (coupled T, p, u state) with acoustics switched off; thermal bc of the chain (neumann for wall boundaries)",
+      "norm": "relative L2, volume weighted"
+    },
+    "ta_d_constant_heating_d3": {
+      "system": "chain",
+      "check": "acoustic_constant_heating_d3",
+      "n": [
+        128,
+        256,
+        512
+      ],
+      "error": [
+        0.020616479684033153,
+        0.005147021009523954,
+        0.0012861239654833724
+      ],
+      "observed_order": [
+        2.0019884333365603,
+        2.000707965215407
+      ],
+      "promised_order": 2.0,
+      "passed": true,
+      "d": 3,
+      "s_m": 0.0008,
+      "t_s": 4.099935938500961e-06,
+      "H0_W_m3": 1000000000.0,
+      "gruneisen": 0.201,
+      "reference": "Duhamel integral, exact: (s^2/(4rc)) [exp(-(r-ct)^2/s^2) - exp(-(r+ct)^2/s^2)]",
+      "norm": "relative L2, volume weighted"
+    }
+  },
+  "consistency_with_chain": {
+    "d2": {
+      "rows": [
+        {
+          "regime": "train",
+          "bc": "pressure_release",
+          "n_traj": 8,
+          "dim": 2,
+          "photothermal_ch0_max_abs_diff": 0.0,
+          "photothermal_ch0_max_rel_diff": 0.0,
+          "photothermal_ch1_max_abs_diff": 0.0,
+          "photothermal_ch1_max_rel_diff": 0.0,
+          "photothermal_unused_ch2_max_abs": 0.0,
+          "thermoacoustic_ch1_max_abs_diff": 0.0,
+          "thermoacoustic_ch1_max_rel_diff": 0.0,
+          "thermoacoustic_ch2_max_abs_diff": 0.0,
+          "thermoacoustic_ch2_max_rel_diff": 0.0,
+          "thermoacoustic_unused_ch0_max_abs": 0.0
+        },
+        {
+          "regime": "train",
+          "bc": "rigid",
+          "n_traj": 8,
+          "dim": 2,
+          "photothermal_ch0_max_abs_diff": 0.0,
+          "photothermal_ch0_max_rel_diff": 0.0,
+          "photothermal_ch1_max_abs_diff": 0.0,
+          "photothermal_ch1_max_rel_diff": 0.0,
+          "photothermal_unused_ch2_max_abs": 0.0,
+          "thermoacoustic_ch1_max_abs_diff": 0.0,
+          "thermoacoustic_ch1_max_rel_diff": 0.0,
+          "thermoacoustic_ch2_max_abs_diff": 0.0,
+          "thermoacoustic_ch2_max_rel_diff": 0.0,
+          "thermoacoustic_unused_ch0_max_abs": 0.0
+        },
+        {
+          "regime": "ood",
+          "bc": "pressure_release",
+          "n_traj": 8,
+          "dim": 2,
+          "photothermal_ch0_max_abs_diff": 0.0,
+          "photothermal_ch0_max_rel_diff": 0.0,
+          "photothermal_ch1_max_abs_diff": 0.0,
+          "photothermal_ch1_max_rel_diff": 0.0,
+          "photothermal_unused_ch2_max_abs": 0.0,
+          "thermoacoustic_ch1_max_abs_diff": 0.0,
+          "thermoacoustic_ch1_max_rel_diff": 0.0,
+          "thermoacoustic_ch2_max_abs_diff": 0.0,
+          "thermoacoustic_ch2_max_rel_diff": 0.0,
+          "thermoacoustic_unused_ch0_max_abs": 0.0
+        },
+        {
+          "regime": "ood",
+          "bc": "rigid",
+          "n_traj": 8,
+          "dim": 2,
+          "photothermal_ch0_max_abs_diff": 0.0,
+          "photothermal_ch0_max_rel_diff": 0.0,
+          "photothermal_ch1_max_abs_diff": 0.0,
+          "photothermal_ch1_max_rel_diff": 0.0,
+          "photothermal_unused_ch2_max_abs": 0.0,
+          "thermoacoustic_ch1_max_abs_diff": 0.0,
+          "thermoacoustic_ch1_max_rel_diff": 0.0,
+          "thermoacoustic_ch2_max_abs_diff": 0.0,
+          "thermoacoustic_ch2_max_rel_diff": 0.0,
+          "thermoacoustic_unused_ch0_max_abs": 0.0
+        }
+      ],
+      "max_rel_diff": 0.0,
+      "unused_channel_max_abs": 0.0,
+      "passed": true,
+      "pass_rule": "max |difference| / max |chain channel| <= 1e-6 (float32 output resolution) and unused channel exactly zero"
+    },
+    "d3": {
+      "rows": [
+        {
+          "regime": "train",
+          "bc": "pressure_release",
+          "n_traj": 8,
+          "dim": 3,
+          "photothermal_ch0_max_abs_diff": 0.0,
+          "photothermal_ch0_max_rel_diff": 0.0,
+          "photothermal_ch1_max_abs_diff": 0.0,
+          "photothermal_ch1_max_rel_diff": 0.0,
+          "photothermal_unused_ch2_max_abs": 0.0,
+          "thermoacoustic_ch1_max_abs_diff": 0.0,
+          "thermoacoustic_ch1_max_rel_diff": 0.0,
+          "thermoacoustic_ch2_max_abs_diff": 0.0,
+          "thermoacoustic_ch2_max_rel_diff": 0.0,
+          "thermoacoustic_unused_ch0_max_abs": 0.0
+        },
+        {
+          "regime": "train",
+          "bc": "rigid",
+          "n_traj": 8,
+          "dim": 3,
+          "photothermal_ch0_max_abs_diff": 0.0,
+          "photothermal_ch0_max_rel_diff": 0.0,
+          "photothermal_ch1_max_abs_diff": 0.0,
+          "photothermal_ch1_max_rel_diff": 0.0,
+          "photothermal_unused_ch2_max_abs": 0.0,
+          "thermoacoustic_ch1_max_abs_diff": 0.0,
+          "thermoacoustic_ch1_max_rel_diff": 0.0,
+          "thermoacoustic_ch2_max_abs_diff": 0.0,
+          "thermoacoustic_ch2_max_rel_diff": 0.0,
+          "thermoacoustic_unused_ch0_max_abs": 0.0
+        },
+        {
+          "regime": "ood",
+          "bc": "pressure_release",
+          "n_traj": 8,
+          "dim": 3,
+          "photothermal_ch0_max_abs_diff": 0.0,
+          "photothermal_ch0_max_rel_diff": 0.0,
+          "photothermal_ch1_max_abs_diff": 0.0,
+          "photothermal_ch1_max_rel_diff": 0.0,
+          "photothermal_unused_ch2_max_abs": 0.0,
+          "thermoacoustic_ch1_max_abs_diff": 0.0,
+          "thermoacoustic_ch1_max_rel_diff": 0.0,
+          "thermoacoustic_ch2_max_abs_diff": 0.0,
+          "thermoacoustic_ch2_max_rel_diff": 0.0,
+          "thermoacoustic_unused_ch0_max_abs": 0.0
+        },
+        {
+          "regime": "ood",
+          "bc": "rigid",
+          "n_traj": 8,
+          "dim": 3,
+          "photothermal_ch0_max_abs_diff": 0.0,
+          "photothermal_ch0_max_rel_diff": 0.0,
+          "photothermal_ch1_max_abs_diff": 0.0,
+          "photothermal_ch1_max_rel_diff": 0.0,
+          "photothermal_unused_ch2_max_abs": 0.0,
+          "thermoacoustic_ch1_max_abs_diff": 0.0,
+          "thermoacoustic_ch1_max_rel_diff": 0.0,
+          "thermoacoustic_ch2_max_abs_diff": 0.0,
+          "thermoacoustic_ch2_max_rel_diff": 0.0,
+          "thermoacoustic_unused_ch0_max_abs": 0.0
+        }
+      ],
+      "max_rel_diff": 0.0,
+      "unused_channel_max_abs": 0.0,
+      "passed": true,
+      "pass_rule": "max |difference| / max |chain channel| <= 1e-6 (float32 output resolution) and unused channel exactly zero"
+    }
+  },
+  "smoke_test": {
+    "passed": true,
+    "rows": {
+      "light_d2": [
+        {
+          "bc": "dirichlet",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0
+            ]
+          ],
+          "ch0_min": 9.821692947298288e-05,
+          "ch0_max": 2.0125112533569336,
+          "ch0_mean_rel_change_per_frame_1to8": 0.010335072875022888,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0061006322503089905,
+          "mua_over_musp_max": 0.16161883799440174,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "start_over_t_tr_min": 11.815515503989317,
+          "init_width_over_l_tr_min": 3.9691334913285234,
+          "internal_dt_s": [
+            1.5706003453959945e-14,
+            7.05887795683593e-15,
+            4.723610061341337e-15,
+            6.903737781960415e-15,
+            4.424226325059139e-15,
+            8.432753532327487e-15,
+            1.6532635214694676e-14,
+            1.697946319347021e-14
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "neumann",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0
+            ]
+          ],
+          "ch0_min": 2.2450993242273398e-07,
+          "ch0_max": 1.9919712543487549,
+          "ch0_mean_rel_change_per_frame_1to8": 0.01147519052028656,
+          "ch0_mean_rel_change_per_frame_56to63": 0.005468157585710287,
+          "mua_over_musp_max": 0.08202223320425682,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "start_over_t_tr_min": 17.489541358522825,
+          "init_width_over_l_tr_min": 4.829015270014213,
+          "internal_dt_s": [
+            1.3960891959075505e-14,
+            1.551210217675056e-14,
+            1.3657394307791255e-14,
+            1.2198837634143645e-14,
+            6.578430766056521e-15,
+            1.6108721491240968e-14,
+            6.8286971538956275e-15,
+            1.0384134515014839e-14
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "dirichlet",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0
+            ]
+          ],
+          "ch0_min": 7.691479549976066e-05,
+          "ch0_max": 1.914840817451477,
+          "ch0_mean_rel_change_per_frame_1to8": 0.020747162401676178,
+          "ch0_mean_rel_change_per_frame_56to63": 0.006645330227911472,
+          "mua_over_musp_max": 0.24094045363879843,
+          "wavelengths_nm": [
+            700,
+            750,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "start_over_t_tr_min": 16.887318217212705,
+          "init_width_over_l_tr_min": 4.745147446562323,
+          "internal_dt_s": [
+            1.1218573895685674e-14,
+            8.725557474422191e-15,
+            1.1422547966516323e-14,
+            9.816252158724965e-15,
+            8.376535175445304e-15,
+            1.1742806320717715e-14,
+            1.2081541118430726e-14,
+            6.3139712377728414e-15
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "neumann",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0
+            ]
+          ],
+          "ch0_min": 0.0022533710580319166,
+          "ch0_max": 2.5348105430603027,
+          "ch0_mean_rel_change_per_frame_1to8": 0.011702504009008408,
+          "ch0_mean_rel_change_per_frame_56to63": 0.005402108654379845,
+          "mua_over_musp_max": 0.23573360342446062,
+          "wavelengths_nm": [
+            700,
+            750,
+            800
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "start_over_t_tr_min": 20.064459824393108,
+          "init_width_over_l_tr_min": 5.172292828059023,
+          "internal_dt_s": [
+            7.615031977677548e-15,
+            1.0739147660827312e-14,
+            1.2691719962795914e-14,
+            7.615031977677548e-15,
+            8.848452650118278e-15,
+            1.3088336211633287e-14,
+            1.551210217675056e-14,
+            1.2081541118430726e-14
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "light_d3": [
+        {
+          "bc": "dirichlet",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0
+            ]
+          ],
+          "ch0_min": 1.7458315824114834e-06,
+          "ch0_max": 2.468189001083374,
+          "ch0_mean_rel_change_per_frame_1to8": 0.017012398689985275,
+          "ch0_mean_rel_change_per_frame_56to63": 0.006648831069469452,
+          "mua_over_musp_max": 0.11238213043543821,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "start_over_t_tr_min": 16.065656826105585,
+          "init_width_over_l_tr_min": 4.62826919789037,
+          "internal_dt_s": [
+            5.634440700972177e-15,
+            4.347682617013133e-15,
+            7.523833989920931e-15,
+            4.133158803673669e-15,
+            9.238825561152908e-15,
+            4.424226325059139e-15,
+            7.569158291065033e-15,
+            6.011867350798065e-15
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "neumann",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0
+            ]
+          ],
+          "ch0_min": 3.219972954937589e-09,
+          "ch0_max": 2.5733590126037598,
+          "ch0_mean_rel_change_per_frame_1to8": 0.01613256335258484,
+          "ch0_mean_rel_change_per_frame_56to63": 0.006029630079865456,
+          "mua_over_musp_max": 0.12251147774460715,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "start_over_t_tr_min": 18.38003822381683,
+          "init_width_over_l_tr_min": 4.950426005078328,
+          "internal_dt_s": [
+            7.479049263790449e-15,
+            6.345859981397957e-15,
+            6.25114565331739e-15,
+            4.5856944391123924e-15,
+            5.0869646814445164e-15,
+            9.972065685053932e-15,
+            8.91120763345245e-15,
+            9.591452490967904e-15
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "dirichlet",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0
+            ]
+          ],
+          "ch0_min": 0.0001802611368475482,
+          "ch0_max": 2.439107894897461,
+          "ch0_mean_rel_change_per_frame_1to8": 0.02318914420902729,
+          "ch0_mean_rel_change_per_frame_56to63": 0.00788139645010233,
+          "mua_over_musp_max": 0.23098082906939313,
+          "wavelengths_nm": [
+            700,
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "start_over_t_tr_min": 14.219907511897299,
+          "init_width_over_l_tr_min": 4.354294050994918,
+          "internal_dt_s": [
+            3.663207802672873e-15,
+            6.578430766056521e-15,
+            7.305117885562764e-15,
+            8.266317607347338e-15,
+            8.212289387691474e-15,
+            5.685431114555636e-15,
+            5.1495093291671945e-15,
+            8.848452650118278e-15
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "neumann",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0
+            ]
+          ],
+          "ch0_min": 4.924676613882184e-05,
+          "ch0_max": 2.3012115955352783,
+          "ch0_mean_rel_change_per_frame_1to8": 0.01904432103037834,
+          "ch0_mean_rel_change_per_frame_56to63": 0.00700695626437664,
+          "mua_over_musp_max": 0.22216887328486468,
+          "wavelengths_nm": [
+            700,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "start_over_t_tr_min": 24.826504075660658,
+          "init_width_over_l_tr_min": 5.753434229589681,
+          "internal_dt_s": [
+            6.866012438889592e-15,
+            6.378072468613175e-15,
+            9.591452490967904e-15,
+            9.376718479976086e-15,
+            6.220199387706908e-15,
+            6.613054085877871e-15,
+            1.0648137934888098e-14,
+            8.725557474422191e-15
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "heat_d2": [
+        {
+          "bc": "dirichlet",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 3.6053314208984375,
+          "ch1_mean_rel_change_per_frame_1to8": 0.08143731951713562,
+          "ch1_mean_rel_change_per_frame_56to63": 0.011935933493077755,
+          "internal_dt_s": [
+            0.0033307311995836586,
+            0.0029024943310657597,
+            0.00394513792572045,
+            0.003303652084139889,
+            0.0029024943310657597,
+            0.0029660526010890976,
+            0.0036608036608036607,
+            0.0031746031746031746
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "neumann",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 4.219873428344727,
+          "ch1_mean_rel_change_per_frame_1to8": 0.050064604729413986,
+          "ch1_mean_rel_change_per_frame_56to63": 0.014321096241474152,
+          "internal_dt_s": [
+            0.003533471359558316,
+            0.0037624926513815404,
+            0.0030324567638000473,
+            0.003250793650793651,
+            0.00394513792572045,
+            0.0030784030784030783,
+            0.0032249937011841773,
+            0.0030784030784030783
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "dirichlet",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 2.5581185817718506,
+          "ch1_mean_rel_change_per_frame_1to8": 0.08125633001327515,
+          "ch1_mean_rel_change_per_frame_56to63": 0.012507330626249313,
+          "internal_dt_s": [
+            0.0027642803153007235,
+            0.0027271758815382977,
+            0.0028218694885361554,
+            0.0028416028416028416,
+            0.0028416028416028416,
+            0.0028218694885361554,
+            0.0028416028416028416,
+            0.002708994708994709
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "neumann",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 2.294536828994751,
+          "ch1_mean_rel_change_per_frame_1to8": 0.07857606559991837,
+          "ch1_mean_rel_change_per_frame_56to63": 0.010744668543338776,
+          "internal_dt_s": [
+            0.0028218694885361554,
+            0.002802408319649699,
+            0.002604802604802605,
+            0.0026910543466834858,
+            0.0026386312100597814,
+            0.002708994708994709,
+            0.0026386312100597814,
+            0.0028416028416028416
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "heat_d3": [
+        {
+          "bc": "dirichlet",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 2.3165013790130615,
+          "ch1_mean_rel_change_per_frame_1to8": 0.09855851531028748,
+          "ch1_mean_rel_change_per_frame_56to63": 0.009191074408590794,
+          "internal_dt_s": [
+            0.0023488393430589963,
+            0.002708994708994709,
+            0.0024929399162527998,
+            0.0020732102364755425,
+            0.00250832843425436,
+            0.0025718304199316856,
+            0.0022084195997239477,
+            0.0019630396441990645
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "neumann",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 4.997133731842041,
+          "ch1_mean_rel_change_per_frame_1to8": 0.0629773885011673,
+          "ch1_mean_rel_change_per_frame_56to63": 0.01237504556775093,
+          "internal_dt_s": [
+            0.0019630396441990645,
+            0.0022957582279616176,
+            0.0019536019536019536,
+            0.002604802604802605,
+            0.0023488393430589963,
+            0.0020017202283212137,
+            0.0025239081139702257,
+            0.0020732102364755425
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "dirichlet",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 5.0560479164123535,
+          "ch1_mean_rel_change_per_frame_1to8": 0.06358189880847931,
+          "ch1_mean_rel_change_per_frame_56to63": 0.012011775746941566,
+          "internal_dt_s": [
+            0.001751505199781062,
+            0.001872576987784361,
+            0.0018639871850881025,
+            0.001774450682747626,
+            0.0018221937504448716,
+            0.0018554758280785678,
+            0.001898828067052366,
+            0.0017439880100824307
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "neumann",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 2.1496706008911133,
+          "ch1_mean_rel_change_per_frame_1to8": 0.2823496460914612,
+          "ch1_mean_rel_change_per_frame_56to63": 0.011840863153338432,
+          "internal_dt_s": [
+            0.0017900846094678693,
+            0.001872576987784361,
+            0.001898828067052366,
+            0.0018221937504448716,
+            0.0017439880100824307,
+            0.0017439880100824307,
+            0.0018059964726631393,
+            0.0018221937504448716
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "sound_uniform_d2": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -4.591952800750732,
+          "ch2_max": 3.5856738090515137,
+          "ch2_mean_rel_change_per_frame_1to8": 0.18346403539180756,
+          "ch2_mean_rel_change_per_frame_56to63": 0.2163049876689911,
+          "energy_ratio_max": 0.9999999994590573,
+          "energy_ratio_min": 0.9999996318307384,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -5.361532211303711,
+          "ch2_max": 3.8990206718444824,
+          "ch2_mean_rel_change_per_frame_1to8": 0.16408219933509827,
+          "ch2_mean_rel_change_per_frame_56to63": 0.15467415750026703,
+          "energy_ratio_max": 0.9999999988879769,
+          "energy_ratio_min": 0.9999998820289921,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.6174695491790771,
+          "ch2_max": 3.8267886638641357,
+          "ch2_mean_rel_change_per_frame_1to8": 0.18476159870624542,
+          "ch2_mean_rel_change_per_frame_56to63": 0.12614400684833527,
+          "energy_ratio_max": 0.999999999298464,
+          "energy_ratio_min": 0.9999999189111701,
+          "internal_dt_s": [
+            9.151642719868217e-09,
+            9.151642719868217e-09,
+            9.151642719868217e-09,
+            9.151642719868217e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            9.151642719868217e-09,
+            9.151642719868217e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -2.975175619125366,
+          "ch2_max": 2.83282470703125,
+          "ch2_mean_rel_change_per_frame_1to8": 0.15029308199882507,
+          "ch2_mean_rel_change_per_frame_56to63": 0.17621859908103943,
+          "energy_ratio_max": 0.9999999990039933,
+          "energy_ratio_min": 0.9999998753174129,
+          "internal_dt_s": [
+            9.151642719868217e-09,
+            9.151642719868217e-09,
+            6.406149903907751e-09,
+            9.151642719868217e-09,
+            9.151642719868217e-09,
+            6.406149903907751e-09,
+            9.151642719868217e-09,
+            9.151642719868217e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "sound_uniform_d3": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -12.388514518737793,
+          "ch2_max": 13.26876163482666,
+          "ch2_mean_rel_change_per_frame_1to8": 0.17109790444374084,
+          "ch2_mean_rel_change_per_frame_56to63": 0.13373278081417084,
+          "energy_ratio_max": 0.9999999979148994,
+          "energy_ratio_min": 0.9999997463053941,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -7.991247177124023,
+          "ch2_max": 7.789834499359131,
+          "ch2_mean_rel_change_per_frame_1to8": 0.12604746222496033,
+          "ch2_mean_rel_change_per_frame_56to63": 0.1925366222858429,
+          "energy_ratio_max": 0.9999999996037974,
+          "energy_ratio_min": 0.9999998780340086,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -5.385395526885986,
+          "ch2_max": 11.687345504760742,
+          "ch2_mean_rel_change_per_frame_1to8": 0.1539132297039032,
+          "ch2_mean_rel_change_per_frame_56to63": 0.19183358550071716,
+          "energy_ratio_max": 0.9999999944260489,
+          "energy_ratio_min": 0.9999999628267758,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            9.151642719868217e-09,
+            7.1179443376752794e-09,
+            6.406149903907751e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            9.151642719868217e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -6.698163032531738,
+          "ch2_max": 8.467935562133789,
+          "ch2_mean_rel_change_per_frame_1to8": 0.13742230832576752,
+          "ch2_mean_rel_change_per_frame_56to63": 0.2072978913784027,
+          "energy_ratio_max": 0.9999999991991878,
+          "energy_ratio_min": 0.9999999635418316,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            6.406149903907751e-09,
+            9.151642719868217e-09,
+            9.151642719868217e-09,
+            6.406149903907751e-09,
+            9.151642719868217e-09,
+            7.1179443376752794e-09,
+            6.406149903907751e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "sound_layered_d2": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -4.492350101470947,
+          "ch2_max": 3.9543814659118652,
+          "ch2_mean_rel_change_per_frame_1to8": 0.13018698990345,
+          "ch2_mean_rel_change_per_frame_56to63": 0.1940578818321228,
+          "energy_ratio_max": 0.9999999990277743,
+          "energy_ratio_min": 0.9999988963057586,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -5.325013637542725,
+          "ch2_max": 2.4365904331207275,
+          "ch2_mean_rel_change_per_frame_1to8": 0.10935069620609283,
+          "ch2_mean_rel_change_per_frame_56to63": 0.1339685320854187,
+          "energy_ratio_max": 0.9999999996882746,
+          "energy_ratio_min": 0.9999981065522112,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -2.567357301712036,
+          "ch2_max": 3.8204076290130615,
+          "ch2_mean_rel_change_per_frame_1to8": 0.15360084176063538,
+          "ch2_mean_rel_change_per_frame_56to63": 0.14949819445610046,
+          "energy_ratio_max": 0.9999999977071141,
+          "energy_ratio_min": 0.9999999193634274,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.6452363729476929,
+          "ch2_max": 4.661988258361816,
+          "ch2_mean_rel_change_per_frame_1to8": 0.1346263736486435,
+          "ch2_mean_rel_change_per_frame_56to63": 0.17738839983940125,
+          "energy_ratio_max": 0.9999999984653429,
+          "energy_ratio_min": 0.9999989777025151,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "sound_layered_d3": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -6.439464092254639,
+          "ch2_max": 9.264756202697754,
+          "ch2_mean_rel_change_per_frame_1to8": 0.18953081965446472,
+          "ch2_mean_rel_change_per_frame_56to63": 0.2056025266647339,
+          "energy_ratio_max": 0.9999999978625079,
+          "energy_ratio_min": 0.9999997662053988,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -11.682735443115234,
+          "ch2_max": 8.145604133605957,
+          "ch2_mean_rel_change_per_frame_1to8": 0.1481674611568451,
+          "ch2_mean_rel_change_per_frame_56to63": 0.21717481315135956,
+          "energy_ratio_max": 0.9999999965501172,
+          "energy_ratio_min": 0.999996706812333,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -13.296557426452637,
+          "ch2_max": 14.147120475769043,
+          "ch2_mean_rel_change_per_frame_1to8": 0.14497971534729004,
+          "ch2_mean_rel_change_per_frame_56to63": 0.17755624651908875,
+          "energy_ratio_max": 0.9999999994109432,
+          "energy_ratio_min": 0.9999999436709442,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -6.563086032867432,
+          "ch2_max": 7.539835453033447,
+          "ch2_mean_rel_change_per_frame_1to8": 0.11631160229444504,
+          "ch2_mean_rel_change_per_frame_56to63": 0.16258975863456726,
+          "energy_ratio_max": 0.9999999996776471,
+          "energy_ratio_min": 0.9999941672531406,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "sound_lossy_d2": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -6.284054279327393,
+          "ch2_max": 2.3674049377441406,
+          "ch2_mean_rel_change_per_frame_1to8": 0.1321392059326172,
+          "ch2_mean_rel_change_per_frame_56to63": 0.18230390548706055,
+          "energy_ratio_max": 0.999302125644267,
+          "energy_ratio_min": 0.9927430158773796,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -4.576044082641602,
+          "ch2_max": 6.432188034057617,
+          "ch2_mean_rel_change_per_frame_1to8": 0.18068693578243256,
+          "ch2_mean_rel_change_per_frame_56to63": 0.16243818402290344,
+          "energy_ratio_max": 0.9989123154545428,
+          "energy_ratio_min": 0.9857538519584871,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -5.131404399871826,
+          "ch2_max": 3.8135526180267334,
+          "ch2_mean_rel_change_per_frame_1to8": 0.1649998426437378,
+          "ch2_mean_rel_change_per_frame_56to63": 0.20179107785224915,
+          "energy_ratio_max": 0.9999814761377663,
+          "energy_ratio_min": 0.9999015172814213,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -1.939961314201355,
+          "ch2_max": 3.6632893085479736,
+          "ch2_mean_rel_change_per_frame_1to8": 0.11180044710636139,
+          "ch2_mean_rel_change_per_frame_56to63": 0.15415018796920776,
+          "energy_ratio_max": 0.9999875891717057,
+          "energy_ratio_min": 0.999964852038897,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "sound_lossy_d3": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -10.760523796081543,
+          "ch2_max": 10.118884086608887,
+          "ch2_mean_rel_change_per_frame_1to8": 0.09149403125047684,
+          "ch2_mean_rel_change_per_frame_56to63": 0.2610940933227539,
+          "energy_ratio_max": 0.998511826809079,
+          "energy_ratio_min": 0.9909869226582746,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -19.687511444091797,
+          "ch2_max": 18.93973159790039,
+          "ch2_mean_rel_change_per_frame_1to8": 0.12272964417934418,
+          "ch2_mean_rel_change_per_frame_56to63": 0.2051616609096527,
+          "energy_ratio_max": 0.9981717038574682,
+          "energy_ratio_min": 0.9889104485294609,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -6.360353469848633,
+          "ch2_max": 7.102858066558838,
+          "ch2_mean_rel_change_per_frame_1to8": 0.0951441153883934,
+          "ch2_mean_rel_change_per_frame_56to63": 0.16811919212341309,
+          "energy_ratio_max": 0.9999834767288988,
+          "energy_ratio_min": 0.9999309372853605,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              2
+            ]
+          ],
+          "ch2_min": -17.027664184570312,
+          "ch2_max": 9.02059555053711,
+          "ch2_mean_rel_change_per_frame_1to8": 0.2341873049736023,
+          "ch2_mean_rel_change_per_frame_56to63": 0.22414638102054596,
+          "energy_ratio_max": 0.9999766088724841,
+          "energy_ratio_min": 0.9998702055751568,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "photothermal_d2": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 1.4205523491739172e-27,
+          "ch0_max": 8611489.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.12189747393131256,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0013565912377089262,
+          "ch1_min": 3.541340554136241e-10,
+          "ch1_max": 0.0001839946344261989,
+          "ch1_mean_rel_change_per_frame_1to8": 0.014915259554982185,
+          "ch1_mean_rel_change_per_frame_56to63": 5.1646813517436385e-05,
+          "mua_over_musp_max": 0.046258711576996694,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9979889392852783,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 0.0,
+          "ch0_max": 9561038.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.12137780338525772,
+          "ch0_mean_rel_change_per_frame_56to63": 0.00483636325225234,
+          "ch1_min": 3.4668124007395974e-42,
+          "ch1_max": 0.00030078290728852153,
+          "ch1_mean_rel_change_per_frame_1to8": 0.01561029814183712,
+          "ch1_mean_rel_change_per_frame_56to63": 0.0002814263280015439,
+          "mua_over_musp_max": 0.08930771657536322,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9992709159851074,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 1.5544879934460436e-28,
+          "ch0_max": 9628050.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.16858693957328796,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0010473334696143866,
+          "ch1_min": 1.015456642383672e-11,
+          "ch1_max": 0.00024002524151001126,
+          "ch1_mean_rel_change_per_frame_1to8": 0.020039120689034462,
+          "ch1_mean_rel_change_per_frame_56to63": 2.720050724747125e-05,
+          "mua_over_musp_max": 0.23135156035267246,
+          "wavelengths_nm": [
+            700,
+            750,
+            800
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "T_over_bound_max": 0.9988884329795837,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 1.2559922039665978e-28,
+          "ch0_max": 8862497.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.17776161432266235,
+          "ch0_mean_rel_change_per_frame_56to63": 0.00019410497043281794,
+          "ch1_min": 3.755725508369778e-09,
+          "ch1_max": 0.0006088592926971614,
+          "ch1_mean_rel_change_per_frame_1to8": 0.024346966296434402,
+          "ch1_mean_rel_change_per_frame_56to63": 1.8478847323422087e-06,
+          "mua_over_musp_max": 0.2845667030303577,
+          "wavelengths_nm": [
+            700,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "T_over_bound_max": 0.9960223436355591,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "photothermal_d3": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 2.7674609891343553e-27,
+          "ch0_max": 9757298.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.15633335709571838,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0009764126734808087,
+          "ch1_min": 3.1679281420338157e-09,
+          "ch1_max": 0.00022335269022732973,
+          "ch1_mean_rel_change_per_frame_1to8": 0.018813643604516983,
+          "ch1_mean_rel_change_per_frame_56to63": 3.1474872230319306e-05,
+          "mua_over_musp_max": 0.08418008320905633,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9985517859458923,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 0.0,
+          "ch0_max": 9689501.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.1533135622739792,
+          "ch0_mean_rel_change_per_frame_56to63": 0.00041501878877170384,
+          "ch1_min": 0.0,
+          "ch1_max": 0.00024320092052221298,
+          "ch1_mean_rel_change_per_frame_1to8": 0.020213618874549866,
+          "ch1_mean_rel_change_per_frame_56to63": 7.320151780731976e-06,
+          "mua_over_musp_max": 0.1270220246576924,
+          "wavelengths_nm": [
+            750,
+            800
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9989742040634155,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 2.1984771982434664e-28,
+          "ch0_max": 9610528.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.13807594776153564,
+          "ch0_mean_rel_change_per_frame_56to63": 0.003559649921953678,
+          "ch1_min": 1.3901784237657644e-11,
+          "ch1_max": 0.00031428784132003784,
+          "ch1_mean_rel_change_per_frame_1to8": 0.020272426307201385,
+          "ch1_mean_rel_change_per_frame_56to63": 0.00024177081650123,
+          "mua_over_musp_max": 0.2775603189549504,
+          "wavelengths_nm": [
+            700,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "T_over_bound_max": 0.9983918070793152,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              0,
+              1
+            ]
+          ],
+          "ch0_min": 0.0,
+          "ch0_max": 9269328.0,
+          "ch0_mean_rel_change_per_frame_1to8": 0.16243194043636322,
+          "ch0_mean_rel_change_per_frame_56to63": 0.0009198805782943964,
+          "ch1_min": 1.2653725132853098e-42,
+          "ch1_max": 0.0002749869308900088,
+          "ch1_mean_rel_change_per_frame_1to8": 0.020615773275494576,
+          "ch1_mean_rel_change_per_frame_56to63": 2.864826819859445e-05,
+          "mua_over_musp_max": 0.27203832712079123,
+          "wavelengths_nm": [
+            700,
+            750,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "wavelength"
+          ],
+          "T_over_bound_max": 0.9972702860832214,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            7.1179443376752794e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "thermoacoustic_d2": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 3.541340554136241e-10,
+          "ch1_max": 0.0001839946344261989,
+          "ch1_mean_rel_change_per_frame_1to8": 0.014915259554982185,
+          "ch1_mean_rel_change_per_frame_56to63": 5.1646813517436385e-05,
+          "ch2_min": -15.056456565856934,
+          "ch2_max": 28.942049026489258,
+          "ch2_mean_rel_change_per_frame_1to8": 0.018348008394241333,
+          "ch2_mean_rel_change_per_frame_56to63": 0.06160907819867134,
+          "p_rel_l2_n256_vs_n512_max": 0.00029953799094073474,
+          "mua_over_musp_max": 0.046258711576996694,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9979889392852783,
+          "p_over_bound_max": 0.5332344770431519,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 3.4668124007395974e-42,
+          "ch1_max": 0.00030078290728852153,
+          "ch1_mean_rel_change_per_frame_1to8": 0.01561029814183712,
+          "ch1_mean_rel_change_per_frame_56to63": 0.0002814263280015439,
+          "ch2_min": -0.9842243790626526,
+          "ch2_max": 80.0660171508789,
+          "ch2_mean_rel_change_per_frame_1to8": 0.014546402730047703,
+          "ch2_mean_rel_change_per_frame_56to63": 0.03503436595201492,
+          "p_rel_l2_n256_vs_n512_max": 0.00029465934494510293,
+          "mua_over_musp_max": 0.08930771657536322,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9992709159851074,
+          "p_over_bound_max": 0.6734315156936646,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 0.0002811684680636972,
+          "ch1_mean_rel_change_per_frame_1to8": 0.018743090331554413,
+          "ch1_mean_rel_change_per_frame_56to63": 5.960358066658955e-06,
+          "ch2_min": -47.36503982543945,
+          "ch2_max": 93.20808410644531,
+          "ch2_mean_rel_change_per_frame_1to8": 0.02271519973874092,
+          "ch2_mean_rel_change_per_frame_56to63": 0.07486003637313843,
+          "p_rel_l2_n256_vs_n512_max": 0.0007681480492465198,
+          "mua_over_musp_max": 0.12142696868850282,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "gruneisen_fat"
+          ],
+          "T_over_bound_max": 0.9953705072402954,
+          "p_over_bound_max": 0.5672434568405151,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 1.485376372184306e-43,
+          "ch1_max": 0.0001835697767091915,
+          "ch1_mean_rel_change_per_frame_1to8": 0.02215706557035446,
+          "ch1_mean_rel_change_per_frame_56to63": 0.00013213421334512532,
+          "ch2_min": 1.0581212551388094e-37,
+          "ch2_max": 146.08645629882812,
+          "ch2_mean_rel_change_per_frame_1to8": 0.019947607070207596,
+          "ch2_mean_rel_change_per_frame_56to63": 0.036023907363414764,
+          "p_rel_l2_n256_vs_n512_max": 0.00023647780471947044,
+          "mua_over_musp_max": 0.2762478302442291,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "gruneisen_fat"
+          ],
+          "T_over_bound_max": 0.9989972710609436,
+          "p_over_bound_max": 0.781501054763794,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "thermoacoustic_d3": [
+        {
+          "bc": "pressure_release",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 3.1679281420338157e-09,
+          "ch1_max": 0.00022335269022732973,
+          "ch1_mean_rel_change_per_frame_1to8": 0.018813643604516983,
+          "ch1_mean_rel_change_per_frame_56to63": 3.1474872230319306e-05,
+          "ch2_min": -24.125581741333008,
+          "ch2_max": 115.3426513671875,
+          "ch2_mean_rel_change_per_frame_1to8": 0.020297566428780556,
+          "ch2_mean_rel_change_per_frame_56to63": 0.08454520255327225,
+          "p_rel_l2_n256_vs_n512_max": 0.0005565143655985594,
+          "mua_over_musp_max": 0.08418008320905633,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9985517859458923,
+          "p_over_bound_max": 1.531714916229248,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "train",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 0.0,
+          "ch1_max": 0.00024320092052221298,
+          "ch1_mean_rel_change_per_frame_1to8": 0.020213618874549866,
+          "ch1_mean_rel_change_per_frame_56to63": 7.320151780731976e-06,
+          "ch2_min": -15.655658721923828,
+          "ch2_max": 126.62886810302734,
+          "ch2_mean_rel_change_per_frame_1to8": 0.017380040138959885,
+          "ch2_mean_rel_change_per_frame_56to63": 0.037437859922647476,
+          "p_rel_l2_n256_vs_n512_max": 0.0008601315785199404,
+          "mua_over_musp_max": 0.1270220246576924,
+          "wavelengths_nm": [
+            750,
+            800
+          ],
+          "ood_kinds": [
+            "None"
+          ],
+          "T_over_bound_max": 0.9989742040634155,
+          "p_over_bound_max": 2.665811061859131,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "pressure_release",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 1.5804867137259038e-10,
+          "ch1_max": 0.00022168461873661727,
+          "ch1_mean_rel_change_per_frame_1to8": 0.018165484070777893,
+          "ch1_mean_rel_change_per_frame_56to63": 0.00024178581952583045,
+          "ch2_min": -36.73649215698242,
+          "ch2_max": 131.51300048828125,
+          "ch2_mean_rel_change_per_frame_1to8": 0.02041325345635414,
+          "ch2_mean_rel_change_per_frame_56to63": 0.0753600150346756,
+          "p_rel_l2_n256_vs_n512_max": 0.00042028361349366605,
+          "mua_over_musp_max": 0.23155618810575246,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "gruneisen_fat"
+          ],
+          "T_over_bound_max": 0.9955446720123291,
+          "p_over_bound_max": 0.8866857290267944,
+          "internal_dt_s": [
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            7.1179443376752794e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        },
+        {
+          "bc": "rigid",
+          "regime": "ood",
+          "n_traj": 8,
+          "shape": [
+            64,
+            3,
+            128
+          ],
+          "dtype": "float32",
+          "finite": true,
+          "channels": [
+            [
+              1,
+              2
+            ]
+          ],
+          "ch1_min": 5.1834030195374983e-42,
+          "ch1_max": 0.00022304161393549293,
+          "ch1_mean_rel_change_per_frame_1to8": 0.013629304245114326,
+          "ch1_mean_rel_change_per_frame_56to63": 0.00020684365881606936,
+          "ch2_min": -49.8880729675293,
+          "ch2_max": 236.2012481689453,
+          "ch2_mean_rel_change_per_frame_1to8": 0.011695744469761848,
+          "ch2_mean_rel_change_per_frame_56to63": 0.034593112766742706,
+          "p_rel_l2_n256_vs_n512_max": 0.0004531870945356786,
+          "mua_over_musp_max": 0.23641655472220416,
+          "wavelengths_nm": [
+            750,
+            800,
+            850
+          ],
+          "ood_kinds": [
+            "blood_fraction",
+            "gruneisen_fat"
+          ],
+          "T_over_bound_max": 0.997027575969696,
+          "p_over_bound_max": 1.9832592010498047,
+          "internal_dt_s": [
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09,
+            8.007687379884689e-09
+          ],
+          "failures": [],
+          "passed": true
+        }
+      ]
+    }
+  },
+  "timing_64x64": {
+    "light_d2": [
+      {
+        "bc": "dirichlet",
+        "sample_kw": {
+          "dim": 2
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 13.116267828001583,
+        "seconds_per_trajectory": 0.20494168481252473,
+        "rk4_substeps_per_frame_max": 253,
+        "rk4_substeps_per_frame_min": 72
+      }
+    ],
+    "light_d3": [
+      {
+        "bc": "dirichlet",
+        "sample_kw": {
+          "dim": 3
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 28.32487116700213,
+        "seconds_per_trajectory": 0.44257611198440827,
+        "rk4_substeps_per_frame_max": 382,
+        "rk4_substeps_per_frame_min": 111
+      }
+    ],
+    "heat_d2": [
+      {
+        "bc": "dirichlet",
+        "sample_kw": {
+          "dim": 2
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 11.722775169997476,
+        "seconds_per_trajectory": 0.18316836203121056,
+        "rk4_substeps_per_frame_max": 141,
+        "rk4_substeps_per_frame_min": 99
+      }
+    ],
+    "heat_d3": [
+      {
+        "bc": "dirichlet",
+        "sample_kw": {
+          "dim": 3
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 25.282822168002895,
+        "seconds_per_trajectory": 0.39504409637504523,
+        "rk4_substeps_per_frame_max": 211,
+        "rk4_substeps_per_frame_min": 148
+      }
+    ],
+    "sound_uniform_d2": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 2
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.4908946700015804,
+        "seconds_per_trajectory": 0.023295229218774693,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "sound_uniform_d3": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 3
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.4866202709963545,
+        "seconds_per_trajectory": 0.02322844173431804,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "sound_layered_d2": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 2
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.507262045997777,
+        "seconds_per_trajectory": 0.023550969468715266,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "sound_layered_d3": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 3
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.4965135019956506,
+        "seconds_per_trajectory": 0.02338302346868204,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "sound_lossy_d2": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 2
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 2.3675276529975235,
+        "seconds_per_trajectory": 0.036992619578086305,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "sound_lossy_d3": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 3
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 2.5629903269946226,
+        "seconds_per_trajectory": 0.04004672385929098,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "photothermal_d2": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 2
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.4219546570020611,
+        "seconds_per_trajectory": 0.022218041515657205,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "photothermal_d3": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 3
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 1.5048288800026057,
+        "seconds_per_trajectory": 0.023512951250040715,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "thermoacoustic_d2": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 2
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 3.933192760006932,
+        "seconds_per_trajectory": 0.061456136875108314,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ],
+    "thermoacoustic_d3": [
+      {
+        "bc": "pressure_release",
+        "sample_kw": {
+          "dim": 3
+        },
+        "n_traj": 64,
+        "n_frames": 64,
+        "n_internal": 512,
+        "seconds": 2.970224378994317,
+        "seconds_per_trajectory": 0.0464097559217862,
+        "rk4_substeps_per_frame_max": 9,
+        "rk4_substeps_per_frame_min": 8
+      }
+    ]
+  },
+  "checks_passed": true,
+  "consistency_passed": true,
+  "passed": true,
+  "seconds_total": 208.74443254300422,
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "cpu_count": 2,
+    "machine": "x86_64"
+  }
+}
